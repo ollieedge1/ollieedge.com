@@ -154,4 +154,213 @@ const CS_PASSWORD = "Apple";
     updateVisitTheme();
   }
 
-  overlay.classList.add('open');  document.body.style.overflow = 'hidden';}function closeCaseStudy() {  const overlay = document.getElementById('csOverlay');  const g=document.getElementById('csGate');if(g)g.classList.remove('active');overlay.classList.remove('open');  document.body.style.overflow = '';}document.querySelectorAll('.wcard[data-project]').forEach(card => {  let startX = 0, startY = 0, startTime = 0;  card.addEventListener('pointerdown', e => { startX = e.clientX; startY = e.clientY; startTime = Date.now(); });  card.addEventListener('pointerup', e => {    const dx = Math.abs(e.clientX - startX);    const dy = Math.abs(e.clientY - startY);    const dt = Date.now() - startTime;    if (dx < 15 && dy < 15 && dt < 500) { openCaseStudy(card.dataset.project); }  });});document.getElementById('csBack').addEventListener('click', closeCaseStudy);document.addEventListener('keydown', e => {  if(e.key === 'Escape') closeCaseStudy();});</script></body></html>
+  overlay.classList.add('open');  document.body.style.overflow = 'hidden';}function closeCaseStudy() {  const overlay = document.getElementById('csOverlay');  const g=document.getElementById('csGate');if(g)g.classList.remove('active');overlay.classList.remove('open');  document.body.style.overflow = '';}document.querySelectorAll('.wcard[data-project]').forEach(card => {  let startX = 0, startY = 0, startTime = 0;  card.addEventListener('pointerdown', e => { startX = e.clientX; startY = e.clientY; startTime = Date.now(); });  card.addEventListener('pointerup', e => {    const dx = Math.abs(e.clientX - startX);    const dy = Math.abs(e.clientY - startY);    const dt = Date.now() - startTime;    if (dx < 15 && dy < 15 && dt < 500) { openCaseStudy(card.dataset.project); }  });});document.getElementById('csBack').addEventListener('click', closeCaseStudy);document.addEventListener('keydown', e => {  if(e.key === 'Escape') closeCaseStudy();});</script>
+
+<!-- ═══ CHATBOT ═══ -->
+<button class="chat-fab" id="chatFab" aria-label="Chat with Ollie's AI assistant">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-header">
+    <div class="chat-header-avatar">
+      <img src="assets/images/about3.png" alt="Ollie Edge" onerror="this.parentElement.style.background='var(--border)';">
+    </div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Ollie Edge</div>
+      <div class="chat-header-status">AI Assistant</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg bot">Hi there! I'm Ollie's AI assistant. Ask me anything about his work, experience, or design approach.</div>
+  </div>
+  <div class="chat-input-wrap">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask about Ollie's work..." autocomplete="off">
+    <button class="chat-send" id="chatSend" disabled aria-label="Send message">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ══ CONFIG ══
+  // Set your Claude API proxy URL here.
+  // Do NOT put your API key in client-side code.
+  // Deploy a simple proxy (Cloudflare Worker, Vercel Edge Function, etc.)
+  // that forwards requests to https://api.anthropic.com/v1/messages
+  const CHAT_API_URL = '';  // e.g. 'https://your-proxy.workers.dev/chat'
+  const CHAT_API_KEY = '';  // Only if your proxy requires a separate auth token
+
+  // ══ SITE CONTEXT ══
+  const SYSTEM_PROMPT = `You are an AI assistant representing Ollie Edge, a Lead Product Designer based in London. You answer questions about Ollie on his behalf, based strictly on the information below. Be friendly, concise, and professional. If you don't know something, say so honestly rather than making things up. Keep responses short (2-4 sentences max unless more detail is asked for). Speak in third person about Ollie.
+
+ABOUT OLLIE:
+Ollie Edge is a Lead Product Designer based in London, UK. He designs thoughtful, research-led digital experiences that improve people's lives through technology - whether that's banking through a smartphone, booking a hotel online, or accessing engineering help. He is currently available for new projects. Contact: hello@ollieedge.com | LinkedIn: linkedin.com/in/ollieedge | Calendly: calendly.com/ollieedge/15min
+
+CURRENT ROLE - AEGON (Jan 2025 - Present):
+Design Lead at Aegon. Key projects:
+- Aegon Workplace Pension Journey: Onboarding, Product, Transactions, Investments, Mylo optimisation across £120M net inflow and 110K users.
+- Mylo app: Leading the design, within multidisciplinary design team (3-4 direct reports) within a regulated financial services ecosystem serving millions of customers.
+- Native Mobile iOS and Android Apps: Increased mobile app rating from 3.6 to 4.3 stars while contributing to £120M net inflows within 12 months through improved clarity, usability, and feel.
+Scope: Design Leadership, Financial Services, iOS/Android, Accessibility.
+
+PREVIOUS ROLES:
+1. Dojo / Paymentsense (Aug 2019 - May 2020): Senior Product Designer. Redesigned iOS and Android dashboard apps, increasing MAU by 50% within six months. Delivered improved POS software UX. Conducted user testing and interviews. Scope: Product Design, iOS/Android, POS, User Research.
+
+2. Danske Bank (Nov 2017 - Jun 2019): Senior Product Designer. Designed the fastest, most transparent lending journey. Launched across 4 Nordic countries, facilitating 1M+ DKK lent in first week. 100% digital end-to-end, reduced funding time from 2 weeks to 2 days. Scope: Product Design, Financial Services, Mobile-first, Prototyping.
+
+3. Grundfos (2015 - 2017): UX Designer at Digitas LBi. Set UX strategy across web, mobile, and dealer portals for the world's largest pump manufacturer. Research, journey mapping, and workshop facilitation across 80+ countries. Scope: UX Strategy, B2B, Multi-channel.
+
+4. BMI Group (2020 - 2021): Senior UX/UI Designer at Digital Detox. Led UX/UI design on a major digital transformation - complete global site redesign for 30+ markets and interactive web tools (3D tile/roof visualiser, material calculator). Scope: UX/UI Design, Digital Transformation, Web Tools.
+
+COMPANIES WORKED WITH: Aegon, Dojo, Danske Bank, Digitas, BBC, Grundfos, BMI Group.
+
+SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, prototyping, user research, design leadership, accessibility (WCAG), iOS/Android native apps, financial services, B2B, multi-channel experiences.`;
+
+  // ══ STATE ══
+  const fab = document.getElementById('chatFab');
+  const panel = document.getElementById('chatPanel');
+  const messages = document.getElementById('chatMessages');
+  const input = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('chatSend');
+  let chatHistory = [];
+  let isOpen = false;
+  let isSending = false;
+
+  // ══ TOGGLE ══
+  fab.addEventListener('click', () => {
+    isOpen = !isOpen;
+    fab.classList.toggle('open', isOpen);
+    panel.classList.toggle('open', isOpen);
+    if (isOpen) input.focus();
+  });
+
+  // ══ INPUT HANDLING ══
+  input.addEventListener('input', () => {
+    sendBtn.disabled = !input.value.trim() || isSending;
+  });
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey && input.value.trim() && !isSending) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+  sendBtn.addEventListener('click', () => {
+    if (input.value.trim() && !isSending) sendMessage();
+  });
+
+  // ══ SEND MESSAGE ══
+  async function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Add user message
+    appendMsg(text, 'user');
+    chatHistory.push({ role: 'user', content: text });
+    input.value = '';
+    sendBtn.disabled = true;
+    isSending = true;
+
+    // Show typing indicator
+    const typing = document.createElement('div');
+    typing.className = 'chat-typing';
+    typing.innerHTML = '<span></span><span></span><span></span>';
+    messages.appendChild(typing);
+    messages.scrollTop = messages.scrollHeight;
+
+    try {
+      let reply;
+      if (CHAT_API_URL) {
+        reply = await callClaudeAPI(text);
+      } else {
+        reply = getFallbackResponse(text);
+      }
+      typing.remove();
+      appendMsg(reply, 'bot');
+      chatHistory.push({ role: 'assistant', content: reply });
+    } catch (err) {
+      typing.remove();
+      appendMsg('Sorry, I\'m having trouble connecting right now. You can reach Ollie directly at hello@ollieedge.com.', 'bot');
+    }
+
+    isSending = false;
+    sendBtn.disabled = !input.value.trim();
+  }
+
+  // ══ CLAUDE API CALL ══
+  async function callClaudeAPI(userMsg) {
+    const headers = { 'Content-Type': 'application/json' };
+    if (CHAT_API_KEY) headers['Authorization'] = 'Bearer ' + CHAT_API_KEY;
+
+    const res = await fetch(CHAT_API_URL, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: SYSTEM_PROMPT,
+        messages: chatHistory.concat([{ role: 'user', content: userMsg }])
+      })
+    });
+
+    if (!res.ok) throw new Error('API error');
+    const data = await res.json();
+    return data.content?.[0]?.text || data.message || 'Sorry, I couldn\'t generate a response.';
+  }
+
+  // ══ FALLBACK (no API configured) ══
+  function getFallbackResponse(text) {
+    const t = text.toLowerCase();
+
+    if (t.includes('contact') || t.includes('email') || t.includes('hire') || t.includes('reach') || t.includes('available'))
+      return 'Ollie is currently available for new projects! You can reach him at hello@ollieedge.com, connect on LinkedIn (linkedin.com/in/ollieedge), or schedule a call at calendly.com/ollieedge/15min.';
+
+    if (t.includes('aegon') || t.includes('current') || t.includes('now') || t.includes('doing'))
+      return 'Ollie is currently Design Lead at Aegon (Jan 2025 - present), leading design on the Workplace Pension Journey, Mylo app, and native mobile apps. He manages a team of 3-4 direct reports and has helped increase the mobile app rating from 3.6 to 4.3 stars while contributing to £120M net inflows.';
+
+    if (t.includes('dojo') || t.includes('paymentsense') || t.includes('merchant') || t.includes('pos'))
+      return 'At Dojo (Paymentsense), Ollie was Senior Product Designer (2019-2020). He redesigned the iOS and Android dashboard apps, increasing monthly active users by 50% within six months. He also improved the POS software UX and conducted user research.';
+
+    if (t.includes('danske') || t.includes('bank') || t.includes('lending') || t.includes('nordic'))
+      return 'At Danske Bank (2017-2019), Ollie designed a frictionless lending journey launched across 4 Nordic countries. It facilitated 1M+ DKK lent in the first week, was 100% digital end-to-end, and reduced funding time from 2 weeks to 2 days.';
+
+    if (t.includes('grundfos') || t.includes('pump') || t.includes('b2b'))
+      return 'At Grundfos (2015-2017), Ollie set the UX strategy across web, mobile, and dealer portals for the world\'s largest pump manufacturer. He led research, journey mapping, and workshop facilitation spanning 80+ countries.';
+
+    if (t.includes('bmi') || t.includes('roofing') || t.includes('design system') || t.includes('digital detox'))
+      return 'At BMI Group (2020-2021), working through Digital Detox, Ollie led UX/UI design on a major digital transformation. This included a complete global site redesign for 30+ markets and interactive web tools - a 3D tile/roof visualiser and material calculator.';
+
+    if (t.includes('experience') || t.includes('background') || t.includes('career') || t.includes('work'))
+      return 'Ollie has worked across financial services, B2B, and consumer products. Key roles include Design Lead at Aegon, Senior Product Designer at Dojo and Danske Bank, UX Designer at Grundfos (via Digitas LBi), and Senior UX/UI Designer at BMI Group (via Digital Detox). He also has experience with the BBC.';
+
+    if (t.includes('skill') || t.includes('strength') || t.includes('speciali') || t.includes('good at') || t.includes('approach'))
+      return 'Ollie specialises in research-led design, UX strategy, UI design, design systems, prototyping, and design leadership. He has deep expertise in financial services, mobile (iOS/Android), accessibility (WCAG), and multi-channel B2B experiences.';
+
+    if (t.includes('hello') || t.includes('hi') || t.includes('hey') || t.includes('morning') || t.includes('afternoon'))
+      return 'Hey! Thanks for stopping by Ollie\'s portfolio. Feel free to ask me about his work, experience, skills, or how to get in touch.';
+
+    if (t.includes('cv') || t.includes('resume') || t.includes('pdf'))
+      return 'You can find a full overview of Ollie\'s experience and work right here on the site. For a more detailed conversation, feel free to schedule a call at calendly.com/ollieedge/15min or email hello@ollieedge.com.';
+
+    if (t.includes('location') || t.includes('where') || t.includes('based') || t.includes('london'))
+      return 'Ollie is based in London, UK. He\'s available for both on-site and remote projects.';
+
+    return 'Great question! For the most detailed answer, I\'d recommend reaching out to Ollie directly at hello@ollieedge.com or scheduling a call at calendly.com/ollieedge/15min. In the meantime, feel free to explore his work and experience sections on this site.';
+  }
+
+  // ══ HELPERS ══
+  function appendMsg(text, type) {
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + type;
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+})();
+</script>
+</body></html>
