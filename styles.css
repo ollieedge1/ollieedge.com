@@ -147,47 +147,16 @@
 }
 @keyframes aiBlink{0%{opacity:1;}100%{opacity:0;}}
 .ai-typing{
-  display:inline-flex;align-items:center;gap:6px;padding:8px 0;
-  color:var(--muted);
-  position:relative;height:24px;
+  display:inline-flex;align-items:center;gap:4px;padding:4px 0;
 }
 .ai-typing span{
-  width:7px;height:7px;border-radius:50%;
-  background:currentColor;opacity:.5;
-  animation:aiMorphDot 2.4s ease-in-out infinite;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--muted);opacity:.4;
+  animation:aiDot 1.2s ease-in-out infinite;
 }
-.ai-typing span:nth-child(1){animation-delay:0s;}
-.ai-typing span:nth-child(2){animation-delay:.12s;}
-.ai-typing span:nth-child(3){animation-delay:.24s;}
-@keyframes aiMorphDot{
-  0%,100%{border-radius:50%;width:7px;opacity:.5;transform:scale(1);}
-  30%{border-radius:50%;width:7px;opacity:.8;transform:scale(1.3);}
-  50%{border-radius:4px;width:20px;opacity:.35;transform:scale(1);}
-  70%{border-radius:50%;width:7px;opacity:.8;transform:scale(1.3);}
-}
-.ai-morph-line{
-  width:0;height:6px;flex-shrink:0;
-  overflow:visible;
-  animation:aiLineGrow 2.4s ease-in-out infinite;
-}
-.ai-morph-line path{
-  stroke-dasharray:100;
-  stroke-dashoffset:100;
-  opacity:0;
-  animation:aiLineDraw 2.4s ease-in-out infinite;
-}
-@keyframes aiLineGrow{
-  0%,25%{width:0;}
-  45%,65%{width:80px;}
-  85%,100%{width:0;}
-}
-@keyframes aiLineDraw{
-  0%,25%{stroke-dashoffset:100;opacity:0;}
-  45%{stroke-dashoffset:0;opacity:.4;}
-  65%{stroke-dashoffset:0;opacity:.4;}
-  85%{stroke-dashoffset:-100;opacity:0;}
-  100%{stroke-dashoffset:-100;opacity:0;}
-}
+.ai-typing span:nth-child(2){animation-delay:.15s;}
+.ai-typing span:nth-child(3){animation-delay:.3s;}
+@keyframes aiDot{0%,60%,100%{opacity:.4;transform:scale(1);}30%{opacity:1;transform:scale(1.3);}}
 @media(max-width:768px){
   .ai-body{max-width:100%;}
   .ai-input{font-size:15px;padding:14px 0 14px 20px;}
