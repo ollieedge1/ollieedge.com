@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY51DX80VL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XY51DX80VL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About My Pay Picture — Free, Private UK Finance Tools</title>
+<meta name="description" content="Why we built My Pay Picture: free, private UK personal finance calculators with no sign-up, no data collection, and no hidden agenda. Learn about our mission and how we keep your data safe.">
+<meta name="keywords" content="My Pay Picture about, free UK tax calculator, private pension calculator, no data collected, financial tools UK">
+<link rel="canonical" href="https://mypaypicture.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mypaypicture.com/about.html">
+<meta property="og:title" content="About My Pay Picture — Free, Private UK Finance Tools">
+<meta property="og:description" content="Free personal finance tools that respect your privacy. No sign-up, no data stored. Everything runs in your browser.">
+<meta property="og:image" content="https://mypaypicture.com/og-image.png">
+<meta property="og:site_name" content="My Pay Picture">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About My Pay Picture — Free, Private UK Finance Tools">
+<meta name="twitter:description" content="Free personal finance tools that respect your privacy. No sign-up, no data stored.">
+<meta name="twitter:image" content="https://mypaypicture.com/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About My Pay Picture",
+  "url": "https://mypaypicture.com/about.html",
+  "description": "Why we built My Pay Picture: free, private UK personal finance calculators.",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "My Pay Picture",
+    "url": "https://mypaypicture.com"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:        #0f1f38;
+    --navy-mid:    #162d4f;
+    --teal:        #0d9488;
+    --teal-light:  #5eead4;
+    --gold:        #c9a84c;
+    --amber:       #edac00;
+    --rose:        #9b2235;
+    --stone:       #6b7280;
+    --indigo:      #4f46e5;
+    --cream:       #f7f5f2;
+    --slate:       #4a5568;
+    --slate-light: #718096;
+    --white:       #ffffff;
+    --border:      rgba(0,0,0,0.1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--navy); min-height: 100vh; }
+
+  /* HEADER */
+  header { background: var(--navy); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .app-switcher { position: relative; }
+  .switcher-trigger { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.4rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); transition: background 0.2s; user-select: none; }
+  .switcher-trigger:hover { background: rgba(255,255,255,0.07); }
+  .switcher-trigger .app-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: white; }
+  .switcher-trigger .app-name em { font-style: italic; color: var(--stone); }
+  .switcher-trigger .chevron { color: rgba(255,255,255,0.4); font-size: 0.7rem; transition: transform 0.2s; }
+  .app-switcher.open .chevron { transform: rotate(180deg); }
+  .switcher-dropdown { display: none; position: absolute; top: calc(100% + 8px); left: 0; background: #1a2f4e; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; min-width: 260px; box-shadow: 0 8px 24px rgba(0,0,0,0.3); z-index: 100; }
+  .app-switcher.open .switcher-dropdown { display: block; }
+  .switcher-group-label { padding: 0.5rem 1rem 0.25rem; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.25); border-top: 1px solid rgba(255,255,255,0.06); margin-top: 0.15rem; }
+  .switcher-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; cursor: pointer; transition: background 0.15s; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .switcher-item:last-child { border-bottom: none; }
+  .switcher-item:hover { background: rgba(255,255,255,0.06); }
+  .switcher-item-icon { width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+  .switcher-item-text .item-name { font-size: 0.85rem; font-weight: 600; color: white; }
+  .switcher-item-text .item-desc { font-size: 0.7rem; color: rgba(255,255,255,0.35); margin-top: 0.1rem; }
+  .disclaimer-badge { font-size: 0.7rem; color: rgba(255,255,255,0.4); border: 1px solid rgba(255,255,255,0.15); padding: 0.3rem 0.7rem; border-radius: 20px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  /* HERO */
+  .hero { background: var(--navy); padding: 3.5rem 2rem 4.5rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 500px; height: 200px; border-radius: 50%; background: radial-gradient(ellipse, rgba(13,148,136,0.15) 0%, transparent 70%); pointer-events: none; }
+  .hero-eyebrow { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255,255,255,0.3); margin-bottom: 1.25rem; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: var(--white); line-height: 1.15; max-width: 580px; margin: 0 auto 1rem; }
+  .hero h1 em { font-style: italic; color: var(--teal-light); }
+  .hero p { color: rgba(255,255,255,0.5); font-size: 1rem; max-width: 440px; margin: 0 auto; line-height: 1.65; }
+
+  /* MAIN CONTENT */
+  .container { max-width: 720px; margin: -2rem auto 0; padding: 0 1.5rem 4rem; position: relative; z-index: 1; }
+
+  .about-card {
+    background: white; border-radius: 14px; padding: 2.25rem 2rem;
+    box-shadow: 0 4px 20px rgba(15,31,56,0.06);
+    margin-bottom: 1.5rem;
+  }
+  .about-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem; font-weight: 700; color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .about-card p {
+    font-size: 0.92rem; line-height: 1.75; color: var(--slate);
+    margin-bottom: 1rem;
+  }
+  .about-card p:last-child { margin-bottom: 0; }
+
+  /* TRUST GRID */
+  .trust-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+    margin-top: 1.25rem;
+  }
+  .trust-item {
+    padding: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+  }
+  .trust-item-icon {
+    font-size: 1.4rem; margin-bottom: 0.5rem;
+  }
+  .trust-item h3 {
+    font-size: 0.88rem; font-weight: 600; color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+  .trust-item p {
+    font-size: 0.78rem; line-height: 1.6; color: var(--slate-light);
+    margin-bottom: 0;
+  }
+
+  /* TOOL LIST */
+  .tool-list { margin-top: 1rem; }
+  .tool-row {
+    display: flex; align-items: center; gap: 0.85rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: background 0.15s;
+    border-radius: 6px;
+    padding-left: 0.5rem;
+  }
+  .tool-row:hover { background: var(--cream); }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-dot {
+    width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0;
+  }
+  .tool-row .tool-name {
+    font-size: 0.88rem; font-weight: 600; color: var(--navy);
+  }
+  .tool-row .tool-desc {
+    font-size: 0.78rem; color: var(--slate-light);
+  }
+
+  /* CTA */
+  .cta-row {
+    text-align: center; margin-top: 1.5rem;
+  }
+  .btn-primary {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600; font-size: 0.92rem;
+    padding: 0.85rem 2rem;
+    background: var(--teal); color: white;
+    border: none; border-radius: 10px;
+    cursor: pointer; transition: all 0.2s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn-primary:hover { background: #0b7c72; transform: translateY(-1px); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.75rem;
+    color: var(--slate-light);
+    line-height: 1.65;
+  }
+  footer a { color: var(--teal); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .trust-grid { grid-template-columns: 1fr; }
+    .about-card { padding: 1.5rem 1.25rem; }
+    header { padding: 1rem 1.25rem; }
+    .hero { padding: 2.5rem 1.25rem 3.5rem; }
+  }
+  .email-capture { padding: 2.5rem 1rem; text-align: center; }
+  .ec-inner { max-width: 480px; margin: 0 auto; background: rgba(255,255,255,0.85); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+  .ec-inner h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #1e293b; margin: 0 0 0.5rem; }
+  .ec-inner p { font-size: 0.88rem; color: #64748b; margin: 0 0 1.25rem; line-height: 1.5; }
+  .ec-btn { display: inline-block; padding: 0.7rem 2rem; border-radius: 8px; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #fff; background: #0d9488; cursor: pointer; transition: opacity 0.2s; }
+  .ec-btn:hover { opacity: 0.88; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-switcher" id="appSwitcher">
+    <div class="switcher-trigger" onclick="toggleSwitcher(event)">
+      <div class="app-name">My Pay <em>Picture</em></div>
+      <div class="chevron">&#9660;</div>
+    </div>
+    <div class="switcher-dropdown">
+      <div class="switcher-item" onclick="window.location.href='index.html'">
+        <div class="switcher-item-icon" style="background:rgba(255,255,255,0.06);">&#127968;</div>
+        <div class="switcher-item-text"><div class="item-name">Suite Home</div><div class="item-desc">All tools at a glance.</div></div>
+      </div>
+      <div class="switcher-group-label">&#128084; Employed</div>
+      <div class="switcher-item" onclick="window.location.href='pension-optimiser.html'">
+        <div class="switcher-item-icon" style="background:rgba(13,148,136,0.15);">&#128200;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Optimiser</div><div class="item-desc">Find the right contribution, save tax.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pension-reclaim.html'">
+        <div class="switcher-item-icon" style="background:rgba(201,168,76,0.15);">&#128176;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Reclaim</div><div class="item-desc">Missed salary sacrifice on a bonus? Reclaim it.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pension-topup.html'">
+        <div class="switcher-item-icon" style="background:rgba(237,172,0,0.15);">&#10133;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Top-Up</div><div class="item-desc">Topped up your pension? Claim tax relief.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='family-benefits.html'">
+        <div class="switcher-item-icon" style="background:rgba(244,167,185,0.2);">&#128106;</div>
+        <div class="switcher-item-text"><div class="item-name">My Family &amp; Benefits</div><div class="item-desc">Losing Child Benefit? See how to keep more.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='self-assessment.html'">
+        <div class="switcher-item-icon" style="background:rgba(124,58,237,0.15);">&#128203;</div>
+        <div class="switcher-item-text"><div class="item-name">My Self Assessment</div><div class="item-desc">Estimate your tax bill and next steps.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='mortgage-vs-pension.html'">
+        <div class="switcher-item-icon" style="background:rgba(5,150,105,0.15);">&#127968;</div>
+        <div class="switcher-item-text"><div class="item-name">My Mortgage &amp; Pension</div><div class="item-desc">Build more wealth: mortgage or pension?</div></div>
+      </div>
+      <div class="switcher-group-label">&#127962; Director</div>
+      <div class="switcher-item" onclick="window.location.href='pay-director.html'">
+        <div class="switcher-item-icon" style="background:rgba(79,70,229,0.15);">&#127962;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pay Director</div><div class="item-desc">Best salary-and-dividend split.</div></div>
+      </div>
+      <div class="switcher-group-label">&#127749; Retired</div>
+      <div class="switcher-item" onclick="window.location.href='retirement-helper.html'">
+        <div class="switcher-item-icon" style="background:rgba(107,114,128,0.15);">&#127749;</div>
+        <div class="switcher-item-text"><div class="item-name">My Retirement Helper</div><div class="item-desc">How long will your money last?</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer-badge">Not financial advice</div>
+</header>
+
+<div class="hero">
+  <canvas id="heroCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+  <div style="position:relative;z-index:1;">
+    <div class="hero-eyebrow">My Pay Picture</div>
+    <h1>Built for clarity,<br><em>not your data.</em></h1>
+    <p>Free UK personal finance tools that work entirely in your browser. No accounts, no tracking, no selling.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- WHY -->
+  <div class="about-card">
+    <h2>Why we built this</h2>
+    <p>Most personal finance decisions in the UK shouldn't be hard. How much pension should I contribute? What happens to my Child Benefit? How does salary sacrifice actually work? The answers are out there, but they're buried in jargon, gated behind email sign-ups, or designed to steer you towards a product.</p>
+    <p>My Pay Picture exists to give you a clear, honest answer in two minutes — then get out of your way. No agenda, no sales funnel, no data harvesting. Just the numbers, explained in plain English.</p>
+  </div>
+
+  <!-- TRUST -->
+  <div class="about-card">
+    <h2>How we earn your trust</h2>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-item-icon">&#128274;</div>
+        <h3>Your data never leaves your device</h3>
+        <p>Every calculation runs locally in your browser. Nothing is sent to a server, stored in a database, or shared with anyone. Close the tab and it's gone.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon">&#128100;</div>
+        <h3>No sign-up, ever</h3>
+        <p>No email, no password, no "create an account to see your results". You open a tool and use it. That's it.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon">&#128679;</div>
+        <h3>Not financial advice</h3>
+        <p>We're upfront about what this is: illustrative estimates based on 2025/26 UK tax rates. For decisions that matter, we'll always point you to a qualified adviser.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item-icon">&#127919;</div>
+        <h3>No hidden agenda</h3>
+        <p>We don't sell financial products, take referral commissions, or steer you towards any provider. The tools are free. The answers are honest.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RATES -->
+  <div class="about-card">
+    <h2>Accuracy and rates</h2>
+    <p>All tools use current 2025/26 UK tax rates, thresholds, and allowances. We update them every April when the new tax year starts. Rates are sourced directly from GOV.UK and HMRC publications.</p>
+    <p>If you spot something that doesn't look right, please let us know at <a href="mailto:hello@mypaypicture.com" style="color:var(--teal); text-decoration:none;">hello@mypaypicture.com</a>.</p>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="about-card">
+    <h2>The tools</h2>
+    <p>Seven free calculators covering the most common UK pay decisions.</p>
+    <div class="tool-list">
+      <div class="tool-row" onclick="window.location.href='pension-optimiser.html'">
+        <div class="tool-dot" style="background:var(--teal);"></div>
+        <div><div class="tool-name">My Pension Optimiser</div><div class="tool-desc">Find the right contribution and save tax via salary sacrifice.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='pension-reclaim.html'">
+        <div class="tool-dot" style="background:var(--gold);"></div>
+        <div><div class="tool-name">My Pension Reclaim</div><div class="tool-desc">Missed salary sacrifice on a bonus? See how to reclaim the tax.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='pension-topup.html'">
+        <div class="tool-dot" style="background:var(--amber);"></div>
+        <div><div class="tool-name">My Pension Top-Up</div><div class="tool-desc">Made an extra pension contribution? Claim your tax relief.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='family-benefits.html'">
+        <div class="tool-dot" style="background:#f4a7b9;"></div>
+        <div><div class="tool-name">My Family &amp; Benefits</div><div class="tool-desc">High earner losing Child Benefit? See how to keep more of it.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='self-assessment.html'">
+      <div class="switcher-item" onclick="window.location.href='mortgage-vs-pension.html'">
+        <div class="switcher-item-icon" style="background:rgba(5,150,105,0.15);">&#127968;</div>
+        <div class="switcher-item-text"><div class="item-name">My Mortgage &amp; Pension</div><div class="item-desc">Build more wealth: mortgage or pension?</div></div>
+      </div>
+        <div class="tool-dot" style="background:#7c3aed;"></div>
+        <div><div class="tool-name">My Self Assessment</div><div class="tool-desc">Estimate your tax bill, deadlines, and next steps.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='pay-director.html'">
+        <div class="tool-dot" style="background:var(--indigo);"></div>
+        <div><div class="tool-name">My Pay Director</div><div class="tool-desc">Find the most tax-efficient salary and dividend split.</div></div>
+      </div>
+      <div class="tool-row" onclick="window.location.href='retirement-helper.html'">
+        <div class="tool-dot" style="background:var(--stone);"></div>
+        <div><div class="tool-name">My Retirement Helper</div><div class="tool-desc">See your retirement income, sustainability, and options.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a class="btn-primary" href="index.html">Pick a tool to get started</a>
+  </div>
+
+</div>
+
+<section class="email-capture">
+  <div class="ec-inner">
+    <h3>Get free tax-year updates</h3>
+    <p>Plain-English pension &amp; tax tips for UK taxpayers. No spam, unsubscribe anytime.</p>
+    <button class="ec-btn" data-tally-open="zxZByE" data-tally-layout="modal" data-tally-emoji-animation="none">
+      Subscribe free
+    </button>
+  </div>
+</section>
+
+<footer>
+  My Pay Picture &middot; Free UK personal finance tools &middot; No data stored<br>
+  <a href="index.html">Home</a> &middot; <a href="about.html">About</a> &middot; <a href="mailto:hello@mypaypicture.com">Contact</a><br>
+  <a href="#" data-tally-open="VLV7pE" data-tally-emoji-animation="wave" style="color:var(--teal); text-decoration:none; font-size:0.75rem;">Spotted a bug or have a suggestion? Let us know</a>
+</footer>
+
+<script>
+  function toggleSwitcher(e) {
+    e.stopPropagation();
+    document.getElementById('appSwitcher').classList.toggle('open');
+  }
+  document.addEventListener('click', function() {
+    document.getElementById('appSwitcher').classList.remove('open');
+  });
+</script>
+
+<script>
+// ── Hero data-inspired motion graphics ──────────────────────────────────────
+(function() {
+  var canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var symbols = ['£', '%', '+', '£', '£', '%', '+', '£'];
+  var amounts = ['120', '5', '40', '250', '80', '12', '60', '300'];
+
+  function Particle() { this.reset(true); }
+  Particle.prototype.reset = function(init) {
+    this.x = Math.random() * W;
+    this.y = init ? Math.random() * H : H + 20;
+    this.speed = 0.15 + Math.random() * 0.35;
+    this.opacity = 0;
+    this.maxOpacity = 0.06 + Math.random() * 0.08;
+    this.fadeIn = true;
+    this.size = 10 + Math.random() * 6;
+    var i = Math.floor(Math.random() * symbols.length);
+    this.text = symbols[i] + amounts[i];
+    this.drift = (Math.random() - 0.5) * 0.15;
+  };
+  Particle.prototype.update = function() {
+    this.y -= this.speed;
+    this.x += this.drift;
+    if (this.fadeIn) { this.opacity += 0.002; if (this.opacity >= this.maxOpacity) this.fadeIn = false; }
+    if (this.y < H * 0.15) this.opacity -= 0.003;
+    if (this.y < -30 || this.opacity <= 0) this.reset(false);
+  };
+  Particle.prototype.draw = function() {
+    ctx.globalAlpha = Math.max(0, this.opacity);
+    ctx.font = this.size + 'px "DM Sans", sans-serif';
+    ctx.fillStyle = '#2dd4bf';
+    ctx.fillText(this.text, this.x, this.y);
+  };
+
+  var lines = [];
+  function makeLine() {
+    var pts = [], segments = 6 + Math.floor(Math.random() * 4);
+    var baseY = H * (0.35 + Math.random() * 0.45);
+    for (var j = 0; j <= segments; j++) pts.push({ x: (W / segments) * j, y: baseY + (Math.random() - 0.4) * 40 });
+    return { pts: pts, opacity: 0, maxOpacity: 0.04 + Math.random() * 0.04, phase: 0, speed: 0.003 + Math.random() * 0.004, color: Math.random() > 0.5 ? '#2dd4bf' : '#5eead4' };
+  }
+  for (var l = 0; l < 3; l++) lines.push(makeLine());
+
+  function drawLine(line) {
+    if (line.opacity <= 0.001) return;
+    ctx.globalAlpha = line.opacity;
+    ctx.strokeStyle = line.color;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    var p = line.pts;
+    ctx.moveTo(p[0].x, p[0].y);
+    for (var i = 1; i < p.length; i++) { var xc = (p[i-1].x + p[i].x) / 2; var yc = (p[i-1].y + p[i].y) / 2; ctx.quadraticCurveTo(p[i-1].x, p[i-1].y, xc, yc); }
+    ctx.stroke();
+  }
+
+  var particles = [];
+  for (var p = 0; p < 18; p++) particles.push(new Particle());
+
+  var paused = false;
+  var observer = new IntersectionObserver(function(entries) { paused = !entries[0].isIntersecting; }, { threshold: 0.1 });
+  observer.observe(canvas.parentElement);
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function frame() {
+    if (prefersReduced) return;
+    if (!paused) {
+      ctx.clearRect(0, 0, W, H);
+      for (var l = 0; l < lines.length; l++) {
+        var ln = lines[l];
+        ln.phase += ln.speed;
+        ln.opacity = ln.maxOpacity * (0.5 + 0.5 * Math.sin(ln.phase));
+        for (var j = 0; j < ln.pts.length; j++) ln.pts[j].y += Math.sin(ln.phase + j) * 0.08;
+        drawLine(ln);
+      }
+      for (var i = 0; i < particles.length; i++) { particles[i].update(); particles[i].draw(); }
+      ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+
+<script src="https://tally.so/widgets/embed.js"></script>
+</body>
+</html>

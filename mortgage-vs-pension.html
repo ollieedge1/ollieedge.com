@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY51DX80VL"></script>
+<script>
+  var GA_ID = 'G-XY51DX80VL';
+  function gaEvent(name, params) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', name, params || {});
+    }
+  }
+  var _gaToolStarted = false;
+  function trackToolStart(toolName) {
+    if (!_gaToolStarted) {
+      _gaToolStarted = true;
+      gaEvent('tool_started', { tool: toolName });
+    }
+  }
+  function trackToolComplete(toolName) {
+    gaEvent('tool_completed', { tool: toolName });
+  }
+  document.addEventListener('click', function(e) {
+    var el = e.target.closest('.adviser-cta-btn');
+    if (el) gaEvent('adviser_cta_clicked', { tool: document.title });
+  });
+  if (window.location.search.includes('paid=true')) {
+    window.addEventListener('DOMContentLoaded', function() {
+      gaEvent('pdf_purchased', { tool: document.title });
+    });
+  }
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XY51DX80VL');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f1f38">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="My Pay Picture">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Mortgage vs Pension Calculator UK 2025/26 — Should You Overpay or Invest? | My Pay Picture</title>
+<meta name="description" content="Free calculator: should you overpay your mortgage or boost your pension? Compare strategies side by side with real tax relief figures. No sign-up, no data stored.">
+<meta name="keywords" content="mortgage vs pension, overpay mortgage or pension, mortgage calculator UK, pension calculator, should I overpay mortgage, early mortgage repayment, pension contribution calculator">
+<link rel="canonical" href="https://mypaypicture.com/mortgage-vs-pension.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mypaypicture.com/mortgage-vs-pension.html">
+<meta property="og:title" content="Mortgage vs Pension Calculator — Should You Overpay or Invest?">
+<meta property="og:description" content="Free calculator: compare strategies for your spare cash. Overpay mortgage, boost pension, or split. Real tax relief figures, no sign-up.">
+<meta property="og:image" content="https://mypaypicture.com/og-mortgage.png">
+<meta property="og:site_name" content="My Pay Picture">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mortgage vs Pension Calculator — Should You Overpay or Invest?">
+<meta name="twitter:description" content="Compare strategies for your spare cash. See which builds more wealth for your situation.">
+<meta name="twitter:image" content="https://mypaypicture.com/og-mortgage.png">
+<meta name="robots" content="index, follow">
+<meta name="author" content="My Pay Picture">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "My Mortgage & Pension Calculator",
+  "url": "https://mypaypicture.com/mortgage-vs-pension.html",
+  "description": "Free UK calculator to compare mortgage overpayment vs pension contribution strategies. See which builds more wealth for your situation.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+  "author": { "@type": "Organization", "name": "My Pay Picture", "url": "https://mypaypicture.com" },
+  "inLanguage": "en-GB"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1f38;
+    --emerald: #059669;
+    --emerald-light: #34d399;
+    --emerald-pale: #ecfdf5;
+    --cream: #f4f7f6;
+    --slate: #4a5568;
+    --slate-light: #718096;
+    --white: #ffffff;
+    --border: rgba(5,150,105,0.2);
+    --red: #e53e3e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    min-height: 100vh;
+  }
+
+  header {
+    background: var(--navy);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header > div:first-child {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--emerald-light);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--white); font-weight: 300; }
+
+  .logo-suite {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.15rem;
+  }
+
+  .disclaimer-badge {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .hero {
+    background: var(--navy);
+    padding: 3rem 2rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: 50%;
+    transform: translateX(-50%);
+    width: 500px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(5,150,105,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52,211,153,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--white);
+    line-height: 1.15;
+    max-width: 580px;
+    margin: 0 auto 1rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--emerald-light);
+  }
+
+  .hero p {
+    color: rgba(255,255,255,0.55);
+    font-size: 1rem;
+    max-width: 440px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--emerald-light);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: -2rem auto 0;
+    padding: 0 1.5rem 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .steps-nav {
+    display: flex;
+    background: white;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-bottom: none;
+  }
+
+  .step-tab {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--slate-light);
+    cursor: pointer;
+    transition: all 0.2s;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+
+  .step-tab:last-child { border-right: none; }
+  .step-tab.active { background: var(--emerald); color: white; }
+  .step-tab.completed { color: var(--emerald); }
+  .step-tab.active.completed { color: white; }
+
+  .step-tab .step-num {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+
+  .step-tab.completed .step-num::after {
+    content: ' ✓';
+    font-size: 0.85rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 0 0 14px 14px;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border);
+    border-top: none;
+    box-shadow: 0 8px 32px rgba(15,31,56,0.08);
+    display: none;
+    animation: fadeUp 0.3s ease;
+  }
+
+  .card.active { display: block; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .card-subtitle {
+    color: var(--slate);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 560px;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  .field-group { margin-bottom: 1.4rem; }
+
+  label {
+    display: block;
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.45rem;
+    letter-spacing: 0.01em;
+  }
+
+  .input-wrap { position: relative; }
+
+  .input-prefix {
+    position: absolute;
+    left: 13px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--slate-light);
+    font-size: 0.95rem;
+    pointer-events: none;
+  }
+
+  .input-suffix {
+    position: absolute;
+    right: 13px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--slate-light);
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+
+  input[type="number"], input[type="date"], select {
+    width: 100%;
+    padding: 0.72rem 2.2rem 0.72rem 2rem;
+    border: 1.5px solid #dde1e7;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--navy);
+    background: white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+  }
+
+  input[type="number"]:focus, input[type="date"]:focus, select:focus {
+    outline: none;
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px rgba(5,150,105,0.1);
+  }
+
+  input.no-prefix { padding-left: 1rem; }
+  input.has-suffix { padding-right: 2.5rem; }
+
+  .hint {
+    font-size: 0.77rem;
+    color: var(--slate-light);
+    margin-top: 0.35rem;
+    line-height: 1.45;
+  }
+
+  .radio-group { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+  .radio-btn {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.65rem 0.75rem;
+    border: 1.5px solid #dde1e7;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.18s;
+    color: var(--slate);
+    background: white;
+    line-height: 1.3;
+  }
+
+  .radio-btn:hover { border-color: var(--emerald); color: var(--navy); }
+  .radio-btn.selected { border-color: var(--emerald); background: var(--emerald-pale); color: var(--emerald); }
+
+  .privacy-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--emerald-pale);
+    border-left: 3px solid var(--emerald);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--emerald);
+    line-height: 1.5;
+  }
+
+  .tooltip-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .tooltip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(5,150,105,0.12);
+    color: var(--emerald);
+    font-size: 0.62rem;
+    font-weight: 700;
+    cursor: help;
+    flex-shrink: 0;
+  }
+
+  .tooltip-bubble {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: white;
+    padding: 0.65rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    z-index: 10;
+    white-space: normal;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .tooltip-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--navy);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+
+  .tooltip-icon:focus ~ .tooltip-bubble,
+  .tooltip-bubble:hover {
+    display: block;
+  }
+
+  .result-box {
+    background: #f1f5f9;
+    border-radius: 10px;
+    padding: 1.1rem 1rem;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .result-box.emerald {
+    background: var(--emerald-pale);
+    border-color: var(--border);
+  }
+
+  .result-box .r-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--slate-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .result-box.emerald .r-label { color: var(--emerald); }
+
+  .result-box .r-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .result-box.emerald .r-amount { color: var(--emerald); }
+
+  .result-box .r-sub {
+    font-size: 0.7rem;
+    color: var(--slate-light);
+    margin-top: 0.3rem;
+  }
+
+  .strategy-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+  }
+
+  .strategy-card {
+    background: white;
+    border: 1.5px solid #dde1e7;
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  .strategy-card:hover {
+    border-color: var(--emerald);
+    box-shadow: 0 4px 16px rgba(5,150,105,0.1);
+  }
+
+  .strategy-card.winner {
+    border-color: var(--emerald);
+    background: var(--emerald-pale);
+  }
+
+  .winner-badge {
+    position: absolute;
+    top: -12px;
+    right: 12px;
+    background: var(--emerald);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+  }
+
+  .strategy-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .strategy-card .sc-desc {
+    font-size: 0.78rem;
+    color: var(--slate);
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+  }
+
+  .strategy-card .sc-how {
+    font-size: 0.72rem;
+    color: var(--emerald);
+    font-weight: 500;
+    background: var(--emerald-pale);
+    padding: 0.5rem 0.65rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    line-height: 1.45;
+  }
+
+  .strategy-metric.total {
+    background: rgba(5,150,105,0.04);
+    margin: 0 -1.25rem;
+    padding: 0.85rem 1.25rem;
+    border-bottom: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .strategy-metric.total .label { font-weight: 600; color: var(--navy); }
+  .strategy-metric.total .value { font-size: 1.15rem; }
+
+  .strategy-metric {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 0.8rem;
+  }
+
+  .strategy-metric:last-child { border-bottom: none; }
+
+  .strategy-metric .label {
+    color: var(--slate-light);
+    display: block;
+    font-size: 0.72rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .strategy-metric .value {
+    color: var(--navy);
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+  }
+
+  .strategy-card.winner .value { color: var(--emerald); }
+
+  .timeline-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin: 1.5rem 0;
+    overflow: auto;
+  }
+
+  .timeline-table th {
+    padding: 0.7rem 0.8rem;
+    text-align: left;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--slate-light);
+    border-bottom: 2px solid var(--border);
+    background: rgba(5,150,105,0.05);
+  }
+
+  .timeline-table td {
+    padding: 0.65rem 0.8rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: var(--slate);
+  }
+
+  .timeline-table tr:last-child td { border-bottom: none; }
+  .timeline-table td:first-child { font-weight: 600; color: var(--navy); }
+
+  .timeline-table tr.milestone-mortgage {
+    background: rgba(34,197,94,0.08);
+  }
+
+  .timeline-table tr.milestone-milestone {
+    background: rgba(59,130,246,0.08);
+  }
+
+  .guidance-box {
+    border-left: 3px solid var(--emerald);
+    background: var(--emerald-pale);
+    border-radius: 0 8px 8px 0;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+  }
+
+  .guidance-box h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+
+  .guidance-box p {
+    font-size: 0.84rem;
+    color: var(--slate);
+    line-height: 1.65;
+  }
+
+  .alert-box {
+    border-left: 3px solid var(--emerald);
+    background: var(--emerald-pale);
+    border-radius: 0 8px 8px 0;
+    padding: 0.9rem 1.1rem;
+    margin: 0.75rem 0;
+  }
+
+  .alert-box.warning {
+    border-left-color: #d97706;
+    background: #fffbeb;
+  }
+
+  .alert-box h4 {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+  }
+
+  .alert-box p {
+    font-size: 0.83rem;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  .accordion {
+    border: 1px solid #dde1e7;
+    border-radius: 10px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #dde1e7;
+  }
+
+  .accordion-item:last-child { border-bottom: none; }
+
+  .accordion-header {
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    transition: background 0.2s;
+    font-weight: 500;
+  }
+
+  .accordion-header:hover { background: #f3f4f6; }
+
+  .accordion-header .chevron {
+    transition: transform 0.2s;
+  }
+
+  .accordion-item.open .accordion-header { background: var(--emerald-pale); }
+  .accordion-item.open .accordion-header .chevron { transform: rotate(180deg); }
+
+  .accordion-content {
+    display: none;
+    padding: 1rem;
+    background: white;
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  .accordion-item.open .accordion-content { display: block; }
+
+  .results-section {
+    margin-top: 2rem;
+  }
+
+  hr { border: none; border-top: 1px solid rgba(0,0,0,0.07); margin: 1.5rem 0; }
+
+  .btn-primary {
+    background: var(--emerald);
+    color: white;
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary:hover {
+    background: #047857;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(5,150,105,0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--slate);
+    border: 1.5px solid #dde1e7;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--emerald); color: var(--navy); }
+
+  .btn-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .email-capture { padding: 2.5rem 1rem; text-align: center; }
+  .ec-inner { max-width: 480px; margin: 0 auto; background: rgba(255,255,255,0.85); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+  .ec-inner h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: #1e293b; margin: 0 0 0.5rem; }
+  .ec-inner p { font-size: 0.88rem; color: #64748b; margin: 0 0 1.25rem; line-height: 1.5; }
+  .ec-btn { display: inline-block; padding: 0.7rem 2rem; border-radius: 8px; border: none; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: #fff; background: var(--emerald); cursor: pointer; transition: opacity 0.2s; }
+  .ec-btn:hover { opacity: 0.88; }
+
+  footer {
+    background: var(--navy);
+    border-top: 3px solid var(--emerald);
+    padding: 2rem 1.5rem;
+  }
+
+  footer a { color: var(--emerald-light); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: var(--white); }
+
+  /* APP SWITCHER */
+  .app-switcher { position: relative; }
+  .switcher-trigger { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; padding: 0.4rem 0.6rem; border-radius: 8px; transition: background 0.2s; }
+  .switcher-trigger:hover { background: rgba(255,255,255,0.07); }
+  .switcher-trigger .app-name { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--emerald-light); }
+  .switcher-trigger .app-name span { color: var(--white); font-weight: 300; }
+  .switcher-trigger .chevron { color: rgba(255,255,255,0.4); font-size: 0.7rem; transition: transform 0.2s; }
+  .app-switcher.open .chevron { transform: rotate(180deg); }
+  .switcher-dropdown { display: none; position: absolute; top: calc(100% + 8px); left: 0; min-width: 300px; background: #162032; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 0.5rem 0; z-index: 100; box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
+  .app-switcher.open .switcher-dropdown { display: block; }
+  .switcher-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 1rem; cursor: pointer; transition: background 0.15s; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .switcher-item:last-child { border-bottom: none; }
+  .switcher-item:hover { background: rgba(255,255,255,0.06); }
+  .switcher-item.current { background: rgba(5,150,105,0.1); cursor: default; }
+  .switcher-item-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .switcher-item-text .item-name { font-family: 'Playfair Display', serif; font-size: 0.9rem; color: white; }
+  .switcher-item-text .item-desc { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 0.1rem; }
+  .switcher-item.current .item-name { color: var(--emerald-light); }
+  .switcher-group-label { padding: 0.5rem 1rem 0.25rem; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.25); font-weight: 600; }
+
+  @media (max-width: 600px) {
+    header { padding: 1rem 1rem; flex-wrap: wrap; gap: 1rem; }
+    .hero { padding: 2rem 1.25rem 4rem; }
+    .card { padding: 1.5rem 1.25rem; }
+    .step-tab { font-size: 0.62rem; padding: 0.7rem 0.2rem; }
+    .step-tab .step-num { font-size: 1.1rem; }
+    .strategy-cards { grid-template-columns: 1fr; }
+    .btn-row { justify-content: stretch; }
+    .btn-primary, .btn-secondary { flex: 1; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="app-switcher" id="appSwitcher">
+    <div class="switcher-trigger" onclick="toggleSwitcher(event)">
+      <div class="app-name">My Mortgage <span>&amp; Pension</span></div>
+      <div class="chevron">&#9660;</div>
+    </div>
+    <div class="switcher-dropdown">
+      <div class="switcher-item" onclick="window.location.href='index.html'">
+        <div class="switcher-item-icon" style="background:rgba(255,255,255,0.06);">&#127968;</div>
+        <div class="switcher-item-text"><div class="item-name" style="color:rgba(255,255,255,0.4);font-size:0.8rem;">&#8592; My Pay Picture</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pension-optimiser.html'">
+        <div class="switcher-item-icon" style="background:rgba(13,148,136,0.15);">&#128200;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Optimiser</div><div class="item-desc">Optimising your pension? Pay less tax.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pension-reclaim.html'">
+        <div class="switcher-item-icon" style="background:rgba(201,168,76,0.15);">&#128176;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Reclaim</div><div class="item-desc">Missed salary sacrifice? Get it back.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pension-topup.html'">
+        <div class="switcher-item-icon" style="background:rgba(237,172,0,0.15);">&#10133;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pension Top-Up</div><div class="item-desc">The government helps pay for it.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='family-benefits.html'">
+        <div class="switcher-item-icon" style="background:rgba(244,167,185,0.2);">&#128106;</div>
+        <div class="switcher-item-text"><div class="item-name">My Family &amp; Benefits</div><div class="item-desc">Paying the Child Benefit charge? Reduce it.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='self-assessment.html'">
+        <div class="switcher-item-icon" style="background:rgba(124,58,237,0.15);">&#128203;</div>
+        <div class="switcher-item-text"><div class="item-name">My Self Assessment</div><div class="item-desc">First time filing? Walk through it.</div></div>
+      </div>
+      <div class="switcher-item current" style="cursor:default;">
+        <div class="switcher-item-icon" style="background:rgba(5,150,105,0.15);">&#127969;</div>
+        <div class="switcher-item-text"><div class="item-name">My Mortgage &amp; Pension</div><div class="item-desc">Build more wealth: mortgage or pension?</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='pay-director.html'">
+        <div class="switcher-item-icon" style="background:rgba(79,70,229,0.15);">&#128188;</div>
+        <div class="switcher-item-text"><div class="item-name">My Pay Director</div><div class="item-desc">Salary vs dividends? Find the sweet spot.</div></div>
+      </div>
+      <div class="switcher-item" onclick="window.location.href='retirement-helper.html'">
+        <div class="switcher-item-icon" style="background:rgba(120,113,108,0.15);">&#127749;</div>
+        <div class="switcher-item-text"><div class="item-name">My Retirement Helper</div><div class="item-desc">When can you retire? What will life look like?</div></div>
+      </div>
+      <div class="switcher-group-label">&#8505; Info</div>
+      <div class="switcher-item" onclick="window.location.href='about.html'">
+        <div class="switcher-item-icon" style="background:rgba(255,255,255,0.06);">&#8505;</div>
+        <div class="switcher-item-text"><div class="item-name">About</div><div class="item-desc">Why we built this. How we protect your data.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer-badge">Not financial advice</div>
+</header>
+
+<div class="hero">
+  <canvas id="heroCanvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+  <div style="position:relative;z-index:1;">
+    <div class="hero-eyebrow">My Pay Picture</div>
+    <h1>Overpay your mortgage<br><em>or boost your pension?</em></h1>
+    <p>See exactly which strategy builds more wealth for your situation.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="privacy-badge">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <span>Your data stays on your device — nothing is sent to a server or stored in the cloud.</span>
+  </div>
+
+  <div class="steps-nav">
+    <div class="step-tab active" onclick="goTo(1)" id="tab1"><span class="step-num">1</span>Your details</div>
+    <div class="step-tab" onclick="goTo(2)" id="tab2"><span class="step-num">2</span>Your mortgage</div>
+    <div class="step-tab" onclick="goTo(3)" id="tab3"><span class="step-num">3</span>Your pensions</div>
+    <div class="step-tab" onclick="goTo(4)" id="tab4"><span class="step-num">4</span>Your strategies</div>
+  </div>
+
+  <!-- STEP 1: YOUR DETAILS -->
+  <div class="card active" id="step1">
+    <div class="card-title">Your details</div>
+    <p class="card-subtitle">We'll calculate how different strategies work for your circumstances.</p>
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Age</label>
+        <div class="input-wrap">
+          <input type="number" id="age" placeholder="e.g. 44" min="18" max="75">
+        </div>
+      </div>
+      <div class="field-group">
+        <label>
+          <span class="tooltip-wrap">
+            Annual gross salary
+            <span class="tooltip-icon" tabindex="0">?</span>
+            <span class="tooltip-bubble">Your total yearly pay before any deductions. Find this on your payslip or contract.</span>
+          </span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="salary" placeholder="e.g. 55000" min="0">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>
+          <span class="tooltip-wrap">
+            Monthly spare cash
+            <span class="tooltip-icon" tabindex="0">?</span>
+            <span class="tooltip-bubble">How much extra you can put towards either mortgage or pension each month, on top of your existing commitments.</span>
+          </span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="monthlySpare" placeholder="e.g. 800" min="0">
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Annual bonus to allocate (optional)</label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="annualBonus" placeholder="e.g. 5000" min="0">
+        </div>
+        <div class="hint">One-off or regular lump sum you want to direct to mortgage or pension.</div>
+      </div>
+
+      <div class="field-group">
+        <label>
+          <span class="tooltip-wrap">
+            Current pension contribution
+            <span class="tooltip-icon" tabindex="0">?</span>
+            <span class="tooltip-bubble">What percentage of your salary you currently contribute to your pension.</span>
+          </span>
+        </label>
+        <div class="input-wrap">
+          <input type="number" id="currentPensionPct" placeholder="e.g. 5" min="0" max="100">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>
+          <span class="tooltip-wrap">
+            Employer pension contribution
+            <span class="tooltip-icon" tabindex="0">?</span>
+            <span class="tooltip-bubble">What percentage your employer adds. Check your scheme details or payslip.</span>
+          </span>
+        </label>
+        <div class="input-wrap">
+          <input type="number" id="employerPensionPct" placeholder="e.g. 5" min="0" max="15">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Does your employer offer salary sacrifice?</label>
+        <div class="radio-group">
+          <button type="button" class="radio-btn selected" onclick="setRadio(this, 'salarySacrifice', 'yes')">Yes</button>
+          <button type="button" class="radio-btn" onclick="setRadio(this, 'salarySacrifice', 'no')">No</button>
+          <button type="button" class="radio-btn" onclick="setRadio(this, 'salarySacrifice', 'unsure')">Not sure</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button type="button" class="btn-primary" onclick="stepValidate(1) && goTo(2)">Next</button>
+    </div>
+  </div>
+
+  <!-- STEP 2: YOUR MORTGAGE -->
+  <div class="card" id="step2">
+    <div class="card-title">Your mortgage</div>
+    <p class="card-subtitle">Tell us about your current mortgage arrangement.</p>
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Remaining mortgage balance</label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="mortgageBalance" placeholder="e.g. 130000" min="0">
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Mortgage interest rate</label>
+        <div class="input-wrap">
+          <input type="number" id="mortgageRate" placeholder="e.g. 3.9" min="0" max="20" step="0.1">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+      <div class="field-group">
+        <label>Years remaining on mortgage</label>
+        <div class="input-wrap">
+          <input type="number" id="mortgageYears" placeholder="e.g. 26" min="1" max="50">
+        </div>
+      </div>
+      <div class="field-group">
+        <label>
+          <span class="tooltip-wrap">
+            Current monthly payment
+            <span class="tooltip-icon" tabindex="0">?</span>
+            <span class="tooltip-bubble">Your normal monthly mortgage payment before any overpayments.</span>
+          </span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="monthlyPayment" placeholder="e.g. 708" min="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Is your rate fixed?</label>
+      <div class="radio-group">
+        <button type="button" class="radio-btn selected" onclick="setRadio(this, 'rateFixed', 'yes'); showFixedOptions();">Yes — fixed</button>
+        <button type="button" class="radio-btn" onclick="setRadio(this, 'rateFixed', 'no'); hideFixedOptions();">No — variable</button>
+        <button type="button" class="radio-btn" onclick="setRadio(this, 'rateFixed', 'unsure'); hideFixedOptions();">Not sure</button>
+      </div>
+    </div>
+
+    <div id="fixedOptions" style="display:none;">
+      <div class="two-col">
+        <div class="field-group">
+          <label>Fixed until (month/year)</label>
+          <input type="month" id="fixedUntil">
+          <div class="hint">Early repayment charges may apply if you overpay beyond the allowed threshold.</div>
+        </div>
+        <div class="field-group">
+          <label>
+            <span class="tooltip-wrap">
+              Annual overpayment allowance
+              <span class="tooltip-icon" tabindex="0">?</span>
+              <span class="tooltip-bubble">Most fixed mortgages let you overpay up to 10% of the balance per year without penalty.</span>
+            </span>
+          </label>
+          <div class="input-wrap">
+            <span class="input-prefix">£</span>
+            <input type="number" id="overpaymentAllowance" placeholder="e.g. 13000" min="0">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="guidance-box">
+      <h4>Early repayment charges</h4>
+      <p>Most fixed-rate mortgages allow overpayments of up to 10% of the outstanding balance per year without early repayment charges. Check your mortgage terms for the exact allowance.</p>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goTo(1)">Back</button>
+      <button type="button" class="btn-primary" onclick="stepValidate(2) && goTo(3)">Next</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: YOUR PENSIONS -->
+  <div class="card" id="step3">
+    <div class="card-title">Your pensions</div>
+    <p class="card-subtitle">Tell us about your current pension arrangements.</p>
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Do you have any defined benefit (DB) pensions?</label>
+        <div class="radio-group">
+          <button type="button" class="radio-btn" onclick="setRadio(this, 'hasDB', 'yes'); showDBPensions();">Yes</button>
+          <button type="button" class="radio-btn selected" onclick="setRadio(this, 'hasDB', 'no'); hideDBPensions();">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="dbSection" style="display:none;">
+      <div class="two-col">
+        <div class="field-group">
+          <label>DB Pension 1 — Annual amount</label>
+          <div class="input-wrap">
+            <span class="input-prefix">£</span>
+            <input type="number" id="db1Amount" placeholder="e.g. 8000" min="0">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>DB Pension 1 — Payable from age</label>
+          <input type="number" id="db1Age" placeholder="e.g. 65" min="55" max="80">
+        </div>
+        <div class="field-group">
+          <label>DB Pension 2 — Annual amount</label>
+          <div class="input-wrap">
+            <span class="input-prefix">£</span>
+            <input type="number" id="db2Amount" placeholder="e.g. 4000" min="0">
+          </div>
+        </div>
+        <div class="field-group">
+          <label>DB Pension 2 — Payable from age</label>
+          <input type="number" id="db2Age" placeholder="e.g. 60" min="55" max="80">
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="field-group">
+        <label>Existing pension pot (optional)</label>
+        <div class="input-wrap">
+          <span class="input-prefix">£</span>
+          <input type="number" id="pensionPot" placeholder="e.g. 50000" min="0">
+        </div>
+        <div class="hint">Your current defined contribution pension pot value.</div>
+      </div>
+      <div class="field-group">
+        <label>Target retirement age</label>
+        <input type="number" id="retirementAge" placeholder="e.g. 60" min="50" max="80">
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>State pension?</label>
+      <div class="radio-group">
+        <button type="button" class="radio-btn selected" onclick="setRadio(this, 'hasState', 'yes')">Yes</button>
+        <button type="button" class="radio-btn" onclick="setRadio(this, 'hasState', 'no')">No</button>
+      </div>
+      <div class="hint">Assumes £11,973/year from age 67 if yes.</div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goTo(2)">Back</button>
+      <button type="button" class="btn-primary" onclick="if(stepValidate(3)){goTo(4);displayResults();trackToolStart('mortgage-vs-pension');}">Calculate</button>
+    </div>
+  </div>
+
+  <!-- STEP 4: YOUR STRATEGIES (RESULTS) -->
+  <div class="card" id="step4">
+    <div class="card-title">Your strategies</div>
+    <p class="card-subtitle">Compare three approaches to see which builds more wealth for you.</p>
+
+    <div class="strategy-cards" id="strategyCards"></div>
+
+    <hr>
+
+    <div class="field-group">
+      <label>View year-by-year breakdown for:</label>
+      <div class="radio-group" id="timelineStrategySelect"></div>
+    </div>
+
+    <div style="overflow-x: auto;">
+      <table class="timeline-table" id="timelineTable"></table>
+    </div>
+
+    <div id="gapAnalysis" class="guidance-box"></div>
+
+    <div id="keyInsight" class="guidance-box" style="margin-top: 1.5rem;"></div>
+
+    <div class="accordion" id="detailAccordion"></div>
+
+    <div class="btn-row">
+      <button class="btn-secondary" onclick="goTo(3)">Back</button>
+      <button type="button" class="btn-primary" onclick="trackToolComplete('mortgage-vs-pension'); downloadResults();">Download summary</button>
+    </div>
+  </div>
+
+</div>
+
+<section class="email-capture">
+  <div class="ec-inner">
+    <h3>Get free tax-year updates</h3>
+    <p>Plain-English pension &amp; tax tips for UK taxpayers. No spam, unsubscribe anytime.</p>
+    <button class="ec-btn" data-tally-open="zxZByE" data-tally-layout="modal" data-tally-emoji-animation="none">Subscribe free</button>
+  </div>
+</section>
+
+<footer>
+  <div style="max-width: 900px; margin: 0 auto; display: flex; gap: 1.25rem; align-items: flex-start;">
+    <div style="font-size: 1.5rem; line-height:1; flex-shrink:0;">⚠️</div>
+    <div>
+      <div style="font-family: 'Playfair Display', serif; color: var(--emerald-light); font-size: 0.95rem; margin-bottom: 0.4rem;">Important — Not Financial or Tax Advice</div>
+      <p style="color: rgba(255,255,255,0.55); font-size: 0.8rem; line-height: 1.7; margin:0;">
+        This tool is for illustrative and educational purposes only. It does not constitute financial, tax, or legal advice. Calculations are estimates based on standard 2025/26 UK tax rates and may not reflect your individual circumstances. Tax rules and mortgage terms are subject to change. Always verify your position with <a href="https://www.gov.uk/contact-hmrc" target="_blank">HMRC</a> or a qualified financial adviser before making decisions.
+      </p>
+    </div>
+  </div>
+  <div style="max-width:900px; margin:0.75rem auto 0; text-align:center;">
+    <a href="#" data-tally-open="VLV7pE" data-tally-emoji-animation="wave" style="color:rgba(255,255,255,0.35); font-size:0.75rem; text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">Spotted a bug or have a suggestion? Let us know</a>
+  </div>
+</footer>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────────────────
+let state = {
+  age: 0,
+  salary: 0,
+  monthlySpare: 0,
+  annualBonus: 0,
+  currentPensionPct: 5,
+  employerPensionPct: 5,
+  salarySacrifice: 'yes',
+  mortgageBalance: 0,
+  mortgageRate: 0,
+  mortgageYears: 0,
+  monthlyPayment: 0,
+  rateFixed: 'yes',
+  fixedUntil: '',
+  overpaymentAllowance: 0,
+  hasDB: 'no',
+  db1Amount: 0,
+  db1Age: 65,
+  db2Amount: 0,
+  db2Age: 65,
+  pensionPot: 0,
+  retirementAge: 60,
+  hasState: 'yes'
+};
+
+const PA = 12570, BRT = 50270, HRT = 125140;
+const NI_PT = 12570, NI_UEL = 50270;
+
+// ── HELPERS ────────────────────────────────────────────────────────────────
+const fmt = n => '£' + Math.round(n).toLocaleString('en-GB');
+const pct = n => Math.round(n * 100) + '%';
+
+function setRadio(el, key, val) {
+  const parent = el.parentElement;
+  parent.querySelectorAll('.radio-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  state[key] = val;
+}
+
+function toggleSwitcher(e) {
+  e.stopPropagation();
+  document.getElementById('appSwitcher').classList.toggle('open');
+}
+document.addEventListener('click', function() {
+  document.getElementById('appSwitcher').classList.remove('open');
+});
+
+function goTo(step) {
+  document.querySelectorAll('.card').forEach((c, i) => {
+    c.classList.toggle('active', i + 1 === step);
+  });
+  document.querySelectorAll('.step-tab').forEach((t, i) => {
+    t.classList.toggle('active', i + 1 === step);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function stepValidate(step) {
+  const fields = {
+    1: ['age', 'salary', 'monthlySpare'],
+    2: ['mortgageBalance', 'mortgageRate', 'mortgageYears', 'monthlyPayment'],
+    3: ['retirementAge']
+  };
+  const required = fields[step] || [];
+  let valid = true;
+  required.forEach(f => {
+    const el = document.getElementById(f);
+    if (!el || el.value === '') {
+      valid = false;
+      if (el) { el.style.borderColor = '#e53e3e'; el.focus(); }
+    } else {
+      if (el) el.style.borderColor = '';
+    }
+  });
+  if (!valid) return false;
+  // Sync values to state
+  if (step === 1) {
+    state.age = parseFloat(document.getElementById('age').value) || 0;
+    state.salary = parseFloat(document.getElementById('salary').value) || 0;
+    state.monthlySpare = parseFloat(document.getElementById('monthlySpare').value) || 0;
+    state.annualBonus = parseFloat(document.getElementById('annualBonus').value) || 0;
+    state.currentPensionPct = parseFloat(document.getElementById('currentPensionPct').value) || 0;
+    state.employerPensionPct = parseFloat(document.getElementById('employerPensionPct').value) || 0;
+  } else if (step === 2) {
+    state.mortgageBalance = parseFloat(document.getElementById('mortgageBalance').value) || 0;
+    state.mortgageRate = parseFloat(document.getElementById('mortgageRate').value) || 0;
+    state.mortgageYears = parseFloat(document.getElementById('mortgageYears').value) || 0;
+    state.monthlyPayment = parseFloat(document.getElementById('monthlyPayment').value) || 0;
+  } else if (step === 3) {
+    state.retirementAge = parseFloat(document.getElementById('retirementAge').value) || 60;
+    state.pensionPot = parseFloat(document.getElementById('pensionPot').value) || 0;
+    if (state.hasDB === 'yes') {
+      state.db1Amount = parseFloat(document.getElementById('db1Amount').value) || 0;
+      state.db1Age = parseFloat(document.getElementById('db1Age').value) || 65;
+      state.db2Amount = parseFloat(document.getElementById('db2Amount').value) || 0;
+      state.db2Age = parseFloat(document.getElementById('db2Age').value) || 65;
+    }
+  }
+  return true;
+}
+
+function showFixedOptions() {
+  document.getElementById('fixedOptions').style.display = 'block';
+}
+
+function hideFixedOptions() {
+  document.getElementById('fixedOptions').style.display = 'none';
+}
+
+function showDBPensions() {
+  document.getElementById('dbSection').style.display = 'block';
+}
+
+function hideDBPensions() {
+  document.getElementById('dbSection').style.display = 'none';
+}
+
+// ── TAX CALCULATION ────────────────────────────────────────────────────────
+function calculateTax(grossSalary, pensionContribution = 0) {
+  let taxable = grossSalary - pensionContribution;
+  let tax = 0;
+  // Basic rate: 20% on PA to BRT
+  if (taxable > PA) {
+    tax += (Math.min(taxable, BRT) - PA) * 0.2;
+  }
+  // Higher rate: 40% on BRT to HRT
+  if (taxable > BRT) {
+    tax += (Math.min(taxable, HRT) - BRT) * 0.4;
+  }
+  // Additional rate: 45% above HRT
+  if (taxable > HRT) {
+    tax += (taxable - HRT) * 0.45;
+  }
+  return tax;
+}
+
+function calculateNI(grossSalary, pensionContribution = 0) {
+  let niBase = grossSalary - pensionContribution;
+  let ni = 0;
+  if (niBase > NI_PT) {
+    ni = (Math.min(niBase, NI_UEL) - NI_PT) * 0.08;
+    if (niBase > NI_UEL) ni += (niBase - NI_UEL) * 0.02;
+  }
+  return ni;
+}
+
+function getTaxRelief(pensionContribution, grossSalary) {
+  const taxBefore = calculateTax(grossSalary);
+  const niBefore = calculateNI(grossSalary);
+  const taxAfter = calculateTax(grossSalary, pensionContribution);
+  const niAfter = calculateNI(grossSalary, pensionContribution);
+  return (taxBefore - taxAfter) + (niBefore - niAfter);
+}
+
+// ── MORTGAGE AMORTISATION ──────────────────────────────────────────────────
+function amortiseMortgage(balance, annualRate, yearsRemaining, monthlyPayment, overpaymentPerMonth) {
+  const monthlyRate = annualRate / 100 / 12;
+  let remaining = balance;
+  let yearsData = [];
+  let paidOffAge = null;
+
+  for (let year = 0; year < yearsRemaining; year++) {
+    let yearEnd = remaining;
+    for (let month = 0; month < 12; month++) {
+      const interest = yearEnd * monthlyRate;
+      const principal = monthlyPayment + overpaymentPerMonth - interest;
+      yearEnd -= principal;
+      if (yearEnd <= 0) {
+        yearEnd = 0;
+        if (!paidOffAge) paidOffAge = state.age + year + (month / 12);
+        break;
+      }
+    }
+    remaining = yearEnd;
+    yearsData.push({ year: state.age + year, balance: Math.max(0, remaining) });
+    if (remaining <= 0) break;
+  }
+
+  return { yearsData, paidOffAge: paidOffAge || state.age + yearsRemaining };
+}
+
+// ── PENSION PROJECTION ─────────────────────────────────────────────────────
+function projectPension(annualContribution, yearsToRetirement) {
+  let pot = parseFloat(state.pensionPot) || 0;
+  let yearsData = [];
+  const growth = 0.04;
+
+  for (let year = 0; year <= yearsToRetirement; year++) {
+    pot *= (1 + growth);
+    pot += annualContribution;
+    yearsData.push({ year: state.age + year, pot: pot });
+  }
+
+  return { yearsData, finalPot: pot };
+}
+
+// ── MAIN CALCULATION ───────────────────────────────────────────────────────
+function calculateStrategies() {
+  const yearsToRetirement = parseInt(state.retirementAge) - parseInt(state.age);
+  const annualSpare = parseInt(state.monthlySpare) * 12 + (parseInt(state.annualBonus) || 0);
+  const monthlySpare = parseInt(state.monthlySpare);
+  const annualBonus = parseInt(state.annualBonus) || 0;
+
+  const salary = parseInt(state.salary);
+  const currentPensionAnnual = salary * (parseInt(state.currentPensionPct) / 100);
+  const employerContribution = salary * (parseInt(state.employerPensionPct) / 100);
+
+  // Mortgage amortisation
+  const monthlyOverpaymentA = monthlySpare;
+  const mortgageA = amortiseMortgage(parseInt(state.mortgageBalance), parseFloat(state.mortgageRate), parseInt(state.mortgageYears), parseInt(state.monthlyPayment), monthlyOverpaymentA);
+
+  // Strategy A: All Mortgage
+  const pensionContribA = currentPensionAnnual + employerContribution;
+  const taxReliefA = 0;
+  const pensionA = projectPension(pensionContribA, yearsToRetirement);
+
+  // Strategy B: All Pension
+  const additionalPensionB = annualSpare;
+  const pensionContribB = currentPensionAnnual + employerContribution + additionalPensionB;
+  const taxReliefB = getTaxRelief(additionalPensionB, salary) * yearsToRetirement;
+  const pensionB = projectPension(pensionContribB, yearsToRetirement);
+  const mortgageB = amortiseMortgage(parseInt(state.mortgageBalance), parseFloat(state.mortgageRate), parseInt(state.mortgageYears), parseInt(state.monthlyPayment), 0);
+
+  // Strategy C: Smart Split
+  // If higher-rate taxpayer, prioritise pension up to amount that brings taxable income to BRT
+  // (maximises 40% relief). Remainder goes to mortgage.
+  const taxableIncome = salary - currentPensionAnnual;
+  const higherRateExcess = Math.max(0, taxableIncome - BRT);
+  // Put enough into pension to use up higher-rate band, rest to mortgage
+  const pensionPriorityC = salary > BRT ? Math.min(higherRateExcess, annualSpare) : annualSpare * 0.4;
+  const mortgageRemainderC = annualSpare - pensionPriorityC;
+  const monthlyOverpaymentC = mortgageRemainderC / 12;
+  const additionalPensionC = pensionPriorityC;
+  const pensionContribC = currentPensionAnnual + employerContribution + additionalPensionC;
+  const taxReliefC = getTaxRelief(additionalPensionC, salary) * yearsToRetirement;
+  const pensionC = projectPension(pensionContribC, yearsToRetirement);
+  const mortgageC = amortiseMortgage(parseInt(state.mortgageBalance), parseFloat(state.mortgageRate), parseInt(state.mortgageYears), parseInt(state.monthlyPayment), monthlyOverpaymentC);
+
+  return {
+    A: {
+      name: 'All Mortgage',
+      desc: 'Every spare penny attacks the mortgage. Your pension stays as-is.',
+      how: fmt(monthlySpare) + '/mo + ' + fmt(annualBonus) + ' bonus → mortgage overpayment',
+      mortgageData: mortgageA, pensionData: pensionA, taxRelief: taxReliefA, mortgagePaidOff: mortgageA.paidOffAge, pensionPot: pensionA.finalPot
+    },
+    B: {
+      name: 'All Pension',
+      desc: 'Every spare penny boosts your pension via salary sacrifice. Mortgage runs its normal term.',
+      how: fmt(monthlySpare) + '/mo + ' + fmt(annualBonus) + ' bonus → extra pension contributions',
+      mortgageData: mortgageB, pensionData: pensionB, taxRelief: taxReliefB, mortgagePaidOff: mortgageB.paidOffAge, pensionPot: pensionB.finalPot
+    },
+    C: {
+      name: 'Smart Split',
+      desc: salary > BRT
+        ? 'Puts ' + fmt(Math.round(pensionPriorityC)) + '/yr into pension to use up your 40% tax band, then ' + fmt(Math.round(mortgageRemainderC)) + '/yr overpays the mortgage.'
+        : 'Splits 40/60 between pension and mortgage — a balanced approach at basic rate.',
+      how: fmt(Math.round(pensionPriorityC / 12)) + '/mo → pension, ' + fmt(Math.round(monthlyOverpaymentC)) + '/mo → mortgage',
+      splitPension: pensionPriorityC,
+      splitMortgage: mortgageRemainderC,
+      isHigherRate: salary > BRT,
+      mortgageData: mortgageC, pensionData: pensionC, taxRelief: taxReliefC, mortgagePaidOff: mortgageC.paidOffAge, pensionPot: pensionC.finalPot
+    }
+  };
+}
+
+function displayResults() {
+  const strategies = calculateStrategies();
+  const yearsToRetirement = parseInt(state.retirementAge) - parseInt(state.age);
+
+  // Display strategy cards
+  const cardsHTML = Object.entries(strategies).map(([key, strategy]) => {
+    const netWealth = strategy.pensionPot - (strategy.mortgageData.yearsData[strategy.mortgageData.yearsData.length - 1]?.balance || 0);
+    return `<div class="strategy-card">
+      <h3>${strategy.name}</h3>
+      <p class="sc-desc">${strategy.desc}</p>
+      <div class="sc-how">${strategy.how}</div>
+      <div class="strategy-metric">
+        <span class="label">Mortgage paid off by age</span>
+        <span class="value">${Math.round(strategy.mortgagePaidOff)}</span>
+      </div>
+      <div class="strategy-metric">
+        <span class="label">Pension pot at retirement</span>
+        <span class="value">${fmt(strategy.pensionPot)}</span>
+      </div>
+      <div class="strategy-metric">
+        <span class="label">Tax relief earned</span>
+        <span class="value">${fmt(strategy.taxRelief)}</span>
+      </div>
+      <div class="strategy-metric total">
+        <span class="label">Net wealth at retirement</span>
+        <span class="value">${fmt(netWealth)}</span>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('strategyCards').innerHTML = cardsHTML;
+
+  // Mark winner
+  let bestStrategy = null, bestWealth = -Infinity;
+  Object.entries(strategies).forEach(([key, strategy]) => {
+    const netWealth = strategy.pensionPot - (strategy.mortgageData.yearsData[strategy.mortgageData.yearsData.length - 1]?.balance || 0);
+    if (netWealth > bestWealth) {
+      bestWealth = netWealth;
+      bestStrategy = key;
+    }
+  });
+  if (bestStrategy) {
+    document.querySelectorAll('.strategy-card')[['A', 'B', 'C'].indexOf(bestStrategy)].classList.add('winner');
+    document.querySelectorAll('.strategy-card')[['A', 'B', 'C'].indexOf(bestStrategy)].innerHTML = `<div class="winner-badge">Winner</div>` + document.querySelectorAll('.strategy-card')[['A', 'B', 'C'].indexOf(bestStrategy)].innerHTML;
+  }
+
+  // Timeline
+  const timelineHTML = ['A', 'B', 'C'].map(key => {
+    const strategy = strategies[key];
+    let html = `<option value="${key}">${strategy.name}</option>`;
+    return html;
+  }).join('');
+  document.getElementById('timelineStrategySelect').innerHTML = `<div style="width:100%;"><select id="timelineSelect" onchange="updateTimeline()" style="width:100%;padding:0.65rem;border:1.5px solid #dde1e7;border-radius:8px;font-size:0.9rem;">${timelineHTML}</select></div>`;
+
+  updateTimeline();
+
+  // Gap analysis
+  const mortgageA = strategies.A.mortgageData.yearsData[strategies.A.mortgageData.yearsData.length - 1]?.balance || 0;
+  const gapAge = Math.round(strategies.A.mortgagePaidOff);
+  const dbAge = Math.max(parseInt(state.db1Age) || 65, parseInt(state.db2Age) || 65);
+  const gapYears = dbAge - gapAge;
+
+  if (gapYears > 0) {
+    document.getElementById('gapAnalysis').innerHTML = `<h4>Income gap between retirement and pensions</h4>
+    <p>Between age ${gapAge} (mortgage paid off) and age ${dbAge} (DB pensions start), you'll need to fund ${gapYears} years of living expenses from your DC pension pot. Make sure it's sufficient for this bridge period.</p>`;
+  } else {
+    document.getElementById('gapAnalysis').innerHTML = `<h4>No funding gap</h4>
+    <p>Your DC pension will start paying before your DB pensions begin, or they overlap. Good planning!</p>`;
+  }
+
+  // Key insight
+  const rate = parseFloat(state.mortgageRate);
+  const annualSpare = parseInt(state.monthlySpare) * 12 + (parseInt(state.annualBonus) || 0);
+  const reliefPerYear = annualSpare > 0 ? getTaxRelief(annualSpare, parseInt(state.salary)) : 0;
+  const effectiveCost = annualSpare > 0 ? ((annualSpare - reliefPerYear) / annualSpare * 100).toFixed(0) : 100;
+  document.getElementById('keyInsight').innerHTML = `<h4>The key insight</h4>
+    <p>Your mortgage costs <strong>${rate}% per year</strong>. Pension contributions via salary sacrifice give you an immediate <strong>${annualSpare > 0 ? Math.round(reliefPerYear / annualSpare * 100) : 0}% return</strong> in tax and NI savings. For every £1 you put into your pension, you only lose <strong>${effectiveCost}p</strong> in take-home pay.</p>`;
+
+  // Accordion for detail
+  const accordionHTML = ['A', 'B', 'C'].map(key => {
+    const strategy = strategies[key];
+    const mortgageBalance = strategy.mortgageData.yearsData[strategy.mortgageData.yearsData.length - 1]?.balance || 0;
+    return `<div class="accordion-item">
+      <div class="accordion-header" onclick="this.parentElement.classList.toggle('open')">
+        <span>${strategy.name} — detailed maths</span>
+        <span class="chevron">▼</span>
+      </div>
+      <div class="accordion-content">
+        <p><strong>Mortgage position:</strong> Balance paid off by age ${Math.round(strategy.mortgagePaidOff)}, final balance £${Math.round(mortgageBalance).toLocaleString('en-GB')}</p>
+        <p><strong>Pension position:</strong> Pot value at retirement: ${fmt(strategy.pensionPot)}</p>
+        <p><strong>Tax relief:</strong> Total over ${yearsToRetirement} years: ${fmt(strategy.taxRelief)}</p>
+        <p><strong>Net wealth:</strong> ${fmt(strategy.pensionPot - mortgageBalance)}</p>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('detailAccordion').innerHTML = accordionHTML;
+}
+
+function updateTimeline() {
+  const selected = document.getElementById('timelineSelect').value;
+  const strategies = calculateStrategies();
+  const strategy = strategies[selected];
+
+  let rows = [];
+  const yearsToRetirement = parseInt(state.retirementAge) - parseInt(state.age);
+
+  for (let year = 0; year <= yearsToRetirement; year++) {
+    const age = parseInt(state.age) + year;
+    const mortgageData = strategy.mortgageData.yearsData[year];
+    const pensionData = strategy.pensionData.yearsData[year];
+
+    const mortgageBalance = mortgageData?.balance || 0;
+    const pensionPot = pensionData?.pot || 0;
+    const netWealth = pensionPot - mortgageBalance;
+
+    const classes = [];
+    if (mortgageBalance === 0) classes.push('milestone-mortgage');
+    if (age >= 57 && year === Math.floor(yearsToRetirement * 0.5)) classes.push('milestone-milestone');
+
+    rows.push(`<tr class="${classes.join(' ')}">
+      <td>${age}</td>
+      <td>${fmt(mortgageBalance)}</td>
+      <td>${fmt(pensionPot)}</td>
+      <td>${fmt(netWealth)}</td>
+    </tr>`);
+  }
+
+  const table = `<thead><tr>
+    <th>Age</th>
+    <th>Mortgage balance</th>
+    <th>Pension pot</th>
+    <th>Net wealth</th>
+  </tr></thead><tbody>${rows.join('')}</tbody>`;
+
+  document.getElementById('timelineTable').innerHTML = table;
+}
+
+function downloadResults() {
+  const strategies = calculateStrategies();
+  let text = 'My Pay Picture — Mortgage vs Pension Analysis\n\n';
+  Object.entries(strategies).forEach(([key, s]) => {
+    text += `Strategy ${key}: ${s.name}\n`;
+    text += `Mortgage paid off by age: ${Math.round(s.mortgagePaidOff)}\n`;
+    text += `Pension pot: ${fmt(s.pensionPot)}\n`;
+    text += `Tax relief: ${fmt(s.taxRelief)}\n\n`;
+  });
+  const blob = new Blob([text], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'mortgage-vs-pension-summary.txt';
+  a.click();
+}
+
+// Load state on page load
+window.addEventListener('load', () => {
+  ['age', 'salary', 'monthlySpare', 'annualBonus', 'currentPensionPct', 'employerPensionPct', 'mortgageBalance', 'mortgageRate', 'mortgageYears', 'monthlyPayment', 'db1Amount', 'db1Age', 'db2Amount', 'db2Age', 'pensionPot', 'retirementAge'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('change', () => { state[id] = el.value; });
+    }
+  });
+});
+</script>
+
+<script>
+// ── Hero data-inspired motion graphics ──────────────────────────────────────
+(function() {
+  var canvas = document.getElementById('heroCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W, H;
+
+  function resize() {
+    var rect = canvas.parentElement.getBoundingClientRect();
+    W = rect.width; H = rect.height;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var symbols = ['£', '%', '+', '£', '£', '%', '+', '£'];
+  var amounts = ['120', '5', '40', '250', '80', '12', '60', '300'];
+
+  function Particle() {
+    this.reset(true);
+  }
+  Particle.prototype.reset = function(init) {
+    this.x = Math.random() * W;
+    this.y = init ? Math.random() * H : H + 20;
+    this.speed = 0.15 + Math.random() * 0.35;
+    this.opacity = 0;
+    this.maxOpacity = 0.06 + Math.random() * 0.08;
+    this.fadeIn = true;
+    this.size = 10 + Math.random() * 6;
+    var i = Math.floor(Math.random() * symbols.length);
+    this.text = symbols[i] + amounts[i];
+    this.drift = (Math.random() - 0.5) * 0.15;
+  };
+  Particle.prototype.update = function() {
+    this.y -= this.speed;
+    this.x += this.drift;
+    if (this.fadeIn) {
+      this.opacity += 0.002;
+      if (this.opacity >= this.maxOpacity) this.fadeIn = false;
+    }
+    if (this.y < H * 0.15) {
+      this.opacity -= 0.003;
+    }
+    if (this.y < -30 || this.opacity <= 0) this.reset(false);
+  };
+  Particle.prototype.draw = function() {
+    ctx.globalAlpha = Math.max(0, this.opacity);
+    ctx.font = this.size + 'px "DM Sans", sans-serif';
+    ctx.fillStyle = '#34d399';
+    ctx.fillText(this.text, this.x, this.y);
+  };
+
+  var lines = [];
+  function makeLine() {
+    var pts = [];
+    var segments = 6 + Math.floor(Math.random() * 4);
+    var baseY = H * (0.35 + Math.random() * 0.45);
+    for (var j = 0; j <= segments; j++) {
+      pts.push({
+        x: (W / segments) * j,
+        y: baseY + (Math.random() - 0.4) * 40
+      });
+    }
+    return {
+      pts: pts,
+      opacity: 0,
+      maxOpacity: 0.04 + Math.random() * 0.04,
+      phase: 0,
+      speed: 0.003 + Math.random() * 0.004,
+      color: Math.random() > 0.5 ? '#34d399' : '#5eead4'
+    };
+  }
+  for (var l = 0; l < 3; l++) lines.push(makeLine());
+
+  function drawLine(line) {
+    if (line.opacity <= 0.001) return;
+    ctx.globalAlpha = line.opacity;
+    ctx.strokeStyle = line.color;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    var p = line.pts;
+    ctx.moveTo(p[0].x, p[0].y);
+    for (var i = 1; i < p.length; i++) {
+      var xc = (p[i - 1].x + p[i].x) / 2;
+      var yc = (p[i - 1].y + p[i].y) / 2;
+      ctx.quadraticCurveTo(p[i - 1].x, p[i - 1].y, xc, yc);
+    }
+    ctx.stroke();
+  }
+
+  var particles = [];
+  var maxParticles = 18;
+  for (var p = 0; p < maxParticles; p++) particles.push(new Particle());
+
+  var paused = false;
+  var observer = new IntersectionObserver(function(entries) {
+    paused = !entries[0].isIntersecting;
+  }, { threshold: 0.1 });
+  observer.observe(canvas.parentElement);
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function frame() {
+    if (prefersReduced) return;
+    if (!paused) {
+      ctx.clearRect(0, 0, W, H);
+
+      for (var l = 0; l < lines.length; l++) {
+        var ln = lines[l];
+        ln.phase += ln.speed;
+        ln.opacity = ln.maxOpacity * (0.5 + 0.5 * Math.sin(ln.phase));
+        for (var j = 0; j < ln.pts.length; j++) {
+          ln.pts[j].y += Math.sin(ln.phase + j) * 0.08;
+        }
+        drawLine(ln);
+      }
+
+      for (var i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+      }
+
+      ctx.globalAlpha = 1;
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+
+<script src="https://tally.so/widgets/embed.js"></script>
+</body>
+</html>
