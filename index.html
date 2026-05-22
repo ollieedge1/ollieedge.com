@@ -471,6 +471,7 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
     .to('.tbtn', { autoAlpha: 1, duration: 0.3 }, '-=0.1');
 
   /* ── Bio split-line reveal ── */
+  var bioEl = document.getElementById('bio');
   var bioLines = document.querySelectorAll('.bio-line');
   if (bioLines.length) {
     gsap.to(bioLines, {
@@ -483,6 +484,18 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
         trigger: '#bio',
         start: 'top 95%',
         toggleActions: 'play none none none'
+      },
+      onComplete: function() {
+        /* Unwrap masks so text reflows naturally at any width */
+        if (!bioEl) return;
+        var spans = bioEl.querySelectorAll('span');
+        var frag = document.createDocumentFragment();
+        spans.forEach(function(s, i) {
+          if (i > 0) frag.appendChild(document.createTextNode(' '));
+          frag.appendChild(s);
+        });
+        bioEl.innerHTML = '';
+        bioEl.appendChild(frag);
       }
     });
   }
@@ -598,7 +611,7 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
   } /* end expViewAll */
   } /* end timeline block */
 
-  /* ═══ INFINITE GSAP CARD CAROUSEL ═══ */
+  /* ═══ GSAP CARD CAROUSEL (FINITE) ═══ */
   (function() {
     var track = document.getElementById('workTrack');
     var prevBtn = document.getElementById('wPrev');
@@ -606,55 +619,18 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
     var counter = document.getElementById('workCounter');
     if (!track || !prevBtn || !nextBtn) return;
 
-    var realCards = gsap.utils.toArray(track.querySelectorAll('.wcard'));
-    var total = realCards.length;
+    var cards = gsap.utils.toArray(track.querySelectorAll('.wcard'));
+    var total = cards.length;
     if (total < 2) return;
 
-    /* ── Clone first and last cards ── */
-    var lastClone = realCards[total - 1].cloneNode(true);
-    var firstClone = realCards[0].cloneNode(true);
-    lastClone.setAttribute('aria-hidden', 'true');
-    firstClone.setAttribute('aria-hidden', 'true');
-    lastClone.classList.add('wcard-clone');
-    firstClone.classList.add('wcard-clone');
-    track.insertBefore(lastClone, track.firstChild);
-    track.appendChild(firstClone);
-
-    /* ── Re-attach theme hover & case study listeners on clones ── */
-    [lastClone, firstClone].forEach(function(clone) {
-      var theme = clone.dataset.theme;
-      if (theme && cardThemes[theme]) {
-        clone.addEventListener('mouseenter', function() {
-          clearTimeout(workThemeTimer);
-          setT(cardThemes[theme]);
-        });
-        clone.addEventListener('mouseleave', function() {
-          workThemeTimer = setTimeout(function() { setT(getDefault()); }, 250);
-        });
-      }
-      var proj = clone.dataset.project;
-      if (proj) {
-        var sX = 0, sY = 0, sTime = 0;
-        clone.addEventListener('pointerdown', function(e) { sX = e.clientX; sY = e.clientY; sTime = Date.now(); });
-        clone.addEventListener('pointerup', function(e) {
-          if (Math.abs(e.clientX - sX) < 15 && Math.abs(e.clientY - sY) < 15 && Date.now() - sTime < 500) {
-            openCaseStudy(proj);
-          }
-        });
-        clone.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCaseStudy(proj); } });
-      }
-    });
-
-    /* ── Measurements ── */
-    var cur = 1; /* start at first real card (index 1 because of prepended clone) */
+    var cur = 0;
     var animating = false;
-    var gap, cardW, padL;
+    var gap, cardW;
 
     function measure() {
       var cs = getComputedStyle(track);
       gap = parseFloat(cs.gap) || 24;
-      padL = parseFloat(cs.paddingLeft) || 48;
-      cardW = track.querySelector('.wcard').offsetWidth;
+      cardW = cards[0].offsetWidth;
     }
     measure();
 
@@ -662,40 +638,34 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
       return -(idx * (cardW + gap));
     }
 
-    /* ── Set initial position (no animation) ── */
-    gsap.set(track, { x: getX(cur) });
+    function updateArrows() {
+      prevBtn.disabled = cur === 0;
+      nextBtn.disabled = cur === total - 1;
+      prevBtn.style.opacity = cur === 0 ? '0.3' : '1';
+      nextBtn.style.opacity = cur === total - 1 ? '0.3' : '1';
+    }
 
     function updateCounter() {
       if (!counter) return;
-      var real = cur;
-      if (real <= 0) real = total;
-      if (real > total) real = 1;
-      counter.textContent = ('0' + real).slice(-2) + ' / ' + ('0' + total).slice(-2);
+      counter.textContent = ('0' + (cur + 1)).slice(-2) + ' / ' + ('0' + total).slice(-2);
     }
+
+    gsap.set(track, { x: getX(0) });
     updateCounter();
+    updateArrows();
 
     function goTo(idx) {
-      if (animating) return;
+      if (animating || idx < 0 || idx > total - 1) return;
       animating = true;
       cur = idx;
       updateCounter();
+      updateArrows();
 
       gsap.to(track, {
         x: getX(cur),
         duration: 0.55,
         ease: 'power2.inOut',
-        onComplete: function() {
-          /* ── Infinite wrap: snap back silently ── */
-          if (cur > total) {
-            cur = 1;
-            gsap.set(track, { x: getX(cur) });
-          } else if (cur < 1) {
-            cur = total;
-            gsap.set(track, { x: getX(cur) });
-          }
-          updateCounter();
-          animating = false;
-        }
+        onComplete: function() { animating = false; }
       });
     }
 
@@ -712,12 +682,11 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
 
     /* ── Touch/pointer swipe ── */
     var wrap = track.parentElement;
-    var swStartX = 0, swStartY = 0, swDragging = false, swDx = 0;
+    var swStartX = 0, swDragging = false, swDx = 0;
 
     wrap.addEventListener('pointerdown', function(e) {
       if (animating) return;
       swStartX = e.clientX;
-      swStartY = e.clientY;
       swDragging = true;
       swDx = 0;
     });
@@ -725,20 +694,23 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
     wrap.addEventListener('pointermove', function(e) {
       if (!swDragging) return;
       swDx = e.clientX - swStartX;
-      /* Live drag feedback */
-      gsap.set(track, { x: getX(cur) + swDx * 0.6 });
+      /* Rubber-band at edges */
+      var dampened = swDx * 0.6;
+      if ((cur === 0 && swDx > 0) || (cur === total - 1 && swDx < 0)) {
+        dampened = swDx * 0.15;
+      }
+      gsap.set(track, { x: getX(cur) + dampened });
     });
 
     function endSwipe() {
       if (!swDragging) return;
       swDragging = false;
       var threshold = cardW * 0.15;
-      if (swDx < -threshold) {
+      if (swDx < -threshold && cur < total - 1) {
         goTo(cur + 1);
-      } else if (swDx > threshold) {
+      } else if (swDx > threshold && cur > 0) {
         goTo(cur - 1);
       } else {
-        /* Snap back */
         gsap.to(track, { x: getX(cur), duration: 0.3, ease: 'power2.out' });
       }
     }
