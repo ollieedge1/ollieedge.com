@@ -1,724 +1,1837 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Ollie Edge &bull; Lead Product Designer</title><link rel="icon" href="favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="styles.css"><meta name="theme-color" content="#F0EBE3" id="themeColorMeta"></head><body class="splash-active">
-<script>history.scrollRestoration='manual';window.scrollTo(0,0);</script>
-<!-- ═══ SPLASH SCREEN ═══ -->
-<div class="splash" id="splash">
-  <svg class="splash-svg" viewBox="0 0 420 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <text class="splash-txt" x="50%" y="90" text-anchor="middle" id="splashLine1">OLLIE</text>
-    <text class="splash-txt" x="50%" y="195" text-anchor="middle" id="splashLine2">EDGE</text>
-  </svg>
-</div>
-<a href="#work" class="skip-link" style="position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:12px 24px;z-index:99999;font-size:14px;border-radius:0 0 8px 8px;transition:top .2s;" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to content</a><!-- Progress bar --><div class="progress-bar" id="progressBar"></div><!-- Scroll CTA - hidden by default, shown after 3s if no scroll --><div id="scta" style="opacity:0;pointer-events:none;">  <a href="#work" class="sclink">Selected Work    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1.5v9M2 7l4 4.5L10 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>  </a></div><div class="wrap">  <!-- ═══ LEFT SIDEBAR ═══ -->  <aside class="col-l">    <div>      <div class="name-flip">        <div class="name-flip-inner">          <div class="name-flip-front">            <h1 class="nl">OLLIE<br>EDGE</h1>          </div>          <div class="name-flip-back">            <img src="assets/images/about3.png" alt="Ollie Edge" class="name-flip-photo"                 onerror="this.parentElement.style.background='var(--border)';">          </div>        </div>      </div>      <p class="tl">Lead Product Designer &bull; London 🇬🇧</p>    </div>    <a href="mailto:hello@ollieedge.com" class="pill">      <span class="pu"></span>Write to me    </a>    <nav class="lnav">      <div class="lnav-icons"><a href="https://www.linkedin.com/in/ollieedge/" target="_blank" rel="noopener" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="mailto:hello@ollieedge.com" title="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg></a><a href="https://calendly.com/ollieedge/15min" target="_blank" rel="noopener" title="Schedule a call"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg></a></div>    </nav>    <button class="tbtn" id="themeToggle" aria-label="Toggle theme" role="switch" aria-checked="false"><span class="tbtn-track"><span class="tbtn-thumb"><span class="icon-sun"><svg width="12" height="12" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="2.8" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 1v1.4M7.5 12.6V14M1 7.5h1.4M12.6 7.5H14M3 3l1 1M11 11l1 1M3 12l1-1M11 4l1-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="icon-moon"><svg width="12" height="12" viewBox="0 0 15 15" fill="none"><path d="M13.5 8.5a6 6 0 0 1-7-7 6 6 0 1 0 7 7z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></button>  </aside>  <!-- ═══ RIGHT COLUMN ═══ -->  <main class="col-r">    <!-- Ticker --><div class="tshell" id="tshell" role="marquee" aria-label="Companies I have worked with">  <div class="ttrack" id="ttrack"></div></div>    <!-- HERO BIO -->    <section class="hero">      <p class="bio" id="bio">Thoughtful, research-led design, with an EDGE. I love designing digital experiences that improve people's lives through technology. Whether that's banking through a smartphone, booking a hotel online, or accessing engineering help.</p>    </section>    <div class="content">      <!-- ══ WORK  - horizontal sliding full-bleed cards ══ -->      <section id="work" class="work-outer exp-section">        <div class="work-header">          <h2 class="work-heading">Selected Work</h2>          <div style="display:flex;align-items:center;gap:12px;">            <span class="work-counter" id="workCounter">01 / 04</span>            <div class="work-arrows">              <button class="work-arrow" id="wPrev" aria-label="Previous project">                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>              </button>              <button class="work-arrow" id="wNext" aria-label="Next project">                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>              </button>            </div>          </div>        </div>        <div class="work-track-wrap">          <div class="work-track" id="workTrack">            <!-- Card 1: Dojo -->            <div class="wcard wcard-dojo" data-theme="dojo" data-project="dojo" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Dojo case study">              <div class="wcard-img" style="background:#a8004c;padding:0;"><img src="assets/images/dojo_hero.jpg" alt="Dojo app screens" style="width:100%;height:100%;object-fit:cover;"></div>              <div class="wcard-info">                <div class="wcard-meta">Dojo</div>                <div class="wcard-title">Redesigning the merchant app for 100K+ businesses, saving &#163;1M a year in paper billing.</div>                <div class="wcard-tags"><span class="wcard-tag">Product Design</span><span class="wcard-tag">iOS &amp; Android</span><span class="wcard-tag">Fintech</span></div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 2: Danske Bank -->            <div class="wcard wcard-danske" data-theme="danske" data-project="danske" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Danske Bank case study">              <div class="wcard-img" style="background:#0a4dbf;padding:0;"><img src="assets/images/danske_hero.jpg" alt="Danske Bank app screens" style="width:100%;height:100%;object-fit:cover;"></div>              <div class="wcard-info">                <div class="wcard-meta">Danske Bank</div>                <div class="wcard-title">Designing a self-service lending platform launched across 4 Nordic countries.</div>                <div class="wcard-tags"><span class="wcard-tag">B2C</span><span class="wcard-tag">Zero &#8594; One</span><span class="wcard-tag">Financial Services</span></div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 3: Grundfos -->            <div class="wcard wcard-grundfos" data-theme="grundfos" data-project="grundfos" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Grundfos case study">              <div class="wcard-img" style="background:#14507e;display:flex;align-items:center;justify-content:center;">                <div class="gvis-grid" style="width:80%;height:80%;border-radius:8px;overflow:hidden;">                  <div class="gcell"><div class="gdot"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.06);"><div style="width:55%;height:2px;background:rgba(0,0,0,.25);border-radius:2px;"></div></div>                  <div class="gcell"><div class="gdot"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.04);"><div style="width:36%;height:32px;border:1px solid rgba(0,0,0,.15);border-radius:3px;"></div></div>                  <div class="gcell"><div class="gdot" style="width:7px;height:7px;background:rgba(0,0,0,.2);"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.06);"><div style="font-size:14px;color:rgba(0,0,0,.3);letter-spacing:.2em;">UX</div></div>                </div>              </div>              <div class="wcard-info">                <div class="wcard-meta">Grundfos</div>                <div class="wcard-title">Unifying the digital experience across 80+ countries for the world&#8217;s largest pump manufacturer.</div>                <div class="wcard-tags"><span class="wcard-tag" >UX Strategy</span><span class="wcard-tag" >B2B</span><span class="wcard-tag" >Multi-channel</span></div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 4: BMI -->            <div class="wcard wcard-bmi" data-theme="bmi" data-project="bmi" style="cursor:pointer;" tabindex="0" role="button" aria-label="View BMI Group case study">              <div class="wcard-img" style="background:#006a9a;position:relative;">                <div class="bmi-token" style="top:15%;left:8%;">color/primary</div>                <div class="bmi-token" style="top:15%;left:38%;">spacing/4</div>                <div class="bmi-token" style="top:15%;right:6%;">type/heading</div>                <div class="bmi-token" style="top:40%;left:16%;">component/button</div>                <div class="bmi-token" style="top:40%;right:8%;">radius/md</div>                <div class="bmi-token" style="top:65%;left:8%;">shadow/lg</div>                <div class="bmi-token" style="top:65%;left:40%;">grid/12col</div>                <div class="bmi-token" style="top:82%;left:22%;">breakpoint/lg</div>                <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 600 300" preserveAspectRatio="none">                  <line x1="130" y1="60" x2="260" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="280" y1="60" x2="380" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="260" y1="120" x2="180" y2="195" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="380" y1="120" x2="340" y2="195" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="180" y1="195" x2="250" y2="250" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                </svg>              </div>              <div class="wcard-info">                <div class="wcard-meta">BMI Group</div>                <div class="wcard-title">Leading a digital transformation across 30+ markets for Europe&#8217;s largest roofing manufacturer.</div>                <div class="wcard-tags"><span class="wcard-tag">UX/UI Design</span><span class="wcard-tag">Digital Transformation</span><span class="wcard-tag">Web Tools</span></div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>                      </div>        </div>        </section>      <!-- ══ AI ASK ME ANYTHING ══ -->
-      <section id="askAi" class="exp-section ai-section">
-        <div class="ai-header">
-          <h2 class="ai-heading" data-r>Ask anything</h2>
-          <p class="ai-sub" data-r>Curious about my experience? Ask away &middot; Powered by AI</p>
-        </div>
-        <div class="ai-body" data-r>
-          <div class="ai-input-row">
-            <input class="ai-input" id="aiInput" type="text" placeholder="What would you like to know?" autocomplete="off">
-            <button class="ai-send" id="aiSend" disabled aria-label="Ask question">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-          <div class="ai-chips" id="aiChips">
-            <button class="ai-chip" data-q="What's Ollie's design approach?">Design approach</button>
-            <button class="ai-chip" data-q="Tell me about Ollie's work at Aegon">Aegon</button>
-            <button class="ai-chip" data-q="What are Ollie's key skills?">Key skills</button>
-            <button class="ai-chip" data-q="How can I get in touch with Ollie?">Get in touch</button>
-          </div>
-          <div class="ai-response" id="aiResponse">
-            <div class="ai-response-inner" id="aiResponseInner"></div>
-          </div>
-        </div>
-      </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermonster — See which items are pushing up your supermarket shop.</title>
+    <meta name="description" content="Take a photo of any supermarket receipt and Supermonster spots the items going up, tracks your weekly shop, and helps your household stop overpaying. Free on iOS.">
+    <link rel="canonical" href="https://supermonsterapp.com/">
 
-      <!-- ══ EXPERIENCE ══ -->      <section id="experience" class="exp-section">        <h2 class="exp-heading" data-r>Experience</h2>
-        <div class="exp-timeline">
-        <div class="exp-timeline-line" id="tlLine"></div>
-        <!-- Aegon -->
-        <div class="exp-card" data-year="2025">
-          <div class="exp-card-header">
-            <div class="exp-card-co">Aegon</div>
-          </div>
-          <div class="exp-card-body">
-            <div>
-              <div class="exp-col-label">Role</div>
-              <div class="exp-role-title">Design Lead</div>
-            </div>
-            <div>
-              <div class="exp-col-label">Key Projects</div>
-              <p class="exp-proj-item"><strong>Pension Journey:</strong> End-to-end design across onboarding, transactions and investments. 110K users, &#163;120M net inflow.</p>
-              <p class="exp-proj-item"><strong>Mobile Apps:</strong> Took iOS and Android ratings from 3.6 to 4.3 stars within 12 months.</p>
-              <p class="exp-proj-item"><strong>Postcards from Tomorrow:</strong> Shipped a GenAI campaign through Mylo &#8212; personalised retirement postcards linking to pension tools. Strong engagement at launch.</p>
-            </div>
-            <div>
-              <div class="exp-col-label">Scope</div>
-              <div class="exp-scope-tags">
-                <span class="exp-scope-tag">Design Leadership</span>
-                <span class="exp-scope-tag">Financial Services</span>
-                <span class="exp-scope-tag">iOS / Android</span>
-                <span class="exp-scope-tag">Accessibility</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Lab 1 -->        <div class="exp-card exp-extra" data-year="2022">          <div class="exp-card-header">            <div class="exp-card-co">Lab 1</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Head of Design</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Enterprise SaaS:</strong> Defined experience principles and interaction patterns for a platform serving global clients.</p>              <p class="exp-proj-item"><strong>Strategy:</strong> Shaped product direction with senior Product and Engineering leadership.</p>              <p class="exp-proj-item"><strong>Impact:</strong> Discovery cycles that contributed to successful funding milestones.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">Design Leadership</span>                <span class="exp-scope-tag">Enterprise SaaS</span>                <span class="exp-scope-tag">Product Strategy</span>                <span class="exp-scope-tag">Interaction Design</span>              </div>            </div>          </div>        </div>        <!-- Linkfire -->        <div class="exp-card exp-extra" data-year="2021">          <div class="exp-card-header">            <div class="exp-card-co">Linkfire</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Lead Product Designer</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>B2B Platform:</strong> Design for 40K+ monthly users &#8212; monetisation tools, smart links and developer workflows.</p>              <p class="exp-proj-item"><strong>Design System:</strong> Built an accessible design system with screen reader support and colour contrast compliance.</p>              <p class="exp-proj-item"><strong>Analytics:</strong> Introduced FullStory to surface friction points and prioritise fixes.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">Product Design</span>                <span class="exp-scope-tag">B2B / SaaS</span>                <span class="exp-scope-tag">Design Systems</span>                <span class="exp-scope-tag">Accessibility</span>              </div>            </div>          </div>        </div>        <!-- Digital Detox -->        <div class="exp-card exp-extra" data-year="2020">          <div class="exp-card-header">            <div class="exp-card-co">Digital Detox</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Senior UX/UI Designer</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Client Platforms:</strong> Design across healthcare (Unum), ecommerce (Edenred) and manufacturing (BMI).</p>              <p class="exp-proj-item"><strong>Complex Journeys:</strong> Simplified multi-step flows into clear, accessible responsive interfaces.</p>              <p class="exp-proj-item"><strong>Workshops:</strong> Facilitated stakeholder workshops aligning business goals with user needs.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">UX / UI Design</span>                <span class="exp-scope-tag">Responsive Web</span>                <span class="exp-scope-tag">Healthcare</span>                <span class="exp-scope-tag">Ecommerce</span>              </div>            </div>          </div>        </div>        <!-- Dojo -->        <div class="exp-card" data-year="2019">          <div class="exp-card-header">            <div class="exp-card-co">Dojo</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Senior Product Designer</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Dashboard Apps:</strong> Redesigned iOS and Android apps for 100K+ merchants.</p>              <p class="exp-proj-item"><strong>POS Software:</strong> Improved flow and readability for high-traffic physical POS terminals.</p>              <p class="exp-proj-item"><strong>User Research:</strong> Testing and interviews with merchants to uncover pain points and validate design decisions.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">Product Design</span>                <span class="exp-scope-tag">iOS / Android</span>                <span class="exp-scope-tag">POS</span>                <span class="exp-scope-tag">User Research</span>              </div>            </div>          </div>        </div>        <!-- Danske Bank -->        <div class="exp-card" data-year="2017">          <div class="exp-card-header">            <div class="exp-card-co">Danske Bank</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Senior UX Designer</div>              <div class="exp-role-dates">Copenhagen, Denmark</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Self-Service Lending:</strong> Designed and launched the Nordics&#8217; first self-service lending platform across four markets (DK, SE, NO, FI).</p>              <p class="exp-proj-item"><strong>10M+ DKK:</strong> Loans facilitated in the first quarter after launch.</p>              <p class="exp-proj-item"><strong>Compliance:</strong> Worked with Legal and Compliance to meet accessibility and regulatory requirements across markets.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">UX Design</span>                <span class="exp-scope-tag">Financial Services</span>                <span class="exp-scope-tag">Multi-market</span>                <span class="exp-scope-tag">Compliance</span>              </div>            </div>          </div>        </div>        <!-- Digitas LBi -->        <div class="exp-card" data-year="2015">          <div class="exp-card-header">            <div class="exp-card-co">Digitas LBi</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">UX Designer</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Global Brands:</strong> UX for Saxo Bank, Radisson Blu, Grundfos, Trelleborg, SKF and Volvo.</p>              <p class="exp-proj-item"><strong>Prototyping:</strong> Wireframes, flows and high-fidelity prototypes for responsive web and native.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">UX Design</span>                <span class="exp-scope-tag">Responsive Web</span>                <span class="exp-scope-tag">Prototyping</span>                <span class="exp-scope-tag">B2B / B2C</span>              </div>            </div>          </div>        </div>        <!-- BBC -->        <div class="exp-card exp-extra" data-year="2005">          <div class="exp-card-header">            <div class="exp-card-co">BBC</div>                      </div>          <div class="exp-card-body">            <div>              <div class="exp-col-label">Role</div>              <div class="exp-role-title">Multimedia Specialist</div>            </div>            <div>              <div class="exp-col-label">Key Projects</div>              <p class="exp-proj-item"><strong>Multimedia Content:</strong> Edited content for web and live TV broadcast.</p>              <p class="exp-proj-item"><strong>Newsroom:</strong> Fast-paced, deadline-driven work alongside journalists and producers.</p>            </div>            <div>              <div class="exp-col-label">Scope</div>              <div class="exp-scope-tags">                <span class="exp-scope-tag">Multimedia</span>                <span class="exp-scope-tag">Broadcast</span>                <span class="exp-scope-tag">Web</span>              </div>            </div>          </div>        </div>        <button class="exp-view-all" id="expViewAll" aria-expanded="false">Show earlier roles</button>
-        </div>
-      </section>      <!-- ══ EDUCATION ══ -->      <section class="exp-section" style="padding-top:0;">        <h2 class="exp-heading" data-r>Education</h2>        <div class="edu-row">        <div class="exp-card" data-r>          <div class="exp-card-header">            <div class="exp-card-co">Copenhagen School of Design</div>          </div>          <div class="exp-card-body" style="grid-template-columns:1fr;">            <div>              <div class="exp-role-title">Multimedia Design (AP Degree)</div>              <div class="edu-date">2014 &#8211; 2016</div>            </div>          </div>        </div>        <div class="exp-card" data-r>          <div class="exp-card-header">            <div class="exp-card-co">Leeds University</div>          </div>          <div class="exp-card-body" style="grid-template-columns:1fr;">            <div>              <div class="exp-role-title">Music Production (BA Hons Degree)</div>              <div class="edu-date">2003 &#8211; 2006</div>            </div>          </div>        </div>        </div>      </section>    </div><!-- /content -->    <footer class="ft exp-section">      <div class="ft-body">        <p class="ft-tagline">Turning &ldquo;uhhh..&rdquo; into &ldquo;ohhh!&rdquo;, one frame at a time.</p>        <p class="ft-cta">Let&rsquo;s talk &#8595;</p>        <div class="ft-links">          <a href="mailto:hello@ollieedge.com" class="ft-email-link">hello@ollieedge.com</a><button class="ft-copy" id="ftCopy" aria-label="Copy email address" type="button"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="5" y="5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M10 5V3.5A1.5 1.5 0 008.5 2h-5A1.5 1.5 0 002 3.5v5A1.5 1.5 0 003.5 10H5" stroke="currentColor" stroke-width="1.3"/></svg></button>        </div>        <span class="fc">&copy; 2026 Ollie Edge</span>      </div>    </footer>  </main></div><!-- /wrap --><script>const cos = [  { n: "Aegon",        bg: "#003b5c", tx: "#fff", mu: "rgba(255,255,255,.6)",  br: "rgba(255,255,255,.15)", tk: "#002d47", ac: "#ffffff" },  { n: "Dojo",         bg: "#a80048", tx: "#fff", mu: "rgba(255,255,255,.6)",  br: "rgba(255,255,255,.15)", tk: "#a8004c", ac: "#ffffff" },  { n: "Danske Bank",  bg: "#0d5de6", tx: "#fff", mu: "rgba(255,255,255,.65)",  br: "rgba(255,255,255,.15)", tk: "#0a4dbf", ac: "#ffffff" },  { n: "Digitas",     bg: "#1a1a1a", tx: "#fff", mu: "rgba(255,255,255,.5)",  br: "rgba(255,255,255,.1)",  tk: "#111111", ac: "#e4002b" },    { n: "BBC",          bg: "#9e1010", tx: "#fff", mu: "rgba(255,255,255,.6)",  br: "rgba(255,255,255,.15)",  tk: "#870d0d", ac: "#ffffff" },      ];const DEF_DARK  = { bg: "#F0EBE3", tx: "#1A1A1A", mu: "rgba(26,26,26,.76)",    br: "rgba(26,26,26,.1)",     tk: "#E8E3DA", ac: "#1A1A1A" };const DEF_LIGHT = { bg: "#141414", tx: "#F0EBE3", mu: "rgba(240,235,227,.65)", br: "rgba(240,235,227,.1)",  tk: "#1c1c1c", ac: "#F0EBE3" };const root = document.documentElement;let rt;let isLight = false;function getDefault() { return isLight ? DEF_LIGHT : DEF_DARK; }function setT(t) {  root.style.setProperty("--bg",     t.bg);  root.style.setProperty("--text",   t.tx);  root.style.setProperty("--muted",  t.mu);  root.style.setProperty("--border", t.br);  root.style.setProperty("--ticker", t.tk);  root.style.setProperty("--accent", t.ac);}(function buildTicker() {  const track = document.getElementById("ttrack");  [...cos, ...cos, ...cos, ...cos].forEach((c, i) => {    const idx = i % cos.length;    const sep = document.createElement("span");    sep.className = "tsep"; sep.textContent = "";    track.appendChild(sep);    const item = document.createElement("div");    item.className = "ti"; item.dataset.i = idx;    const nm = document.createElement("span"); nm.textContent = c.n;    item.appendChild(nm);    item.addEventListener("mouseenter", () => {      clearTimeout(rt);      document.querySelectorAll(".ti").forEach(el => el.classList.toggle("on", parseInt(el.dataset.i) === idx));      setT(cos[idx]);    });    item.addEventListener("mouseleave", () => item.classList.remove("on"));    track.appendChild(item);  });  const shell = document.getElementById("tshell");  shell.addEventListener("mouseleave", () => {    document.querySelectorAll(".ti").forEach(el => el.classList.remove("on"));    rt = setTimeout(() => setT(getDefault()), 250);  });  shell.addEventListener("mouseenter", () => clearTimeout(rt));})();document.getElementById("themeToggle").addEventListener("click", () => {  isLight = !isLight;  root.classList.toggle("light", isLight);  document.getElementById("themeToggle").setAttribute("aria-checked", isLight);  setT(getDefault());  var tcm=document.getElementById('themeColorMeta');if(tcm)tcm.setAttribute('content',isLight?'#141414':'#F0EBE3');});const cardThemes = {  dojo:     { bg: "#a80048", tx: "#fff", mu: "rgba(255,255,255,.6)",  br: "rgba(255,255,255,.15)", tk: "#a8004c", ac: "#ffffff" },  danske:   { bg: "#0d5de6", tx: "#fff", mu: "rgba(255,255,255,.65)",  br: "rgba(255,255,255,.15)", tk: "#0a4dbf", ac: "#ffffff" },  grundfos: { bg: "#11497b", tx: "#fff", mu: "rgba(255,255,255,.6)",  br: "rgba(255,255,255,.15)", tk: "#14507e", ac: "#ffffff" },  bmi:      { bg: "#009fe3", tx: "#fff", mu: "rgba(255,255,255,.65)", br: "rgba(255,255,255,.18)", tk: "#006a9a", ac: "#ffffff" },};let workThemeTimer;document.querySelectorAll(".wcard[data-project]").forEach(card => { card.addEventListener("keydown", e => { if(e.key==="Enter"||e.key===" "){e.preventDefault();card.click();} }); });
-document.querySelectorAll(".wcard[data-theme]").forEach(card => {  card.addEventListener("mouseenter", () => {    clearTimeout(workThemeTimer);    const theme = cardThemes[card.dataset.theme];    if (theme) setT(theme);  });  card.addEventListener("mouseleave", () => {    workThemeTimer = setTimeout(() => setT(getDefault()), 250);  });});(function() {  const el = document.getElementById("bio");  if (!el) return;  const txt = el.textContent;  el.innerHTML = "";  const words = txt.split(" ");  const wordEls = [];  words.forEach(function(word, wi) {    if (wi > 0) el.appendChild(document.createTextNode(" "));    var w = document.createElement("span");    w.textContent = word;    w.style.display = "inline";    w.style.whiteSpace = "nowrap";    if (word.toLowerCase().replace(/[.,!?]/g, "") === "edge") w.classList.add("bio-edge");    el.appendChild(w);    wordEls.push(w);  });  var lines = [], cur = [], lastT = -1;  wordEls.forEach(function(w) {    var t = w.getBoundingClientRect().top;    if (lastT > -1 && Math.abs(t - lastT) > 2) { lines.push(cur); cur = []; }    cur.push(w); lastT = t;  });  if (cur.length) lines.push(cur);  el.innerHTML = "";  lines.forEach(function(ln) {    var mask = document.createElement("div");    mask.className = "bio-mask";    var inner = document.createElement("div");    inner.className = "bio-line";    ln.forEach(function(w, i) { if (i > 0) inner.appendChild(document.createTextNode(" ")); inner.appendChild(w); });    mask.appendChild(inner);    el.appendChild(mask);  });})();const scta = document.getElementById("scta");let sctaShown = false;const sctaTimer = setTimeout(() => {  if (window.scrollY < 100) { scta.style.opacity = "1"; scta.style.pointerEvents = "auto"; sctaShown = true; }}, 3000);window.addEventListener("scroll", () => {  if (!sctaShown && window.scrollY > 50) { clearTimeout(sctaTimer); return; }  const h = window.scrollY > 100;  scta.style.opacity = h ? "0" : (sctaShown ? "1" : "0");  scta.style.pointerEvents = h ? "none" : (sctaShown ? "auto" : "none");}, { passive: true });const progressBar = document.getElementById("progressBar");window.addEventListener("scroll", () => {  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;  const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;  progressBar.style.transform = `scaleX(${progress})`;}, { passive: true });const revealObs = new IntersectionObserver((entries) => {  entries.forEach(entry => {    if (entry.isIntersecting) {      entry.target.classList.add("vis");      revealObs.unobserve(entry.target);    }  });}, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });document.querySelectorAll("[data-r]").forEach(el => revealObs.observe(el));document.querySelectorAll('a[href^="#"]').forEach(a => {  a.addEventListener("click", e => {    const target = document.querySelector(a.getAttribute("href"));    if (target) {      e.preventDefault();      target.scrollIntoView({ behavior: "smooth", block: "start" });    }  });});(function(){  const btn = document.getElementById('expViewAll');  if (!btn) return;  const extras = document.querySelectorAll('.exp-extra');  let open = false;  btn.innerHTML = 'Show earlier roles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';  btn.addEventListener('click', () => {    open = !open;    extras.forEach(el => el.classList.toggle('exp-show', open));    btn.setAttribute('aria-expanded', open);    btn.innerHTML = open      ? 'Show fewer roles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'      : 'Show earlier roles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4.5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';    if (open) {      extras.forEach(el => { el.classList.add('vis'); });    }  });})();(function(){var btn=document.getElementById('ftCopy');if(!btn)return;btn.addEventListener('click',function(){navigator.clipboard.writeText('hello@ollieedge.com').then(function(){btn.classList.add('copied');btn.innerHTML='<svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3.5 8l2.5 2.5 5.5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';setTimeout(function(){btn.classList.remove("copied");btn.innerHTML='<svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="5" y="5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M10 5V3.5A1.5 1.5 0 008.5 2h-5A1.5 1.5 0 002 3.5v5A1.5 1.5 0 003.5 10H5" stroke="currentColor" stroke-width="1.3"/></svg>';},2000);});});})();</script><!-- ═══ CASE STUDY OVERLAY ═══ --><div class="cs-overlay" id="csOverlay">
-    <div class="cs-gate" id="csGate">
-      <div class="cs-gate-box">
-        <div class="cs-gate-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <div class="cs-gate-title">Protected work</div>
-        <div class="cs-gate-sub">Enter the password to view this case study.</div>
-        <div class="cs-gate-input-wrap"><input class="cs-gate-input" id="csGateInput" type="password" placeholder="Password" aria-label="Enter portfolio password" autocomplete="off" spellcheck="false"><button class="cs-gate-submit" id="csGateSubmit" type="button" aria-label="Submit password"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
-        <div class="cs-gate-hint" id="csGateHint" role="alert" aria-live="assertive">Incorrect password</div>
-        <p class="cs-gate-access">Need access? Email <a href="mailto:hello@ollieedge.com">hello@ollieedge.com</a></p>
-        <button class="cs-gate-back" id="csGateBack" type="button">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          BACK
-        </button>
-      </div>
-    </div>
-    <a class="cs-visit" id="csVisit" href="#" target="_blank" rel="noopener noreferrer"><span class="cs-visit-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cs-visit-text"><span class="cs-visit-label">Visit</span><span class="cs-visit-name" id="csVisitName"></span></span></a>  <button class="cs-back" id="csBack">    <svg viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>    Back  </button>  <div id="csContent"></div></div><script>const projects = {  dojo: {    url: "https://www.dojo.tech",
-      title: "Dojo",    subtitle: "A merchant app that puts cash flow first",    tags: ["Product Design", "iOS & Android", "Fintech"],    heroColor: "#c20058",    heroAccent: "#f0006a",    services: "Redesign of merchant-facing iOS and Android applications.",    year: "2019 \u2013 2020",    role: "Senior Product Designer",    company: "Dojo",    info: `Dojo is one of Europe’s largest independent merchant services providers, processing billions in card payments for over 100,000 small businesses across the UK and Ireland. The merchant-facing apps are the primary tools business owners use to track sales, manage settlements, and understand their performance.
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Supermonster">
+    <meta property="og:title" content="See which items are pushing up your supermarket shop.">
+    <meta property="og:description" content="Take a photo of any receipt and Supermonster spots the items going up — across every supermarket. Free on iOS.">
+    <meta property="og:url" content="https://supermonsterapp.com/">
+    <meta property="og:image" content="https://supermonsterapp.com/appicon.png">
 
-The existing experience suffered from low engagement and poor usability. Merchants were still relying on paper statements and phone calls for basic queries. The brief was clear: put real-time cash flow visibility directly in the hands of business owners.`,    sections: [      {        title: "Starting with the merchant",        text: `Over 30 merchant interviews across the UK - restaurants, salons, retail - to understand how business owners actually interact with their payment data. One insight shaped everything: merchants don\u2019t want a fintech app. They want a simple answer to \u201chow much did I make today?\u201d\n\nA radically simplified home screen centred around net sales. Progressive disclosure for transaction data, settlement timelines, and dispute management. Everything structured around the merchant\u2019s mental model, not the platform\u2019s.`      },      {        title: "Replacing paper with pixels",        text: `The highest-impact initiative: replacing Dojo\u2019s entire paper billing system with in-app digital statements. Searchable, instant, always accessible.\n\nOver \u00a31 million saved annually in printing and postage alone - and a dramatically better experience for the merchants who depend on it.`      },      {        title: "A system that scales",        text: `Dojo\u2019s first component library, built in Figma. A full token system, reusable patterns for iOS and Android, and comprehensive documentation - designed to help the product team move faster without sacrificing consistency.`      }    ],    stats: [      { val: "\u00a31M", label: "Saved annually" },      { val: "100K+", label: "Merchants served" }    ],    next: "danske"  },  danske: {    url: "https://www.danskebank.dk",
-      title: "Danske Bank",    subtitle: "Frictionless financing for the future",    tags: ["B2C", "Zero \u2192 One", "Financial Services", "Multi-market"],    heroColor: "#0d5de6",    heroAccent: "#0055aa",    services: "End-to-end product design of a B2C automated-decision lending solution.",    year: "2017 \u2013 2019",    role: "Senior UX Designer",    company: "Danske Bank",    info: `Denmark\u2019s largest bank, facing competition from a new generation of challengers. The response: a self-service lending platform that would make Danske the fastest, most transparent place for business customers to access financing. A zero-to-one product, launched across four Nordic countries. Working with Research, Product Management, and Content Design, we researched, designed, and tested an automated-decision lending solution. End-to-end product design strategy, interface design, and prototyping.`,    sections: [      {        title: "Synthesising research",        text: `Journey maps and personas to communicate user goals and surface opportunities. The research highlighted unmet needs - particularly around third-party accounting integration - and gave the team a shared language for the problems worth solving.`      },      {        title: "A stepped-form model",        text: `A stepped-form interaction model: frictionless on mobile, easier to comprehend in smaller chunks, and scalable enough to absorb new business logic or features later. Each step of the application process carries equal weight.\n\nA design system built alongside engineering. The uniform layout meant core components could be developed early, in parallel with design - reducing time to build without sacrificing quality.`      },      {        title: "Show me you know me",        text: `Customers want to be recognised, understood, and given relevant offers. Using customer identification at login, the application surfaces account data, business history, and packaged lending offers tailored to business size and industry.\n\nTone of voice mattered. Early testing revealed that some businesses felt patronised by overly simple language. Several rounds of copy refinement to find the right register.`      },      {        title: "Designing for everyone",        text: `A significant portion of business banking customers are middle-aged to senior users. The interface had to be big, clear, and intuitive. Large selector elements, emphasised input state changes, and animated transitions that provide feedback and navigational context.\n\nA \u2018share with an advisor\u2019 button for customers who want human support or to negotiate their offer. The digital experience doesn\u2019t replace the relationship - it extends it.`      },      {        title: "Deliberate friction",        text: `During usability testing, several users described the process as a \u2018quick loan\u2019 - a phrase with negative connotations.\n\nThe solution: deliberate friction. Indeterminate progress screens with fixed time delays, communicating each stage of the decision - processing the request, evaluating the application, analysing the risk profile, creating the offer. The result feels considered rather than instant. Trust, not speed, became the design objective.`      },      {        title: "Testing and iterating",        text: `Customers involved early and every two weeks. One round revealed the tone was too elementary and help text too distracting. Contextual tooltips replaced inline guidance. Users wanted to experiment with their choices and feel in control. Navigational loops introduced more editing freedom. Dotted underline iconography outperformed text links for progress indication.\n\n9 out of 10 users reached the end page with all criteria entered correctly. Average task time: 2 minutes.`      },      {        title: "Launch",        text: `The visual design reinforces trust: Danske\u2019s blues and whites, immediately recognisable.\n\nAfter 18 months, a self-service financing solution live across four Nordic countries - with a 100,000 DKK lending limit and full digital signing. Accessible anytime, anywhere, without manual processes. The time from application to funds in the account: reduced from two weeks to two days.`      }    ],    stats: [      { val: "4", label: "Nordic countries" },      { val: "1M+", label: "DKK lent in first week" },      { val: "2 days", label: "vs 2 weeks to fund" },      { val: "100%", label: "Digital end-to-end" }    ],    next: "grundfos"  },  grundfos: {    url: "https://www.grundfos.com",
-      title: "Grundfos",    subtitle: "A unified digital experience for the world\u2019s largest pump manufacturer",    tags: ["UX Strategy", "B2B", "Multi-channel"],    heroColor: "#11497b",    heroAccent: "#5a8a84",    services: "UX strategy across web, mobile, and dealer portals.",    year: "2015 \u2013 2017",    role: "UX Designer at Digitas LBi",    company: "Grundfos",    info: `Grundfos employs over 19,000 people across 80 countries. Their products are critical infrastructure - water supply, heating systems, industrial processes, wastewater.\n\nDozens of disconnected digital properties: corporate websites, product catalogues, dealer portals, mobile tools, specification engines - each built independently, with no unified experience strategy. Engineers, installers, and specifiers were the primary audience. Their needs were deeply technical and poorly served by the existing digital landscape.`,    sections: [      {        title: "Mapping the journey",        text: `Interviews with engineers, pump specifiers, and wholesale distributors across multiple European markets. The end-to-end journey from discovery to specification to purchase was fragmented across platforms, forcing constant context-switching.\n\nThese journeys were mapped into a unified framework: critical drop-off points identified, opportunities for digital intervention surfaced, and a shared understanding established across stakeholders.`      },      {        title: "One strategy, many channels",        text: `Cross-functional workshops with marketing, product management, and IT to define how each touchpoint should work together. A new information architecture for the product catalogue, streamlined specification tools, and design principles that carry across web, mobile, and dealer-facing platforms.\n\nThe foundation for Grundfos\u2019s digital transformation - a unified approach to serving a technical audience across every channel.`      },      {        title: "Setting the direction",        text: `The strategy influenced subsequent redesigns across Grundfos\u2019s global web presence and mobile tools. A single, coherent experience framework where previously there had been none.`      }    ],    stats: [      { val: "#1", label: "Global pump manufacturer" },      { val: "80+", label: "Countries served" },      { val: "Multi", label: "Channel strategy" }    ],    next: "bmi"  },  bmi: {    url: "https://www.bmigroup.com",
-      title: "BMI Group",    subtitle: "A global digital transformation for Europe\u2019s largest roofing manufacturer",    tags: ["UX/UI Design", "Digital Transformation", "Web Tools"],    heroColor: "#009fe3",    heroAccent: "#2a3f50",    services: "UX/UI design lead across global site redesign and interactive web tools.",    year: "2020 \u2013 2021",    role: "Senior UX/UI Designer at Digital Detox",    company: "BMI Group",    info: `Europe\u2019s largest manufacturer of flat and pitched roofing systems, operating across more than 30 countries under brands including Monier, Braas, Coverland, and Icopal. As Senior UX/UI Designer at Digital Detox, I led the UX/UI design on a major digital transformation programme. The scope covered two workstreams: a complete global website redesign serving dozens of markets with varying products, languages, and regulations, and a suite of interactive web tools designed to help professionals specify and visualise roofing solutions.`,    sections: [      {        title: "Global site redesign",        text: `A complete redesign of BMI\u2019s global web presence across 30+ markets. The information architecture needed to accommodate thousands of product pages, regional compliance requirements, and multiple brand expressions including Monier, Braas, Coverland, and Icopal.\n\nI designed a scalable template and component system that gave local teams flexibility within a consistent, quality-controlled framework. Product pages, project references, technical documentation, and regional landing pages - all built from a shared design language.`      },      {        title: "Web tools",        text: `Two interactive tools built to support roofing professionals in the field. A 3D tile and roof visualiser that lets users preview materials on realistic roof models - selecting colours, textures, and configurations in real time. And a material calculator that generates accurate quantities based on roof dimensions and product specifications.\n\nBoth tools needed to work across markets with different product catalogues and measurement standards.`      },      {        title: "Unified design language",        text: `A single design system underpinning both the global site and the web tools. Token-based colour, typography, and spacing across brand variants. A Monier page in Germany feels distinctly branded while sharing the same underlying architecture as a Braas page in Scandinavia. The system ensured consistency across every touchpoint of the digital transformation.`      }    ],    stats: [      { val: "30+", label: "Markets served" },      { val: "1\u00d7", label: "Unified design language" }    ],    next: "dojo"  }};function renderHeroVisual(key, project) {  const c = project.heroColor;  const a = project.heroAccent;  switch(key) {    case 'dojo':      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Dojo_1.jpg" alt="Dojo" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'danske':      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Danskebank_1.jpg" alt="Danske Bank" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'grundfos':      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/grundfos1.jpeg" alt="Grundfos" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'bmi':      return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/bmi_1.jpg" alt="BMI Group" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;    default:      return `<div class="cs-vis" style="background:${c};"></div>`;  }}function renderSecondaryVisual(key, project, index) {  const c = project.heroColor;  const a = project.heroAccent;  switch(key) {    case 'dojo':      if(index===0) return `<div class="cs-vis" style="background:#ffffff;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/dojo_billing1.png" alt="Dojo" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===1) return `<div class="cs-vis" style="background:#ffffff;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/dojo_billing2.png" alt="Dojo" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===2) return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/dojoimage4.png" alt="Dojo" style="width:100%;height:100%;object-fit:cover;"></div>`;      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Dojo_3.png" alt="Dojo" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'danske':      if(index===0) return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Danskebank_2.jpg" alt="Danske Bank" style="width:100%;height:100%;object-fit:cover;"></div>`;      if(index===2) return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Danskebank_4.png" alt="Danske Bank" style="width:100%;height:100%;object-fit:cover;"></div>`;      if(index===3) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/Danskebank_5.png" alt="Danske Bank" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===4) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/Danskebank_2.png" alt="Danske Bank" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===5) return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Danskebank_6.png" alt="Danske Bank" style="width:100%;height:100%;object-fit:cover;"></div>`;      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Danskebank_3.jpg" alt="Danske Bank" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'grundfos':      if(index===0) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/grundfos3.png" alt="Grundfos" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===1) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/grundfos2.png" alt="Grundfos" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===2) return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Grundfos_2.jpg" alt="Grundfos" style="width:100%;height:100%;object-fit:cover;"></div>`;      if(index===3) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/grundfos6.png" alt="Grundfos" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      if(index===4) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/grundfos5.jpg" alt="Grundfos" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      return `<div class="cs-vis" style="background:${c};padding:0;overflow:hidden;"><img src="assets/images/Grundfos_3.jpg" alt="Grundfos" style="width:100%;height:100%;object-fit:cover;"></div>`;    case 'bmi':      if(index===0) return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/bmi_2.png" alt="BMI Group" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;      return `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><img src="assets/images/bmi_3.png" alt="BMI Group" style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></div>`;    default:      return `<div class="cs-vis" style="background:#333;"></div>`;  }}function getNextTwo(key) {  const keys = Object.keys(projects);  const idx = keys.indexOf(key);  return [keys[(idx+1)%keys.length], keys[(idx+2)%keys.length]];}const csMutedMap = {dojo:"#fbf4f7",danske:"#b5c3d2",grundfos:"#e0e8e6",bmi:"#f5eae9"};
-const CS_PASSWORD = "Apple";
-  let csUnlocked = sessionStorage.getItem("csUnlocked") === "true";
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="See which items are pushing up your supermarket shop.">
+    <meta name="twitter:description" content="Take a photo of any receipt — Supermonster spots the items going up across every supermarket.">
+    <meta name="twitter:image" content="https://supermonsterapp.com/appicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  function openCaseStudy(key) {
-    const p = projects[key];
-    if(!p) return;
-
-    // Show gate if not yet unlocked this session
-    if (!csUnlocked) {
-      const overlay = document.getElementById('csOverlay');
-      const gate = document.getElementById('csGate');
-      const input = document.getElementById('csGateInput');
-      const hint = document.getElementById('csGateHint');
-
-      // Store the key so we can continue after unlock
-      window.__pendingCSKey = key;
-
-      overlay.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      gate.classList.add('active');
-
-      input.value = '';
-      input.classList.remove('cs-gate-error');
-      hint.classList.remove('vis');
-
-      setTimeout(() => input.focus(), 350);
-
-      // Remove old listeners
-      const newInput = input.cloneNode(true);
-      input.parentNode.replaceChild(newInput, input);
-
-      newInput.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-          if (this.value === CS_PASSWORD) {
-            csUnlocked = true; sessionStorage.setItem("csUnlocked", "true");
-            gate.classList.remove('active');
-            setTimeout(() => {
-              openCaseStudy(window.__pendingCSKey);
-            }, 350);
-          } else {
-            this.classList.add('cs-gate-error');
-            document.getElementById('csGateHint').classList.add('vis');
-            setTimeout(() => this.classList.remove('cs-gate-error'), 400);
-          }
+        :root {
+            --yellow: #F2C506;
+            --yellow-light: #FFF8D6;
+            --dark: #1A1A2E;
+            --text: #1A1A2E;
+            --text-secondary: #6B7280;
+            --bg: #FAF8F2;
+            --bg-grey: #F0EBE6;
+            --max-width: 1100px;
+            --radius: 16px;
         }
-        if (e.key === 'Escape') {
-          gate.classList.remove('active');
-          setTimeout(() => {
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-          }, 350);
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
-      });
 
-      newInput.addEventListener('input', function() {
-        this.classList.remove('cs-gate-error');
-        document.getElementById('csGateHint').classList.remove('vis');
-      });
-
-      document.getElementById('csGateBack').addEventListener('click', function() {
-        gate.classList.remove('active');
-        setTimeout(() => {
-          overlay.classList.remove('open');
-          document.body.style.overflow = '';
-        }, 350);
-      });
-
-      document.getElementById('csGateSubmit').addEventListener('click', function() {
-        const inp = document.getElementById('csGateInput');
-        if (inp.value === CS_PASSWORD) {
-          csUnlocked = true; sessionStorage.setItem("csUnlocked", "true");
-          gate.classList.remove('active');
-          setTimeout(() => { openCaseStudy(window.__pendingCSKey); }, 350);
-        } else {
-          inp.classList.add('cs-gate-error');
-          document.getElementById('csGateHint').classList.add('vis');
-          setTimeout(() => inp.classList.remove('cs-gate-error'), 400);
+        /* ─── NAV ─── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250,248,242,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
         }
-      });
-
-      return;
-    }  const overlay = document.getElementById('csOverlay');
-  const visitEl = document.getElementById('csVisit');
-  const visitName = document.getElementById('csVisitName');
-  if (visitEl && p.url) { visitEl.href = p.url; visitEl.style.display = ''; if(visitName) visitName.textContent = p.title; }
-  else if (visitEl) { visitEl.style.display = 'none'; }  const content = document.getElementById('csContent');  const [nextKey1, nextKey2] = getNextTwo(key);  const next1 = projects[nextKey1];  const next2 = projects[nextKey2];    let sectionsHTML = '';  p.sections.forEach((s, i) => {    sectionsHTML += `      <div class="cs-section cs-anim">        <div class="cs-section-spacer"></div>        <div class="cs-section-body"><h2>${s.title}</h2>${s.text.split('\n\n').map(para => `<p>${para}</p>`).join('')}</div>      </div>`;        if(i % 3 === 0 && i < p.sections.length - 1) {      const fullIdx = (key === 'dojo' && i === 0) ? 2 : (key === 'grundfos' && i === 0) ? 2 : (key === 'danske' && i === 0) ? 4 : (key === 'danske' && i === 3) ? 5 : i % 2;      sectionsHTML += `<div class="cs-img-full cs-anim"><div class="cs-img-full-inner">${renderSecondaryVisual(key, p, fullIdx)}</div></div>`;    }    if(i % 3 === 1 && i < p.sections.length - 1) {      if(key === 'danske' && i === 1) {        sectionsHTML += `<div class="cs-img-full cs-anim"><div class="cs-img-full-inner">${renderSecondaryVisual(key, p, 2)}</div></div>`;      } else if(key === 'grundfos' && i === 1) {        sectionsHTML += `<div class="cs-img-pair cs-anim"><div class="cs-img-pair-item">${renderSecondaryVisual(key, p, 3)}</div><div class="cs-img-pair-item">${renderSecondaryVisual(key, p, 4)}</div></div>`;      } else if(key === 'danske' && i === 4) {        sectionsHTML += `<div class="cs-img-pair cs-anim"><div class="cs-img-pair-item"><div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/danskebankvideo4.mp4" autoplay loop muted playsinline style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></video></div></div><div class="cs-img-pair-item">${renderSecondaryVisual(key, p, 3)}</div></div>`;      } else {        sectionsHTML += `<div class="cs-img-pair cs-anim"><div class="cs-img-pair-item">${renderSecondaryVisual(key, p, 0)}</div><div class="cs-img-pair-item">${renderSecondaryVisual(key, p, 1)}</div></div>`;      }    }    if(key === 'danske' && i === 5) {      sectionsHTML += `<div class="cs-img-full cs-anim"><div class="cs-img-full-inner"><div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/danskevideo3.mp4" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;"></video></div></div></div>`;    }    if(key === 'grundfos' && i === 2) {      sectionsHTML += `<div class="cs-img-full cs-anim"><div class="cs-img-full-inner"><div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/grundfosvideo2.mov" autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;"></video></div></div></div>`;    }  });  content.innerHTML = `    <!-- HERO TOP -->    <div class="cs-hero-top" style="background:${p.heroColor};--cs-muted:${csMutedMap[key] || '#d0d0d0'};">
-      <h1>${p.title}</h1>      <div class="cs-hero-bottom">        <div class="cs-hero-bottom-left">          <div class="cs-tags">${p.tags.map(t => `<span class="cs-tag">${t}</span>`).join('')}</div>        </div>        <div class="cs-hero-bottom-right">          <div class="cs-hero-subtitle-label">${p.subtitle}</div>          <p class="cs-intro">${p.info.split('\n\n')[0]}</p>        </div>      </div>    </div>    <!-- FULL-WIDTH HERO IMAGE  - edge to edge -->    <div class="cs-hero-img"><div class="cs-hero-img-inner">${renderHeroVisual(key, p)}</div></div>    <!-- SERVICES / INFORMATION 2-col -->    <div class="cs-meta-grid cs-anim">      <div class="cs-meta-col">        <div class="cs-meta-label">Services</div>        <div class="cs-meta-value">${p.services.replace(/\. /g, '.<br>')}</div>      </div>      <div class="cs-meta-col">        <div class="cs-meta-label">Information</div>        <div class="cs-meta-value">${p.info.split('\n\n').map(para => `<p style="margin-bottom:14px;">${para}</p>`).join('')}</div>      </div>    </div>    <!-- IMPACT -->    ${p.stats && p.stats.length ? `<div class="cs-impact cs-anim"><div class="cs-meta-label">Impact</div><div class="cs-impact-grid">${p.stats.map(s => `<div class="cs-impact-stat"><span class="wstat-val">${s.val}</span><span class="wstat-lbl">${s.label}</span></div>`).join('')}</div></div>` : ''}    <!-- IMAGE/VIDEO PAIR -->    <div class="cs-img-pair cs-anim">      <div class="cs-img-pair-item">${key === 'dojo' ? `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/dojovideo1.mp4" autoplay loop muted playsinline style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></video></div>` : key === 'danske' ? `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/danskevideo1.mp4" autoplay loop muted playsinline style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></video></div>` : renderSecondaryVisual(key, p, 0)}</div>      <div class="cs-img-pair-item">${key === 'dojo' ? `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/dojovideo2.mp4" autoplay loop muted playsinline style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></video></div>` : key === 'danske' ? `<div class="cs-vis" style="background:#EFEFEF;display:flex;align-items:center;justify-content:center;overflow:hidden;"><video src="assets/videos/danskevideo2.mp4" autoplay loop muted playsinline style="width:75%;height:75%;object-fit:contain;border-radius:8px;"></video></div>` : renderSecondaryVisual(key, p, 1)}</div>    </div>    <!-- CONTENT SECTIONS with interleaved images -->    ${sectionsHTML}    <!-- EXPLORE MORE -->    <div class="cs-explore cs-anim">      <div class="cs-explore-label">Explore more of my work</div>      <div class="cs-explore-grid">        <div class="cs-explore-card" data-go="${nextKey1}">          <div class="cs-explore-card-img">${renderHeroVisual(nextKey1, next1)}</div>          <div class="cs-explore-card-title">${next1.title}</div>          <div class="cs-explore-card-sub">${next1.subtitle}</div>        </div>        <div class="cs-explore-card" data-go="${nextKey2}">          <div class="cs-explore-card-img">${renderHeroVisual(nextKey2, next2)}</div>          <div class="cs-explore-card-title">${next2.title}</div>          <div class="cs-explore-card-sub">${next2.subtitle}</div>        </div>      </div>    </div>    <!-- FOOTER -->    <footer class="cs-footer"><span class="fc">&copy; 2026 Ollie Edge</span></footer>  `;    const csRevealObs = new IntersectionObserver((entries) => {    entries.forEach(entry => {      if(entry.isIntersecting) {        entry.target.classList.add('vis');        csRevealObs.unobserve(entry.target);      }    });  }, { threshold: 0.06, root: overlay });  content.querySelectorAll('.cs-anim').forEach(el => csRevealObs.observe(el));    content.querySelectorAll('.cs-explore-card[data-go]').forEach(card => {    card.addEventListener('click', function() {      overlay.scrollTo({ top: 0, behavior: 'instant' });      setTimeout(() => openCaseStudy(this.dataset.go), 50);    });  });  overlay.scrollTo({ top: 0, behavior: 'instant' });  
-  // Adapt Visit component colors based on what's behind it
-  const visitPill = document.getElementById('csVisit');
-  if (visitPill) {
-    const darkSelectors = '.cs-hero-top, .cs-img-full, .cs-img-pair, .cs-hero-img, .cs-impact';
-    const updateVisitTheme = () => {
-      const pillRect = visitPill.getBoundingClientRect();
-      const pillCx = pillRect.left + pillRect.width / 2;
-      const pillCy = pillRect.top + pillRect.height / 2;
-      visitPill.style.pointerEvents = 'none';
-      const behind = document.elementFromPoint(pillCx, pillCy);
-      visitPill.style.pointerEvents = '';
-      const onDark = behind && !!behind.closest(darkSelectors);
-      visitPill.style.setProperty('--visit-fg', onDark ? 'rgba(240,235,227,.7)' : 'rgba(26,26,26,.6)');
-      visitPill.style.setProperty('--visit-border', onDark ? 'rgba(240,235,227,.2)' : 'rgba(26,26,26,.15)');
-      visitPill.style.setProperty('--visit-border-hover', onDark ? 'rgba(240,235,227,.4)' : 'rgba(26,26,26,.3)');
-      visitPill.style.setProperty('--visit-bg-hover', onDark ? 'rgba(0,0,0,.15)' : 'rgba(0,0,0,.05)');
-      visitPill.style.setProperty('--visit-icon-bg', onDark ? 'rgba(240,235,227,.15)' : 'rgba(26,26,26,.08)');
-    };
-    overlay.addEventListener('scroll', updateVisitTheme);
-    updateVisitTheme();
-  }
-
-  var tcm=document.getElementById('themeColorMeta');if(tcm&&p.heroColor)tcm.setAttribute('content',p.heroColor);  overlay.classList.add('open');  document.body.style.overflow = 'hidden';}function closeCaseStudy() {  const overlay = document.getElementById('csOverlay');  const g=document.getElementById('csGate');if(g)g.classList.remove('active');overlay.classList.remove('open');  document.body.style.overflow = '';  var tcm=document.getElementById('themeColorMeta');if(tcm){var bg=getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();tcm.setAttribute('content',bg||'#F0EBE3');}}document.querySelectorAll('.wcard[data-project]').forEach(card => {  let startX = 0, startY = 0, startTime = 0;  card.addEventListener('pointerdown', e => { startX = e.clientX; startY = e.clientY; startTime = Date.now(); });  card.addEventListener('pointerup', e => {    const dx = Math.abs(e.clientX - startX);    const dy = Math.abs(e.clientY - startY);    const dt = Date.now() - startTime;    if (dx < 15 && dy < 15 && dt < 500) { openCaseStudy(card.dataset.project); }  });});document.getElementById('csBack').addEventListener('click', closeCaseStudy);document.addEventListener('keydown', e => {  if(e.key === 'Escape') closeCaseStudy();});</script>
-
-<!-- ═══ AI Q&A ENGINE ═══ -->
-<script>
-(function() {
-  // ══ CONFIG ══
-  // Set your Claude API proxy URL here.
-  // Do NOT put your API key in client-side code.
-  // Deploy a simple proxy (Cloudflare Worker, Vercel Edge Function, etc.)
-  // that forwards requests to https://api.anthropic.com/v1/messages
-  const CHAT_API_URL = 'https://ollie-chat-proxy.proud-truth-9c88.workers.dev';
-  const CHAT_API_KEY = '';  // Only if your proxy requires a separate auth token
-
-  // ══ SITE CONTEXT ══
-  const SYSTEM_PROMPT = `You are an AI assistant representing Ollie Edge, a Lead Product Designer based in London. You answer questions about Ollie on his behalf, based strictly on the information below. Be friendly, concise, and professional. If you don't know something, say so honestly rather than making things up. Keep responses short (2-4 sentences max unless more detail is asked for). Speak in third person about Ollie.
-
-ABOUT OLLIE:
-Ollie Edge is a Lead Product Designer based in London, UK. He designs thoughtful, research-led digital experiences that improve people's lives through technology - whether that's banking through a smartphone, booking a hotel online, or accessing engineering help. He is currently available for new projects. Contact: hello@ollieedge.com | LinkedIn: linkedin.com/in/ollieedge | Calendly: calendly.com/ollieedge/15min
-
-CURRENT ROLE - AEGON (Jan 2025 - Present):
-Design Lead at Aegon. Key projects:
-- Aegon Workplace Pension Journey: Onboarding, Product, Transactions, Investments, Mylo optimisation across £120M net inflow and 110K users.
-- Mylo app: Leading the design, within multidisciplinary design team (3-4 direct reports) within a regulated financial services ecosystem serving millions of customers.
-- Native Mobile iOS and Android Apps: Increased mobile app rating from 3.6 to 4.3 stars while contributing to £120M net inflows within 12 months through improved clarity, usability, and feel.
-Scope: Design Leadership, Financial Services, iOS/Android, Accessibility.
-
-PREVIOUS ROLES:
-1. Dojo / Paymentsense (Aug 2019 - May 2020): Senior Product Designer. Redesigned iOS and Android dashboard apps for 100K+ merchants. Delivered improved POS software UX. Conducted user testing and interviews. Scope: Product Design, iOS/Android, POS, User Research.
-
-2. Danske Bank (Nov 2017 - Jun 2019): Senior Product Designer. Designed the fastest, most transparent lending journey. Launched across 4 Nordic countries, facilitating 1M+ DKK lent in first week. 100% digital end-to-end, reduced funding time from 2 weeks to 2 days. Scope: Product Design, Financial Services, Mobile-first, Prototyping.
-
-3. Grundfos (2015 - 2017): UX Designer at Digitas LBi. Set UX strategy across web, mobile, and dealer portals for the world's largest pump manufacturer. Research, journey mapping, and workshop facilitation across 80+ countries. Scope: UX Strategy, B2B, Multi-channel.
-
-4. BMI Group (2020 - 2021): Senior UX/UI Designer at Digital Detox. Led UX/UI design on a major digital transformation - complete global site redesign for 30+ markets and interactive web tools (3D tile/roof visualiser, material calculator). Scope: UX/UI Design, Digital Transformation, Web Tools.
-
-COMPANIES WORKED WITH: Aegon, Dojo, Danske Bank, Digitas, BBC, Grundfos, BMI Group.
-
-SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, prototyping, user research, design leadership, accessibility (WCAG), iOS/Android native apps, financial services, B2B, multi-channel experiences.`;
-
-  // ══ FALLBACK (no API configured) ══
-  function getFallbackResponse(text) {
-    const t = text.toLowerCase();
-
-    if (t.includes('contact') || t.includes('email') || t.includes('hire') || t.includes('reach') || t.includes('available'))
-      return 'Ollie is currently available for new projects! You can reach him at hello@ollieedge.com, connect on LinkedIn (linkedin.com/in/ollieedge), or schedule a call at calendly.com/ollieedge/15min.';
-
-    if (t.includes('aegon') || t.includes('current') || t.includes('now') || t.includes('doing'))
-      return 'Ollie is currently Design Lead at Aegon (Jan 2025 - present), leading design on the Workplace Pension Journey, Mylo app, and native mobile apps. He manages a team of 3-4 direct reports and has helped increase the mobile app rating from 3.6 to 4.3 stars while contributing to £120M net inflows.';
-
-    if (t.includes('dojo') || t.includes('paymentsense') || t.includes('merchant') || t.includes('pos'))
-      return 'At Dojo (Paymentsense), Ollie was Senior Product Designer (2019-2020). He redesigned the iOS and Android dashboard apps for 100K+ merchants. He also improved the POS software UX and conducted user research.';
-
-    if (t.includes('danske') || t.includes('bank') || t.includes('lending') || t.includes('nordic'))
-      return 'At Danske Bank (2017-2019), Ollie designed a frictionless lending journey launched across 4 Nordic countries. It facilitated 1M+ DKK lent in the first week, was 100% digital end-to-end, and reduced funding time from 2 weeks to 2 days.';
-
-    if (t.includes('grundfos') || t.includes('pump') || t.includes('b2b'))
-      return 'At Grundfos (2015-2017), Ollie set the UX strategy across web, mobile, and dealer portals for the world\'s largest pump manufacturer. He led research, journey mapping, and workshop facilitation spanning 80+ countries.';
-
-    if (t.includes('bmi') || t.includes('roofing') || t.includes('design system') || t.includes('digital detox'))
-      return 'At BMI Group (2020-2021), working through Digital Detox, Ollie led UX/UI design on a major digital transformation. This included a complete global site redesign for 30+ markets and interactive web tools - a 3D tile/roof visualiser and material calculator.';
-
-    if (t.includes('experience') || t.includes('background') || t.includes('career') || t.includes('work'))
-      return 'Ollie has worked across financial services, B2B, and consumer products. Key roles include Design Lead at Aegon, Senior Product Designer at Dojo and Danske Bank, UX Designer at Grundfos (via Digitas LBi), and Senior UX/UI Designer at BMI Group (via Digital Detox). He also has experience with the BBC.';
-
-    if (t.includes('skill') || t.includes('strength') || t.includes('speciali') || t.includes('good at') || t.includes('approach'))
-      return 'Ollie specialises in research-led design, UX strategy, UI design, design systems, prototyping, and design leadership. He has deep expertise in financial services, mobile (iOS/Android), accessibility (WCAG), and multi-channel B2B experiences.';
-
-    if (t.includes('hello') || t.includes('hi') || t.includes('hey') || t.includes('morning') || t.includes('afternoon'))
-      return 'Hey! Thanks for stopping by Ollie\'s portfolio. Feel free to ask me about his work, experience, skills, or how to get in touch.';
-
-    if (t.includes('cv') || t.includes('resume') || t.includes('pdf'))
-      return 'You can find a full overview of Ollie\'s experience and work right here on the site. For a more detailed conversation, feel free to schedule a call at calendly.com/ollieedge/15min or email hello@ollieedge.com.';
-
-    if (t.includes('location') || t.includes('where') || t.includes('based') || t.includes('london'))
-      return 'Ollie is based in London, UK. He\'s available for both on-site and remote projects.';
-
-    return 'Great question! For the most detailed answer, I\'d recommend reaching out to Ollie directly at hello@ollieedge.com or scheduling a call at calendly.com/ollieedge/15min. In the meantime, feel free to explore his work and experience sections on this site.';
-  }
-
-  // ══ INLINE AI Q&A ══
-  (function initAiSection() {
-    const aiInput = document.getElementById('aiInput');
-    const aiSend = document.getElementById('aiSend');
-    const aiChips = document.getElementById('aiChips');
-    const aiResponse = document.getElementById('aiResponse');
-    const aiInner = document.getElementById('aiResponseInner');
-    if (!aiInput || !aiSend) return;
-
-    let aiSending = false;
-    let aiHistory = [];
-
-    aiInput.addEventListener('input', () => {
-      aiSend.disabled = !aiInput.value.trim() || aiSending;
-    });
-    aiInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter' && !e.shiftKey && aiInput.value.trim() && !aiSending) {
-        e.preventDefault();
-        askAi(aiInput.value.trim());
-      }
-    });
-    aiSend.addEventListener('click', () => {
-      if (aiInput.value.trim() && !aiSending) askAi(aiInput.value.trim());
-    });
-
-    aiChips.addEventListener('click', e => {
-      const chip = e.target.closest('.ai-chip');
-      if (chip && !aiSending) {
-        const q = chip.dataset.q;
-        aiInput.value = q;
-        askAi(q);
-      }
-    });
-
-    async function askAi(text) {
-      aiSending = true;
-      aiSend.disabled = true;
-      aiInput.value = '';
-      aiResponse.classList.add('active');
-
-      // Show typing dots
-      aiInner.innerHTML = '<div class="ai-typing"><span></span><span></span><span></span></div>';
-
-      // Hide chips after first question
-      aiChips.style.opacity = '0';
-      aiChips.style.pointerEvents = 'none';
-      setTimeout(() => { aiChips.style.display = 'none'; }, 300);
-
-      aiHistory.push({ role: 'user', content: text });
-
-      try {
-        let reply;
-        if (CHAT_API_URL) {
-          const headers = { 'Content-Type': 'application/json' };
-          if (CHAT_API_KEY) headers['Authorization'] = 'Bearer ' + CHAT_API_KEY;
-          const res = await fetch(CHAT_API_URL, {
-            method: 'POST',
-            headers,
-            body: JSON.stringify({
-              model: 'claude-sonnet-4-20250514',
-              max_tokens: 400,
-              system: SYSTEM_PROMPT,
-              messages: aiHistory
-            })
-          });
-          if (!res.ok) throw new Error('API error');
-          const data = await res.json();
-          reply = data.content?.[0]?.text || data.message || 'Sorry, I couldn\'t generate a response.';
-        } else {
-          reply = getFallbackResponse(text);
+        .nav-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        aiHistory.push({ role: 'assistant', content: reply });
-        typeResponse(reply);
-      } catch (err) {
-        typeResponse('Sorry, I\'m having trouble connecting right now. You can reach Ollie directly at hello@ollieedge.com.');
-      }
-    }
-
-    function typeResponse(text) {
-      aiInner.innerHTML = '';
-      aiResponse.classList.add('active');
-      let i = 0;
-      const cursor = document.createElement('span');
-      cursor.className = 'ai-cursor';
-
-      function tick() {
-        if (i < text.length) {
-          // Remove cursor, add char, re-add cursor
-          if (cursor.parentNode) cursor.remove();
-          aiInner.appendChild(document.createTextNode(text[i]));
-          aiInner.appendChild(cursor);
-          i++;
-          setTimeout(tick, 18 + Math.random() * 12);
-        } else {
-          // Done typing — remove cursor after a beat
-          setTimeout(() => {
-            if (cursor.parentNode) cursor.remove();
-            // Show input ready state
-            aiSending = false;
-            aiSend.disabled = !aiInput.value.trim();
-            aiInput.placeholder = 'Ask a follow-up...';
-            aiInput.focus();
-          }, 600);
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text);
         }
-      }
-      tick();
-    }
-  })();
-
-})();
-</script>
-
-<!-- ═══ GSAP + SCROLLTRIGGER ═══ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
-(function() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  /* Respect prefers-reduced-motion */
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var sp = document.getElementById('splash');
-    if (sp) sp.style.display = 'none';
-    document.body.classList.remove('splash-active');
-    var allTlCards = document.querySelectorAll('.exp-timeline .exp-card');
-    allTlCards.forEach(function(c) { c.classList.add('tl-vis'); });
-    var ln = document.getElementById('tlLine');
-    if (ln) ln.style.height = 'calc(100% - 48px)';
-    document.querySelectorAll('.bio-line').forEach(function(l) { l.style.transform = 'none'; });
-    return;
-  }
-
-  /* ═══ SPLASH SCREEN — DRAW-ON-PATH ═══ */
-  var splash = document.getElementById('splash');
-  var splashTexts = document.querySelectorAll('.splash-txt');
-
-  /* Prepare splash text: stroke hidden, fill invisible */
-  splashTexts.forEach(function(t) {
-    var len = t.getComputedTextLength ? t.getComputedTextLength() * 3 : 1200;
-    t._dashLen = len;
-    gsap.set(t, {
-      strokeDasharray: len,
-      strokeDashoffset: len,
-      fillOpacity: 0
-    });
-  });
-
-  /* Hide right column behind splash */
-  gsap.set('.col-r', { autoAlpha: 0 });
-
-  /* ═══ MASTER TIMELINE ═══ */
-  var loadTl = gsap.timeline({ delay: 0.2 });
-
-  loadTl
-    /* ── Phase 1: Draw the logo outlines ── */
-    .to(splashTexts, {
-      strokeDashoffset: 0,
-      duration: 1.4,
-      ease: 'power2.inOut',
-      stagger: 0.15
-    })
-    /* ── Phase 2: Fill in the letters ── */
-    .to(splashTexts, {
-      fillOpacity: 1,
-      duration: 0.5,
-      ease: 'power2.out',
-      stagger: 0.08
-    }, '-=0.4')
-    /* ── Phase 3: Hold briefly so the logo registers ── */
-    .to({}, { duration: 0.35 })
-    /* ── Phase 4: Splash fades out and scales down ── */
-    .to(splash, {
-      autoAlpha: 0,
-      scale: 0.92,
-      duration: 0.7,
-      ease: 'power3.inOut',
-      onComplete: function() {
-        splash.style.display = 'none';
-        document.body.classList.remove('splash-active');
-      }
-    })
-    /* ── Phase 5: Right column reveals ── */
-    .to('.col-r', { autoAlpha: 1, duration: 0.6, ease: 'power2.out' }, '-=0.3');
-
-  /* ── Bio split-line reveal ── */
-  var bioEl = document.getElementById('bio');
-  var bioLines = document.querySelectorAll('.bio-line');
-  if (bioLines.length) {
-    gsap.to(bioLines, {
-      y: '0%',
-      duration: 0.9,
-      stagger: 0.14,
-      ease: 'power3.out',
-      delay: 0.3,
-      scrollTrigger: {
-        trigger: '#bio',
-        start: 'top 95%',
-        toggleActions: 'play none none none'
-      },
-      onComplete: function() {
-        /* Unwrap masks so text reflows naturally at any width */
-        if (!bioEl) return;
-        var spans = bioEl.querySelectorAll('span');
-        var frag = document.createDocumentFragment();
-        spans.forEach(function(s, i) {
-          if (i > 0) frag.appendChild(document.createTextNode(' '));
-          frag.appendChild(s);
-        });
-        bioEl.innerHTML = '';
-        bioEl.appendChild(frag);
-      }
-    });
-  }
-
-  /* ═══ SECTION HEADINGS CLIP-REVEAL ═══ */
-  gsap.utils.toArray('.work-heading, .exp-heading, .ai-heading').forEach(function(h) {
-    gsap.fromTo(h,
-      { clipPath: 'inset(100% 0 0 0)', y: 20 },
-      {
-        clipPath: 'inset(0% 0 0 0)', y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: h,
-          start: 'top 85%',
-          toggleActions: 'play none none none'
+        .nav-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 9px;
+            overflow: hidden;
+            flex-shrink: 0;
         }
-      }
-    );
-  });
+        .nav-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .nav-brand span {
+            font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+        }
+        .nav-cta {
+            background: var(--dark);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .nav-cta:hover { opacity: 0.85; }
 
-  /* ═══ WORK SECTION ENTRANCE ═══ */
-  gsap.fromTo('.work-track-wrap',
-    { y: 50, autoAlpha: 0 },
+        /* ─── HERO ─── */
+        .hero {
+            text-align: center;
+            padding: 80px 24px 60px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+.hero-brand {
+            font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            font-size: clamp(20px, 2.4vw, 26px);
+            font-weight: 900;
+            color: var(--dark);
+            letter-spacing: -0.01em;
+            margin-bottom: 18px;
+        }
+        /* Cycling monster mascot — mirrors the sign-in landing screen in the app.
+           All seven characters are stacked; each is visible for ~1s with a
+           soft cross-fade, totalling a 7s loop. */
+        .hero-monster-stack {
+            position: relative;
+            width: clamp(140px, 22vw, 200px);
+            height: clamp(140px, 22vw, 200px);
+            margin: 0 auto 28px;
+        }
+        .hero-monster-stack img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            transform: scale(0.85);
+            animation: hero-monster-cycle 7s ease-in-out infinite;
+            filter: drop-shadow(0 6px 18px rgba(242,197,6,0.35));
+        }
+        .hero-monster-stack img:nth-child(1) { animation-delay: 0s; }
+        .hero-monster-stack img:nth-child(2) { animation-delay: 1s; }
+        .hero-monster-stack img:nth-child(3) { animation-delay: 2s; }
+        .hero-monster-stack img:nth-child(4) { animation-delay: 3s; }
+        .hero-monster-stack img:nth-child(5) { animation-delay: 4s; }
+        .hero-monster-stack img:nth-child(6) { animation-delay: 5s; }
+        .hero-monster-stack img:nth-child(7) { animation-delay: 6s; }
+        @keyframes hero-monster-cycle {
+            0%   { opacity: 0; transform: scale(0.85); }
+            3%   { opacity: 1; transform: scale(1); }
+            12%  { opacity: 1; transform: scale(1); }
+            15%  { opacity: 0; transform: scale(0.85); }
+            100% { opacity: 0; transform: scale(0.85); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-monster-stack img { animation: none; }
+            .hero-monster-stack img:first-child { opacity: 1; transform: scale(1); }
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .store-badges {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .store-badge {
+            display: inline-block;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .store-badge:hover { opacity: 0.85; }
+        .store-badge img { height: 81px; }
+
+        /* ─── HERO TRUST PILLS ─── */
+        .hero-trust {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        .hero-trust-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid rgba(0,0,0,0.06);
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .hero-trust-stars { color: var(--yellow); letter-spacing: 0.5px; }
+
+                /* ─── GRADER TOOL ─── */
+        .grader {
+            padding: 60px 24px;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .grader h2 {
+            font-size: clamp(24px, 4vw, 34px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .grader .grader-sub {
+            text-align: center;
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        .grader-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+        .grader-group { margin-bottom: 24px; }
+        .grader-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .size-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .size-btn {
+            flex: 1;
+            min-width: 56px;
+            padding: 14px 6px;
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            background: #fff;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.15s;
+            font-family: inherit;
+        }
+        .size-btn:hover { border-color: var(--yellow); }
+        .size-btn.active {
+            border-color: var(--yellow);
+            background: var(--yellow-light);
+        }
+        .size-btn .num { font-size: 20px; font-weight: 800; display: block; }
+        .size-btn .lbl { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+        .spend-wrap { position: relative; }
+        .spend-wrap .cur {
+            position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+            font-size: 20px; font-weight: 700; color: var(--text-secondary);
+        }
+        .spend-input {
+            width: 100%;
+            padding: 16px 16px 16px 36px;
+            font-size: 20px; font-weight: 700; font-family: inherit;
+            border: 2px solid #E5E7EB; border-radius: 12px;
+            outline: none; transition: border-color 0.15s;
+            -moz-appearance: textfield;
+        }
+        .spend-input::-webkit-outer-spin-button,
+        .spend-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+        .spend-input:focus { border-color: var(--yellow); }
+        .period-toggle {
+            display: flex; background: var(--bg-grey); border-radius: 10px; padding: 4px; margin-top: 10px;
+        }
+        .period-btn {
+            flex: 1; padding: 10px; border: none; border-radius: 8px;
+            background: transparent; font-size: 13px; font-weight: 600;
+            font-family: inherit; cursor: pointer; color: var(--text-secondary); transition: all 0.15s;
+        }
+        .period-btn.active {
+            background: #fff; color: var(--text); box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+        .grade-btn {
+            width: 100%; padding: 18px; border: none; border-radius: 14px;
+            background: linear-gradient(135deg, #F2C506, #FFD60A);
+            color: var(--dark); font-size: 17px; font-weight: 800;
+            font-family: inherit; cursor: pointer; transition: opacity 0.2s;
+        }
+        .grade-btn:hover { opacity: 0.9; }
+        .grade-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Grader results */
+        .grader-results { display: none; margin-top: 24px; }
+        .grader-results.show { display: block; }
+        .grade-result-card {
+            background: #fff; border-radius: 20px; padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06); text-align: center; margin-bottom: 20px;
+        }
+        .grade-letter {
+            width: 90px; height: 90px; border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 42px; font-weight: 900; color: #fff; margin-bottom: 12px;
+        }
+        .grade-title { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .grade-subtitle { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px; }
+        .comp-bar-wrap {
+            background: var(--bg-grey); border-radius: 14px; padding: 18px; text-align: left; margin-bottom: 20px;
+        }
+        .comp-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .comp-bar { height: 10px; background: #E5E7EB; border-radius: 5px; position: relative; margin-bottom: 12px; }
+        .comp-fill { height: 100%; border-radius: 5px; transition: width 0.8s ease-out; }
+        .comp-marker {
+            position: absolute; top: -5px; width: 20px; height: 20px; border-radius: 50%;
+            background: var(--dark); border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            transform: translateX(-50%); transition: left 0.8s ease-out;
+        }
+        .comp-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); }
+        .comp-labels .you { font-weight: 700; color: var(--text); }
+        .tips-list { text-align: left; }
+        .tip-row { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; }
+        .tip-row + .tip-row { border-top: 1px solid #F3F4F6; }
+        .tip-icon {
+            width: 34px; height: 34px; border-radius: 10px;
+            display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;
+        }
+        .tip-text { font-size: 13px; line-height: 1.5; }
+        .tip-text strong { font-weight: 700; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 20px; border: 2px solid #E5E7EB; border-radius: 100px;
+            background: #fff; font-size: 13px; font-weight: 600; font-family: inherit;
+            cursor: pointer; color: var(--text); transition: border-color 0.15s;
+        }
+        .share-btn:hover { border-color: var(--yellow); }
+        .grader-cta {
+            text-align: center; margin-top: 20px; padding: 24px;
+            background: var(--dark); border-radius: 16px; color: #fff;
+        }
+        .grader-cta p { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+        .grader-cta .store-badge img { height: 44px; filter: invert(1); }
+
+        @media (max-width: 480px) {
+            .grader-card { padding: 24px 20px; }
+            .size-btn .num { font-size: 18px; }
+        }
+
+        /* ─── APP SCREENSHOTS ─── */
+        .screenshots {
+            padding: 60px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .screenshots-intro {
+            text-align: center;
+            font-size: clamp(15px, 1.6vw, 18px);
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin: 0 24px 28px;
+            letter-spacing: -0.01em;
+        }
+        .screenshots-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: nowrap;
+            min-width: min-content;
+        }
+        .phone-frame {
+            width: 220px;
+            flex-shrink: 0;
+            background: var(--bg-grey);
+            border-radius: 28px;
+            border: 3px solid #E5E7EB;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+        }
+        .phone-frame img {
+            width: 100%;
+            display: block;
+        }
+        .phone-label {
+            padding: 12px 16px;
+            text-align: center;
+            background: #fff;
+        }
+        .phone-label h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .phone-label p {
+            font-size: 11px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* ─── FEATURES ─── */
+        .features {
+            padding: 80px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .features h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 56px;
+            letter-spacing: -0.02em;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: var(--bg-grey);
+            border-radius: var(--radius);
+            padding: 32px;
+            transition: background 0.2s;
+        }
+        .feature-card:hover { background: #E6E1D9; }
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .feature-card-img {
+            width: 100%;
+            height: 180px;
+            background: var(--yellow-light);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .feature-card-img img {
+            height: 120px;
+            object-fit: contain;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover .feature-card-img img {
+            transform: scale(1.08);
+        }
+
+        /* ─── WHAT'S NEW (RECENTLY SHIPPED) ─── */
+        .whats-new {
+            padding: 60px 24px 20px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .whats-new h2 {
+            font-size: clamp(22px, 3vw, 32px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        .whats-new-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+        .whats-new-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 22px;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+        .whats-new-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--dark);
+            background: var(--yellow);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .whats-new-card h3 {
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .whats-new-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+                /* ─── TESTIMONIALS ─── */
+        .testimonials {
+            padding: 80px 24px 80px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonials h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+        .testimonial-card {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .testimonial-quote-icon {
+            font-size: 36px;
+            color: #D1D5DB;
+            margin-bottom: 20px;
+        }
+        .testimonial-text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .testimonial-role {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* ─── INFLATION WATCH ─── */
+        .inflation-watch {
+            padding: 80px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        .inflation-watch h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .inflation-watch-intro {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 17px;
+            max-width: 640px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        .iw-card {
+            background: #fff;
+            border-radius: var(--radius);
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            overflow: hidden;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .iw-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 24px 6px;
+        }
+        .iw-card-header-title {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--dark);
+        }
+        .iw-badge {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            color: #fff;
+            background: var(--yellow);
+            padding: 3px 7px;
+            border-radius: 4px;
+        }
+        .iw-card-disclaimer {
+            padding: 4px 24px 14px;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        .iw-card-intro {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 16px 24px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .iw-card-intro-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--yellow-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .iw-card-intro-text h3 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .iw-card-intro-text p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        .iw-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 24px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+        .iw-row-rank {
+            width: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            text-align: center;
+        }
+        .iw-row-emoji {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-grey);
+            flex-shrink: 0;
+        }
+        .iw-row-meta {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .iw-row-emoji {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            background: rgba(220, 38, 38, 0.10);
+        }
+        .iw-row-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+        .iw-row-meta-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        .iw-row-meta-text .iw-row-meta-strong {
+            color: var(--yellow);
+            font-weight: 700;
+        }
+        .iw-row-pct {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 13px;
+            font-weight: 900;
+            color: #DC2626;
+            background: rgba(220, 38, 38, 0.10);
+            padding: 5px 10px;
+            border-radius: 100px;
+            white-space: nowrap;
+        }
+        .iw-row-pct svg { width: 11px; height: 11px; }
+        .iw-notify {
+            padding: 16px 24px 22px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            background: rgba(253,214,8,0.06);
+        }
+        .iw-notify label {
+            display: block;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        .iw-notify-row { display: flex; gap: 8px; }
+        .iw-notify input[type="email"] {
+            flex: 1;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0,0.12);
+            font: inherit;
+            font-size: 14px;
+            color: var(--text);
+            background: #fff;
+        }
+        .iw-notify input[type="email"]:focus {
+            outline: 2px solid var(--yellow);
+            outline-offset: 1px;
+        }
+        .iw-notify button {
+            background: var(--dark);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 0 18px;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .iw-notify button:hover { opacity: 0.88; }
+        .iw-notify-note {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+                /* ─── BLOG ─��─ */
+        .blog-preview { padding: 80px 24px; }
+        .blog-inner { max-width: 900px; margin: 0 auto; }
+        .blog-preview h2 {
+            font-size: clamp(28px, 4vw, 44px); font-weight: 900;
+            margin-bottom: 12px; letter-spacing: -0.02em;
+        }
+        .blog-preview .blog-sub {
+            font-size: 16px; color: var(--text-secondary); margin-bottom: 36px;
+        }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .blog-card {
+            background: #fff; border-radius: 16px; padding: 24px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05); text-decoration: none; color: var(--text);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .blog-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.09); }
+        .blog-card .blog-emoji { font-size: 36px; margin-bottom: 14px; }
+        .blog-card h3 { font-size: 16px; font-weight: 800; line-height: 1.3; margin-bottom: 8px; }
+        .blog-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.5; flex: 1; }
+        .blog-card .read-link {
+            font-size: 13px; font-weight: 700; color: var(--dark); margin-top: 14px;
+            display: inline-flex; align-items: center; gap: 4px;
+        }
+        .blog-all {
+            display: inline-block; margin-top: 28px; font-size: 14px; font-weight: 700;
+            color: var(--dark); text-decoration: none;
+        }
+        .blog-all:hover { text-decoration: underline; }
+        @media (max-width: 700px) { .blog-grid { grid-template-columns: 1fr; } }
+
+        /* ─���─ FAQ ─── */
+        .faq {
+            background: var(--bg-grey);
+            padding: 80px 24px;
+        }
+        .faq-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .faq h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 900;
+            margin-bottom: 48px;
+            letter-spacing: -0.02em;
+        }
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 20px 0;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            color: var(--text);
+            font-family: inherit;
+            padding: 4px 0;
+        }
+        .faq-question:hover { color: var(--text-secondary); }
+        .faq-chevron {
+            font-size: 20px;
+            transition: transform 0.3s;
+            color: var(--text-secondary);
+        }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+            padding-top: 12px;
+        }
+        .faq-answer p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            padding: 48px 24px;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .footer-brand-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .footer-brand-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .footer-brand span {
+            font-size: 16px;
+            font-weight: 800;
+        }
+        .footer-left p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--text); }
+
+        /* ─── ANIMATIONS ─── */
+
+        /* Scroll-triggered reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered children — each child delays slightly */
+        .stagger-children > .reveal:nth-child(1) { transition-delay: 0s; }
+        .stagger-children > .reveal:nth-child(2) { transition-delay: 0.08s; }
+        .stagger-children > .reveal:nth-child(3) { transition-delay: 0.16s; }
+        .stagger-children > .reveal:nth-child(4) { transition-delay: 0.24s; }
+        .stagger-children > .reveal:nth-child(5) { transition-delay: 0.32s; }
+        .stagger-children > .reveal:nth-child(6) { transition-delay: 0.40s; }
+
+        /* Hero stagger — tighter timing */
+        .hero-stagger > * {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .hero-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+        .hero-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+        .hero-stagger > *:nth-child(3) { animation-delay: 0.35s; }
+        .hero-stagger > *:nth-child(4) { animation-delay: 0.5s; }
+        .hero-stagger > *:nth-child(5) { animation-delay: 0.65s; }
+
+        @keyframes heroFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating bob on hero icon — chain after heroFadeUp so opacity still transitions */
+        .hero-icon {
+            animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+                       float 4s ease-in-out 0.8s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Phone frames slide up from further down */
+        .phone-frame.reveal {
+            transform: translateY(60px);
+        }
+
+        /* Subtle scale-in for feature cards */
+        .feature-card.reveal {
+            transform: translateY(40px) scale(0.97);
+        }
+        .feature-card.reveal.visible {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Nav slide down on load */
+        nav {
+            animation: navSlideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes navSlideDown {
+            from { opacity: 0; transform: translateY(-100%); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Shimmer on CTA button */
+        .nav-cta {
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 60%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { left: -100%; }
+            50% { left: 150%; }
+        }
+
+        /* Grade button pulse when enabled */
+        .grade-btn:not(:disabled) {
+            animation: subtlePulse 2.5s ease-in-out infinite;
+        }
+        @keyframes subtlePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(242,197,6,0.3); }
+            50% { box-shadow: 0 0 0 8px rgba(242,197,6,0); }
+        }
+
+        /* Blog card hover lift is already there, add scale */
+        .blog-card {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: none; opacity: 1; transform: none; }
+            .hero-stagger > * { animation: none; opacity: 1; transform: none; }
+            .hero-icon { animation: none; }
+            nav { animation: none; }
+            .nav-cta::after { animation: none; }
+            .grade-btn:not(:disabled) { animation: none; }
+        }
+
+        /* ─── RESPONSIVE: TABLET ─── */
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px 40px; }
+            .hero p { font-size: 16px; }
+            .hero-monster-stack { width: 140px; height: 140px; margin-bottom: 20px; }
+            .hero-brand { margin-bottom: 12px; }
+            .store-badge img { height: 56px; }
+            .screenshots { padding: 40px 16px; }
+            .screenshots-row { justify-content: flex-start; padding: 0 16px; gap: 12px; }
+            .phone-frame { width: 180px; }
+            .features { padding: 48px 20px; }
+            .features h2 { margin-bottom: 32px; }
+            .features-grid { grid-template-columns: 1fr; gap: 16px; }
+            .feature-card { padding: 24px; }
+            .testimonials { padding: 48px 20px; }
+            .testimonial-text { font-size: 16px; }
+            .testimonial-nav { gap: 120px; margin-top: -60px; }
+            .blog-preview { padding: 48px 20px; }
+            .faq { padding: 48px 20px; }
+            .faq h2 { margin-bottom: 32px; }
+            footer { flex-direction: column; text-align: center; align-items: center; gap: 16px; }
+            .footer-links { justify-content: center; }
+            .grader { padding: 40px 20px; }
+            .inflation-watch { padding: 48px 20px; }
+            .inflation-watch h2 { margin-bottom: 12px; }
+            .iw-card-header,
+            .iw-card-disclaimer,
+            .iw-card-intro,
+            .iw-row { padding-left: 16px; padding-right: 16px; }
+        }
+
+        /* ─── RESPONSIVE: MOBILE ─── */
+        @media (max-width: 480px) {
+            .nav-inner { padding: 12px 16px; }
+            .nav-brand span { font-size: 15px; }
+            .nav-cta { padding: 8px 16px; font-size: 13px; }
+            .hero { padding: 40px 16px 32px; }
+            .hero-monster-stack { width: 120px; height: 120px; margin-bottom: 16px; }
+            .hero-brand { font-size: 18px; margin-bottom: 10px; }
+            .hero p { font-size: 15px; margin-bottom: 24px; }
+            .store-badges { gap: 8px; }
+            .store-badge img { height: 44px; }
+            .screenshots { padding: 32px 0; }
+            .screenshots-row { padding: 0 16px; gap: 10px; }
+            .phone-frame { width: 150px; }
+            .phone-label h3 { font-size: 12px; }
+            .phone-label p { font-size: 10px; }
+            .features { padding: 32px 16px; }
+            .features h2 { margin-bottom: 24px; }
+            .feature-card { padding: 20px; }
+            .feature-card h3 { font-size: 16px; }
+            .feature-card p { font-size: 14px; }
+            .feature-card-img { height: 140px; }
+            .feature-card-img img { height: 90px; }
+            .testimonials { padding: 32px 16px; }
+            .testimonials h2 { margin-bottom: 28px; }
+            .testimonial-text { font-size: 15px; }
+            .testimonial-nav { gap: 80px; margin-top: -50px; }
+            .testimonial-nav button { font-size: 28px; }
+            .blog-preview { padding: 32px 16px; }
+            .blog-card { padding: 20px; }
+            .faq { padding: 32px 16px; }
+            .faq-question { font-size: 15px; }
+            .grader { padding: 32px 16px; }
+            .grader-card { padding: 20px 16px; }
+            .size-btn { padding: 10px 14px; }
+            .size-btn .num { font-size: 18px; }
+        }
+
+        /* ─── RESPONSIVE: SMALL PHONES ─── */
+        @media (max-width: 360px) {
+            .nav-brand span { font-size: 14px; }
+            .nav-cta { padding: 6px 12px; font-size: 12px; }
+            .hero h1 { font-size: 28px; }
+            .phone-frame { width: 130px; }
+            .store-badge img { height: 38px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
     {
-      y: 0, autoAlpha: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: { trigger: '.work-outer', start: 'top 70%', toggleActions: 'play none none none' }
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Weekly Shop Budget Grader",
+        "description": "Free tool that grades your weekly shop against the UK average based on your household size. Get an instant A-F grade with personalised saving tips.",
+        "url": "https://supermonsterapp.com/#grader",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+        "author": { "@type": "Organization", "name": "Supermonster", "url": "https://supermonsterapp.com" }
     }
-  );
-  gsap.fromTo('.work-counter',
-    { autoAlpha: 0 },
-    { autoAlpha: 1, duration: 0.5, delay: 0.3,
-      scrollTrigger: { trigger: '.work-header', start: 'top 85%', toggleActions: 'play none none none' }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Supermonster?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Supermonster is a shopping tracker for UK households. Take a photo of any supermarket receipt to track price changes on the items you buy regularly, set weekly budgets, and share shopping lists with your partner or family."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does receipt capture work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Take a photo of the items list on any UK supermarket receipt (avoid the barcode at the bottom). Supermonster's AI reads every item name, price, and discount automatically — it takes just a few seconds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Supermonster free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The free tier includes unlimited receipt capture, household sharing, and shopping lists. Supermonster Plus (£2.99/month) unlocks weekly spending insights, full price tracking across supermarkets, and nutrition swap suggestions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I share with my partner?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Create a household and share a code with your partner. You'll both see shared shopping lists, combined spending data, and household budgets — all synced in real time."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data private?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your personal data is never shared. You can optionally opt in to share anonymised shopping data to help build better price insights for everyone, but this is entirely your choice and can be changed anytime in Settings."
+                }
+            }
+        ]
     }
-  );
-  gsap.fromTo('.work-arrows',
-    { autoAlpha: 0, x: -10 },
-    { autoAlpha: 1, x: 0, duration: 0.5, delay: 0.4,
-      scrollTrigger: { trigger: '.work-header', start: 'top 85%', toggleActions: 'play none none none' }
+    </script>
+
+    <!-- App store structured data — eligible for rich app card in search results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Supermonster — Grocery Tracker",
+        "operatingSystem": "iOS",
+        "applicationCategory": "FinanceApplication",
+        "description": "Take a photo of any UK supermarket receipt to track prices, spot rises across stores, set household budgets, and share shopping lists.",
+        "url": "https://supermonsterapp.com/",
+        "image": "https://supermonsterapp.com/appicon.png",
+        "screenshot": [
+            "https://supermonsterapp.com/home.png",
+            "https://supermonsterapp.com/spending.png",
+            "https://supermonsterapp.com/nutrition.png",
+            "https://supermonsterapp.com/lists.png",
+            "https://supermonsterapp.com/you.png"
+        ],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+        "downloadUrl": "https://apps.apple.com/gb/app/supermonster-grocery-tracker/id6763580977",
+        "author": { "@type": "Organization", "name": "Supermonster", "url": "https://supermonsterapp.com" }
     }
-  );
+    </script>
+</head>
+<body>
 
-  /* ═══ TIMELINE ANIMATIONS ═══ */
-  var timeline = document.querySelector('.exp-timeline');
-  var tlLine = document.getElementById('tlLine');
-  if (timeline && tlLine) {
+<!-- NAV -->
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-brand">
+            <div class="nav-icon"><img src="appicon.png" alt="Supermonster app icon"></div>
+            <span>Supermonster</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:20px;">
+            <a href="/prices/" style="text-decoration:none;font-size:14px;font-weight:700;color:var(--yellow);transition:opacity 0.2s;">UK Prices</a>
+            <a href="/blog" style="text-decoration:none;font-size:14px;font-weight:600;color:var(--text-secondary);transition:color 0.2s;">Blog</a>
+            <a href="https://apps.apple.com/gb/app/supermonster-grocery-tracker/id6763580977" class="nav-cta">Download now</a>
+        </div>
+    </div>
+</nav>
 
-  /* ── Line draws down as you scroll through the section ── */
-  gsap.to(tlLine, {
-    height: 'calc(100% - 48px)',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: timeline,
-      start: 'top 80%',
-      end: 'bottom 50%',
-      scrub: 0.6
+<!-- HERO -->
+<section class="hero hero-stagger">
+    <div class="hero-brand">Supermonster</div>
+    <div class="hero-monster-stack" aria-hidden="true">
+        <img src="monster-chester.png" alt="">
+        <img src="monster-grumpus.png" alt="">
+        <img src="monster-blobby.png" alt="">
+        <img src="monster-fuzzy.png" alt="">
+        <img src="monster-wally.png" alt="">
+        <img src="monster-fluffbert.png" alt="">
+        <img src="monster-pixel.png" alt="">
+    </div>
+    <h1>See which items are pushing up<br>your supermarket shop.</h1>
+    <p>Take a photo of any UK receipt — Supermonster spots the items going up across every supermarket, helps you set household budgets, and stops you overpaying.</p>
+    <div class="store-badges">
+        <a href="https://apps.apple.com/gb/app/supermonster-grocery-tracker/id6763580977" class="store-badge">
+            <img src="apple-download-black-btn.svg" alt="Download on the App Store">
+        </a>
+    </div>
+    <div class="hero-trust">
+        <div class="hero-trust-pill">
+            <span class="hero-trust-stars">★★★★★</span>
+            <span>Free on iOS</span>
+        </div>
+        <div class="hero-trust-pill">
+            <span class="hero-trust-emoji">🔒</span>
+            <span>Receipts stay on your device</span>
+        </div>
+    </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="screenshots">
+    <p class="screenshots-intro reveal">Five tabs. Starts with a photo.</p>
+    <div class="screenshots-row stagger-children">
+        <div class="phone-frame reveal">
+            <img src="home.png" alt="Supermonster home screen with monster, progress and one-tap photo capture">
+        </div>
+        <div class="phone-frame reveal">
+            <img src="spending.png" alt="Spending tab showing UK Inflation Watch, price rises and drops by supermarket">
+        </div>
+        <div class="phone-frame reveal">
+            <img src="nutrition.png" alt="Nutrition tab showing health score, processing bar and swap suggestions">
+        </div>
+        <div class="phone-frame reveal">
+            <img src="lists.png" alt="Shopping lists with weekly shop items and household sharing">
+        </div>
+        <div class="phone-frame reveal">
+            <img src="you.png" alt="Profile and settings screen with household and subscription options">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2 class="reveal">Everything you need to save on the weekly shop</h2>
+    <div class="features-grid stagger-children">
+        <div class="feature-card reveal">
+            <h3>Instant receipt capture</h3>
+            <p>Take a photo of any supermarket receipt — point your camera at the items list and Supermonster reads every item, price, and discount in seconds using AI.</p>
+            <div class="feature-card-img"><img src="monster-chester.png" alt="Receipt capture"></div>
+        </div>
+        <div class="feature-card reveal">
+            <h3>Price tracking with budgets</h3>
+            <p>See which items went up or down since your last shop, set weekly or monthly budget goals, and get a heads-up when you're close to the limit.</p>
+            <div class="feature-card-img"><img src="monster-wally.png" alt="Price tracking"></div>
+        </div>
+        <div class="feature-card reveal">
+            <h3>Household sharing</h3>
+            <p>Link with your partner or family. Shared shopping lists, combined spending view, and household budgets — all synced in real time.</p>
+            <div class="feature-card-img"><img src="monster-fuzzy.png" alt="Household sharing"></div>
+        </div>
+        <div class="feature-card reveal">
+            <h3>Smart shopping lists</h3>
+            <p>Create shared lists with your household. Supermonster suggests your regular items based on past shops and tracks what you've checked off in real time.</p>
+            <div class="feature-card-img"><img src="monster-grumpus.png" alt="Smart shopping lists"></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT'S NEW -->
+<section class="whats-new">
+    <h2 class="reveal">Recently shipped</h2>
+    <div class="whats-new-grid stagger-children">
+        <div class="whats-new-card reveal">
+            <span class="whats-new-tag">New</span>
+            <h3>Inflation Watch</h3>
+            <p>A community-sourced view of UK supermarket price moves — in preview while we hit data scale.</p>
+        </div>
+        <div class="whats-new-card reveal">
+            <span class="whats-new-tag">Updated</span>
+            <h3>Smart shopping lists</h3>
+            <p>Lists now learn from past shops and suggest your regulars as you type.</p>
+        </div>
+        <div class="whats-new-card reveal">
+            <span class="whats-new-tag">Updated</span>
+            <h3>Price history</h3>
+            <p>Every item's price across stores and dates, on a clean per-item timeline.</p>
+        </div>
+    </div>
+</section>
+
+<!-- INFLATION WATCH -->
+<section class="inflation-watch">
+    <h2 class="reveal">Inflation Watch</h2>
+    <p class="inflation-watch-intro reveal">
+        A community-sourced view of how UK supermarket prices are moving — which items are quietly going up,
+        and where they're cheaper. Built from anonymised shop data from Supermonster users.
+    </p>
+
+    <div class="iw-card reveal">
+        <div class="iw-card-header">
+            <span class="iw-card-header-title">Inflation Watch</span>
+            <span class="iw-badge">COMING SOON</span>
+        </div>
+        <div class="iw-card-disclaimer">Example data only — not real UK-wide stats yet.</div>
+
+        <div class="iw-card-intro">
+            <div class="iw-card-intro-icon">📈</div>
+            <div class="iw-card-intro-text">
+                <h3>UK-wide supermarket price moves</h3>
+                <p>We're building a community-sourced view of which items are going up — and where they're quietly cheaper. Coming soon.</p>
+            </div>
+        </div>
+
+        <div class="iw-row">
+            <div class="iw-row-rank">🥇</div>
+            <div class="iw-row-emoji">🍊</div>
+            <div class="iw-row-meta">
+                <div class="iw-row-name">Tropicana Orange Juice</div>
+                <div class="iw-row-meta-text"><span class="iw-row-meta-strong">1.3K users</span> · 4 stores</div>
+            </div>
+            <div class="iw-row-pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>+18.4%</div>
+        </div>
+        <div class="iw-row">
+            <div class="iw-row-rank">🥈</div>
+            <div class="iw-row-emoji">🧈</div>
+            <div class="iw-row-meta">
+                <div class="iw-row-name">Lurpak Spreadable 500g</div>
+                <div class="iw-row-meta-text"><span class="iw-row-meta-strong">2.2K users</span> · 4 stores</div>
+            </div>
+            <div class="iw-row-pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>+14.2%</div>
+        </div>
+        <div class="iw-row">
+            <div class="iw-row-rank">🥉</div>
+            <div class="iw-row-emoji">🍞</div>
+            <div class="iw-row-meta">
+                <div class="iw-row-name">Hovis Thick Sliced</div>
+                <div class="iw-row-meta-text"><span class="iw-row-meta-strong">1.9K users</span> · 3 stores</div>
+            </div>
+            <div class="iw-row-pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>+11.8%</div>
+        </div>
+        <div class="iw-row">
+            <div class="iw-row-rank">4</div>
+            <div class="iw-row-emoji">🫘</div>
+            <div class="iw-row-meta">
+                <div class="iw-row-name">Heinz Baked Beans 415g</div>
+                <div class="iw-row-meta-text"><span class="iw-row-meta-strong">3.3K users</span> · 4 stores</div>
+            </div>
+            <div class="iw-row-pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>+9.6%</div>
+        </div>
+        <div class="iw-row">
+            <div class="iw-row-rank">5</div>
+            <div class="iw-row-emoji">🧀</div>
+            <div class="iw-row-meta">
+                <div class="iw-row-name">Cathedral City Mature</div>
+                <div class="iw-row-meta-text"><span class="iw-row-meta-strong">1.6K users</span> · 3 stores</div>
+            </div>
+            <div class="iw-row-pct"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>+8.4%</div>
+        </div>
+
+        <form class="iw-notify" action="https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT" method="POST" onsubmit="return iwNotifySubmit(event);">
+            <label for="iw-email">Be first when Inflation Watch goes live</label>
+            <div class="iw-notify-row">
+                <input id="iw-email" type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Notify me</button>
+            </div>
+            <p class="iw-notify-note" id="iw-notify-note">One email when we launch. No marketing fluff.</p>
+        </form>
+    </div>
+</section>
+
+<!-- GROCERY BUDGET GRADER -->
+<section class="grader" id="grader">
+    <h2 class="reveal">How does your weekly shop stack up?</h2>
+    <p class="grader-sub reveal">Enter your household details and get an instant grade against the UK average.</p>
+
+    <div class="grader-card reveal">
+        <div class="grader-group">
+            <label>How many people in your household?</label>
+            <div class="size-options">
+                <button class="size-btn" data-size="1" onclick="graderSelectSize(1)">
+                    <span class="num">1</span><span class="lbl">Solo</span>
+                </button>
+                <button class="size-btn" data-size="2" onclick="graderSelectSize(2)">
+                    <span class="num">2</span><span class="lbl">Couple</span>
+                </button>
+                <button class="size-btn" data-size="3" onclick="graderSelectSize(3)">
+                    <span class="num">3</span><span class="lbl">Small</span>
+                </button>
+                <button class="size-btn" data-size="4" onclick="graderSelectSize(4)">
+                    <span class="num">4</span><span class="lbl">Family</span>
+                </button>
+                <button class="size-btn" data-size="5" onclick="graderSelectSize(5)">
+                    <span class="num">5+</span><span class="lbl">Large</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="grader-group">
+            <label>How much do you spend on the weekly shop?</label>
+            <div class="spend-wrap">
+                <span class="cur">&pound;</span>
+                <input type="number" class="spend-input" id="graderSpend" placeholder="80" min="1" max="9999" inputmode="decimal">
+            </div>
+            <div class="period-toggle">
+                <button class="period-btn active" data-period="week" onclick="graderSelectPeriod('week')">Per week</button>
+                <button class="period-btn" data-period="month" onclick="graderSelectPeriod('month')">Per month</button>
+            </div>
+        </div>
+
+        <button class="grade-btn" id="graderBtn" onclick="graderCalculate()" disabled>Grade My Spending</button>
+    </div>
+
+    <!-- Results (hidden until graded) -->
+    <div class="grader-results" id="graderResults">
+        <div class="grade-result-card">
+            <div class="grade-letter" id="graderLetter">A</div>
+            <h3 class="grade-title" id="graderTitle">Budget Master!</h3>
+            <p class="grade-subtitle" id="graderSubtitle">You're spending well below the UK average.</p>
+
+            <div class="comp-bar-wrap">
+                <div class="comp-label">Your spend vs UK average</div>
+                <div class="comp-bar">
+                    <div class="comp-fill" id="graderFill"></div>
+                    <div class="comp-marker" id="graderMarker"></div>
+                </div>
+                <div class="comp-labels">
+                    <span class="you" id="graderYou">&pound;60/wk</span>
+                    <span id="graderAvg">UK avg: &pound;80/wk</span>
+                </div>
+            </div>
+
+            <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+            <button class="share-btn" id="shareImgBtn" onclick="graderShareImage()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                Share as image
+            </button>
+            <button class="share-btn" onclick="graderShare()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+                Share as text
+            </button>
+        </div>
+        <canvas id="graderCanvas" style="display:none;"></canvas>
+        </div>
+
+        <div class="grade-result-card tips-list" id="graderTipsCard">
+            <h3 class="grade-title" id="graderTipsTitle" style="text-align:left;font-size:16px;">Tips to save more</h3>
+            <div id="graderTipsContent"></div>
+        </div>
+
+        <div class="grader-cta">
+            <p>Track it properly with Supermonster</p>
+            <a href="https://apps.apple.com/gb/app/supermonster-grocery-tracker/id6763580977" class="store-badge">
+                <img src="apple-download-black-btn.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-preview">
+    <div class="blog-inner">
+        <h2 class="reveal">From the blog</h2>
+        <p class="blog-sub reveal">Tips and data to help you spend smarter at the supermarket.</p>
+        <div class="blog-grid stagger-children">
+            <a href="/blog/average-uk-grocery-spend.html" class="blog-card reveal">
+                <div class="blog-emoji">🧾</div>
+                <h3>Average UK Grocery Spend in 2026</h3>
+                <p>What British households actually spend each week, broken down by size.</p>
+                <span class="read-link">Read &rarr;</span>
+            </a>
+            <a href="/blog/reduce-grocery-bill.html" class="blog-card reveal">
+                <div class="blog-emoji">💷</div>
+                <h3>9 Ways to Cut Your Grocery Bill</h3>
+                <p>Practical changes that save real money — not the same old generic tips.</p>
+                <span class="read-link">Read &rarr;</span>
+            </a>
+            <a href="/blog/tesco-vs-aldi-vs-lidl.html" class="blog-card reveal">
+                <div class="blog-emoji">🏪</div>
+                <h3>Tesco vs Aldi vs Lidl</h3>
+                <p>We compared 20 items across the big three. The gap might surprise you.</p>
+                <span class="read-link">Read &rarr;</span>
+            </a>
+        </div>
+        <a href="/blog" class="blog-all">View all articles &rarr;</a>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+    <div class="faq-inner">
+        <h2 class="reveal">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What is Supermonster?
+                <span class="faq-chevron">⌵</span>
+            </button>
+            <div class="faq-answer">
+                <p>Supermonster is a shopping tracker for UK households. Take a photo of any supermarket receipt to track price changes on the items you buy regularly, set weekly budgets, and share shopping lists with your partner or family.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                How does receipt capture work?
+                <span class="faq-chevron">⌵</span>
+            </button>
+            <div class="faq-answer">
+                <p>Take a photo of the items list on any UK supermarket receipt (avoid the barcode at the bottom). Our AI reads every item name, price, and discount automatically — it takes just a few seconds.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Is Supermonster free?
+                <span class="faq-chevron">⌵</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes. The free tier includes unlimited receipt capture, household sharing, and shopping lists. Supermonster Plus (£2.99/month) unlocks weekly spending insights, full price tracking across supermarkets, and nutrition swap suggestions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can I share with my partner?
+                <span class="faq-chevron">⌵</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes! Create a household and share a code with your partner. You'll both see shared shopping lists, combined spending data, and household budgets — all synced in real time.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Is my data private?
+                <span class="faq-chevron">⌵</span>
+            </button>
+            <div class="faq-answer">
+                <p>Your personal data is never shared. You can optionally opt in to share anonymised shopping data to help build better price insights for everyone, but this is entirely your choice and can be changed anytime in Settings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-left">
+        <div class="footer-brand">
+            <div class="footer-brand-icon"><img src="appicon.png" alt="Supermonster"></div>
+            <span>Supermonster</span>
+        </div>
+        <p>Track food prices. Save as a household.</p>
+        <p style="margin-top: 4px; font-size: 13px; color: #9CA3AF;">Copyright © 2026 Supermonster. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
+        <a href="/support">Support</a>
+        <a href="mailto:press@supermonsterapp.com">Press</a>
+    </div>
+</footer>
+
+<script>
+// Inflation Watch notify form
+function iwNotifySubmit(event) {
+    const form = event.target;
+    if (form.action.includes('REPLACE_WITH_YOUR_ENDPOINT')) {
+        event.preventDefault();
+        const note = document.getElementById('iw-notify-note');
+        if (note) note.textContent = "Thanks — we'll be in touch when Inflation Watch launches.";
+        form.querySelector('input[type=email]').value = '';
+        return false;
     }
-  });
+    return true;
+}
 
-  /* ── Animate visible (non-extra) cards on scroll ── */
-  var visibleCards = gsap.utils.toArray('.exp-timeline .exp-card:not(.exp-extra)');
-  visibleCards.forEach(function(card, i) {
-    gsap.fromTo(card,
-      { autoAlpha: 0, y: 32 },
-      {
-        autoAlpha: 1, y: 0,
-        duration: 0.65,
-        ease: 'power2.out',
-        delay: i * 0.12,
-        scrollTrigger: {
-          trigger: card,
-          start: 'top 88%',
-          toggleActions: 'play none none none'
-        },
-        onStart: function() { card.classList.add('tl-vis'); }
-      }
-    );
-  });
+// FAQ accordion
+function toggleFaq(button) {
+    const item = button.parentElement;
+    const wasOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    // Toggle clicked
+    if (!wasOpen) item.classList.add('open');
+}
 
-  /* ── Handle "Show earlier roles" — animate extras when revealed ── */
-  const viewAllBtn = document.getElementById('expViewAll');
-  if (viewAllBtn) {
-    viewAllBtn.addEventListener('click', function() {
-      requestAnimationFrame(function() {
-        var extras = document.querySelectorAll('.exp-timeline .exp-extra.exp-show');
-        if (extras.length) {
-          extras.forEach(function(card, i) {
-            gsap.fromTo(card,
-              { autoAlpha: 0, y: 32 },
-              {
-                autoAlpha: 1, y: 0,
-                duration: 0.6,
-                delay: i * 0.1,
-                ease: 'power2.out',
-                onStart: function() { card.classList.add('tl-vis'); }
-              }
-            );
-          });
-          ScrollTrigger.refresh();
-        } else {
-          /* Collapsing — reset extras for next reveal */
-          var hiddenExtras = document.querySelectorAll('.exp-timeline .exp-extra:not(.exp-show)');
-          hiddenExtras.forEach(function(card) {
-            card.classList.remove('tl-vis');
-            gsap.set(card, { autoAlpha: 0, y: 32 });
-          });
-          ScrollTrigger.refresh();
+/* ─── GROCERY BUDGET GRADER ─── */
+(function() {
+    const AVG_PER_PERSON_WEEKLY = 35;
+    const GRADES = [
+        { letter: 'A+', max: 0.60, color: '#15803D', title: 'Incredible!', subtitle: 'You\'re spending way below the UK average. Either you\'re a savvy shopper or you\'ve found a secret discount universe.' },
+        { letter: 'A',  max: 0.75, color: '#22C55E', title: 'Budget master', subtitle: 'You\'re well below the UK average. Your trolley game is strong.' },
+        { letter: 'B',  max: 0.95, color: '#65A30D', title: 'Doing well', subtitle: 'You\'re spending a bit less than average. Room to optimise, but you\'re in good shape.' },
+        { letter: 'C',  max: 1.15, color: '#F59E0B', title: 'About average', subtitle: 'You\'re right around the UK average. Not bad, but there\'s room to trim.' },
+        { letter: 'D',  max: 1.40, color: '#F97316', title: 'Above average', subtitle: 'You\'re spending more than most UK households your size. A few tweaks could save you hundreds a year.' },
+        { letter: 'F',  max: 999,  color: '#EF4444', title: 'Needs attention', subtitle: 'You\'re spending significantly more than the UK average. The good news? Small changes can make a big difference.' },
+    ];
+
+    const TIPS = {
+        low: [
+            { icon: '\u{1F3C6}', bg: '#F0FDF4', text: '<strong>You\'re crushing it.</strong> Keep scanning receipts to make sure prices don\'t creep up on your regular items.' },
+            { icon: '\u{1F4CA}', bg: '#F0FDF4', text: '<strong>Track your wins.</strong> Use Supermonster to see exactly how much you\'re saving compared to last month.' },
+            { icon: '\u{1F6D2}', bg: '#FFF8D6', text: '<strong>Share your wisdom.</strong> Your household could save even more with shared shopping lists.' },
+        ],
+        mid: [
+            { icon: '\u{1F50D}', bg: '#FFF8D6', text: '<strong>Check for price creep.</strong> Items you buy every week often rise 5-10% without you noticing.' },
+            { icon: '\u{1F4CB}', bg: '#FFF8D6', text: '<strong>Stick to a list.</strong> Impulse buys add an average of £15/week. A shared shopping list keeps the whole household honest.' },
+            { icon: '\u{1F504}', bg: '#FEF3C7', text: '<strong>Try own-brand swaps.</strong> Switching 5 branded items to own-brand can save £8-12 per shop.' },
+            { icon: '\u{1F4C5}', bg: '#FEF3C7', text: '<strong>Set a weekly budget.</strong> Even a rough target helps. Supermonster warns you when you\'re close to your limit.' },
+        ],
+        high: [
+            { icon: '\u{1F6A8}', bg: '#FEF2F2', text: '<strong>Start with one change.</strong> Pick your most expensive regular item and find a cheaper alternative. That alone could save £200/year.' },
+            { icon: '\u{1F4CB}', bg: '#FEF2F2', text: '<strong>Plan before you shop.</strong> Households that meal-plan spend 20-30% less.' },
+            { icon: '\u{1F3EA}', bg: '#FFF8D6', text: '<strong>Compare stores.</strong> The same basket can cost 30% more at one supermarket vs another.' },
+            { icon: '\u{1F504}', bg: '#FFF8D6', text: '<strong>Swap 5 items.</strong> Pick your top 5 branded items and try own-brand for a month. Most people save £10+/week.' },
+            { icon: '\u{1F3AF}', bg: '#FEF3C7', text: '<strong>Set a target.</strong> Try cutting just 10% next month. That\'s <strong class="grader-saving"></strong> back in your pocket each week.' },
+        ],
+    };
+
+    let selectedSize = null;
+    let selectedPeriod = 'week';
+    let gradeResult = null;
+
+    window.graderSelectSize = function(size) {
+        selectedSize = size;
+        document.querySelectorAll('.grader .size-btn').forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.dataset.size) === size);
+        });
+        graderCheckReady();
+    };
+
+    window.graderSelectPeriod = function(period) {
+        selectedPeriod = period;
+        document.querySelectorAll('.grader .period-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.period === period);
+        });
+    };
+
+    function graderCheckReady() {
+        const spend = document.getElementById('graderSpend').value;
+        document.getElementById('graderBtn').disabled = !(selectedSize && spend > 0);
+    }
+
+    document.getElementById('graderSpend').addEventListener('input', graderCheckReady);
+
+    window.graderCalculate = function() {
+        const rawSpend = parseFloat(document.getElementById('graderSpend').value);
+        if (!selectedSize || !rawSpend) return;
+
+        const weeklySpend = selectedPeriod === 'month' ? rawSpend / 4.33 : rawSpend;
+        const avgWeekly = AVG_PER_PERSON_WEEKLY * selectedSize;
+        const ratio = weeklySpend / avgWeekly;
+
+        let grade = GRADES[GRADES.length - 1];
+        for (const g of GRADES) {
+            if (ratio < g.max) { grade = g; break; }
         }
-      });
+
+        document.getElementById('graderLetter').style.background = grade.color;
+        document.getElementById('graderLetter').textContent = grade.letter;
+        document.getElementById('graderTitle').textContent = grade.title;
+        document.getElementById('graderSubtitle').textContent = grade.subtitle;
+
+        const barPct = Math.min(ratio * 50, 100);
+        const fillColor = ratio <= 1 ? 'var(--green)' : ratio <= 1.4 ? 'var(--orange)' : 'var(--red)';
+        document.getElementById('graderFill').style.width = barPct + '%';
+        document.getElementById('graderFill').style.background = fillColor;
+        document.getElementById('graderMarker').style.left = barPct + '%';
+        document.getElementById('graderYou').textContent = '£' + Math.round(weeklySpend) + '/wk (you)';
+        document.getElementById('graderAvg').textContent = 'UK avg: £' + Math.round(avgWeekly) + '/wk';
+
+        let tipSet;
+        if (ratio < 0.95) tipSet = TIPS.low;
+        else if (ratio < 1.15) tipSet = TIPS.mid;
+        else tipSet = TIPS.high;
+
+        const saving = '£' + Math.round(weeklySpend * 0.1);
+        const tipsHtml = tipSet.map(tip => {
+            let text = tip.text.replace('<strong class="grader-saving"></strong>', '<strong>' + saving + '</strong>');
+            return '<div class="tip-row"><div class="tip-icon" style="background:' + tip.bg + '">' + tip.icon + '</div><div class="tip-text">' + text + '</div></div>';
+        }).join('');
+
+        document.getElementById('graderTipsContent').innerHTML = tipsHtml;
+        document.getElementById('graderTipsTitle').textContent = ratio < 0.95 ? 'Keep it up' : 'Tips to save more';
+
+        const results = document.getElementById('graderResults');
+        results.classList.add('show');
+        results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        gradeResult = { letter: grade.letter, title: grade.title, gradeColor: grade.color, weeklySpend: Math.round(weeklySpend), avgWeekly: Math.round(avgWeekly), householdSize: selectedSize };
+    };
+
+    function graderDrawCard() {
+        var r = gradeResult;
+        if (!r) return null;
+        var c = document.getElementById('graderCanvas');
+        var W = 600, H = 340;
+        c.width = W * 2; c.height = H * 2;
+        c.style.width = W + 'px'; c.style.height = H + 'px';
+        var ctx = c.getContext('2d');
+        ctx.scale(2, 2);
+
+        // Background
+        ctx.fillStyle = '#1A1A2E';
+        ctx.beginPath();
+        ctx.roundRect(0, 0, W, H, 20);
+        ctx.fill();
+
+        // Grade circle
+        var cx = 90, cy = 120;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 52, 0, Math.PI * 2);
+        ctx.fillStyle = r.gradeColor;
+        ctx.fill();
+        ctx.fillStyle = '#fff';
+        ctx.font = '900 46px Inter, -apple-system, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(r.letter, cx, cy);
+
+        // Title + subtitle
+        ctx.textAlign = 'left';
+        ctx.fillStyle = '#fff';
+        ctx.font = '800 26px Inter, -apple-system, sans-serif';
+        ctx.fillText(r.title, 164, 90);
+        ctx.fillStyle = 'rgba(255,255,255,0.6)';
+        ctx.font = '500 14px Inter, -apple-system, sans-serif';
+        ctx.fillText('Household of ' + r.householdSize, 164, 118);
+
+        // Stats row
+        var statsY = 160;
+        // Your spend
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        ctx.beginPath(); ctx.roundRect(164, statsY, 180, 60, 10); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.font = '600 11px Inter, -apple-system, sans-serif';
+        ctx.fillText('YOUR SPEND', 180, statsY + 20);
+        ctx.fillStyle = '#fff';
+        ctx.font = '800 22px Inter, -apple-system, sans-serif';
+        ctx.fillText('£' + r.weeklySpend + '/week', 180, statsY + 46);
+
+        // UK average
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        ctx.beginPath(); ctx.roundRect(358, statsY, 180, 60, 10); ctx.fill();
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.font = '600 11px Inter, -apple-system, sans-serif';
+        ctx.fillText('UK AVERAGE', 374, statsY + 20);
+        ctx.fillStyle = '#fff';
+        ctx.font = '800 22px Inter, -apple-system, sans-serif';
+        ctx.fillText('£' + r.avgWeekly + '/week', 374, statsY + 46);
+
+        // Comparison bar
+        var barY = 240, barX = 164, barW = 374;
+        ctx.fillStyle = 'rgba(255,255,255,0.1)';
+        ctx.beginPath(); ctx.roundRect(barX, barY, barW, 8, 4); ctx.fill();
+        var pct = Math.min(r.weeklySpend / (r.avgWeekly * 1.6), 1);
+        var avgPct = 1 / 1.6;
+        ctx.fillStyle = r.gradeColor;
+        ctx.beginPath(); ctx.roundRect(barX, barY, barW * pct, 8, 4); ctx.fill();
+        // Average marker
+        var avgX = barX + barW * avgPct;
+        ctx.strokeStyle = 'rgba(255,255,255,0.4)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([3, 3]);
+        ctx.beginPath(); ctx.moveTo(avgX, barY - 6); ctx.lineTo(avgX, barY + 14); ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.fillStyle = 'rgba(255,255,255,0.4)';
+        ctx.font = '500 10px Inter, -apple-system, sans-serif';
+        ctx.fillText('avg', avgX - 8, barY + 26);
+
+        // Yellow accent line
+        ctx.fillStyle = '#F2C506';
+        ctx.beginPath(); ctx.roundRect(24, 280, 552, 3, 1.5); ctx.fill();
+
+        // Footer: branding + CTA
+        ctx.fillStyle = '#F2C506';
+        ctx.font = '800 16px Inter, -apple-system, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText('Supermonster', 24, 314);
+        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.font = '500 13px Inter, -apple-system, sans-serif';
+        ctx.fillText('supermonsterapp.com', 162, 314);
+
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#F2C506';
+        ctx.font = '700 13px Inter, -apple-system, sans-serif';
+        ctx.fillText('Get your grade free →', W - 24, 314);
+
+        return c;
+    }
+
+    window.graderShareImage = function() {
+        if (!gradeResult) return;
+        var c = graderDrawCard();
+        if (!c) return;
+
+        c.toBlob(function(blob) {
+            var file = new File([blob], 'my-grocery-grade.png', { type: 'image/png' });
+            var r = gradeResult;
+            var text = 'I got a ' + r.letter + ' on the Supermonster Weekly Shop Grader! Spending £' + r.weeklySpend + '/wk for a household of ' + r.householdSize + ' (UK avg: £' + r.avgWeekly + '/wk). How do you compare?\n\nhttps://supermonsterapp.com/#grader';
+
+            if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+                navigator.share({ title: 'My Weekly Shop Grade', text: text, files: [file] }).catch(function(){});
+            } else {
+                var url = URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'my-grocery-grade.png';
+                a.click();
+                URL.revokeObjectURL(url);
+                var btn = document.getElementById('shareImgBtn');
+                btn.textContent = 'Image saved!';
+                setTimeout(function() {
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Share as image';
+                }, 2000);
+            }
+        }, 'image/png');
+    };
+
+    window.graderShare = function() {
+        if (!gradeResult) return;
+        var r = gradeResult;
+        var text = 'I got a ' + r.letter + ' on the Supermonster Grocery Budget Grader! Spending £' + r.weeklySpend + '/wk for a household of ' + r.householdSize + ' (UK avg: £' + r.avgWeekly + '/wk). How do you compare? \u{1F6D2}\n\nhttps://supermonsterapp.com/#grader';
+
+        if (navigator.share) {
+            navigator.share({ title: 'My Weekly Shop Grade', text: text }).catch(function(){});
+        } else {
+            navigator.clipboard.writeText(text).then(function() {
+                var btn = document.querySelectorAll('.grader .share-btn')[1];
+                btn.textContent = 'Copied!';
+                setTimeout(function() {
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share as text';
+                }, 2000);
+            });
+        }
+    };
+})();
+
+/* ─── SCROLL REVEAL ─── */
+(function() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+        observer.observe(el);
     });
-  } /* end expViewAll */
-  } /* end timeline block */
-
-  /* ═══ GSAP CARD CAROUSEL (FINITE) ═══ */
-  (function() {
-    var track = document.getElementById('workTrack');
-    var prevBtn = document.getElementById('wPrev');
-    var nextBtn = document.getElementById('wNext');
-    var counter = document.getElementById('workCounter');
-    if (!track || !prevBtn || !nextBtn) return;
-
-    var cards = gsap.utils.toArray(track.querySelectorAll('.wcard'));
-    var total = cards.length;
-    if (total < 2) return;
-
-    var cur = 0;
-    var animating = false;
-    var gap, cardW;
-
-    function measure() {
-      var cs = getComputedStyle(track);
-      gap = parseFloat(cs.gap) || 24;
-      cardW = cards[0].offsetWidth;
-    }
-    measure();
-
-    function getX(idx) {
-      return -(idx * (cardW + gap));
-    }
-
-    function updateArrows() {
-      prevBtn.disabled = cur === 0;
-      nextBtn.disabled = cur === total - 1;
-      prevBtn.style.opacity = cur === 0 ? '0.3' : '1';
-      nextBtn.style.opacity = cur === total - 1 ? '0.3' : '1';
-    }
-
-    function updateCounter() {
-      if (!counter) return;
-      counter.textContent = ('0' + (cur + 1)).slice(-2) + ' / ' + ('0' + total).slice(-2);
-    }
-
-    gsap.set(track, { x: getX(0) });
-    updateCounter();
-    updateArrows();
-
-    function goTo(idx) {
-      if (animating || idx < 0 || idx > total - 1) return;
-      animating = true;
-      cur = idx;
-      updateCounter();
-      updateArrows();
-
-      gsap.to(track, {
-        x: getX(cur),
-        duration: 0.55,
-        ease: 'power2.inOut',
-        onComplete: function() { animating = false; }
-      });
-    }
-
-    /* ── Arrow buttons ── */
-    nextBtn.addEventListener('click', function() { goTo(cur + 1); });
-    prevBtn.addEventListener('click', function() { goTo(cur - 1); });
-
-    /* ── Keyboard arrows ── */
-    document.addEventListener('keydown', function(e) {
-      if (document.querySelector('.cs-overlay.open')) return;
-      if (e.key === 'ArrowRight') goTo(cur + 1);
-      if (e.key === 'ArrowLeft') goTo(cur - 1);
-    });
-
-    /* ── Touch/pointer swipe ── */
-    var wrap = track.parentElement;
-    var swStartX = 0, swDragging = false, swDx = 0;
-
-    wrap.addEventListener('pointerdown', function(e) {
-      if (animating) return;
-      swStartX = e.clientX;
-      swDragging = true;
-      swDx = 0;
-    });
-
-    wrap.addEventListener('pointermove', function(e) {
-      if (!swDragging) return;
-      swDx = e.clientX - swStartX;
-      /* Rubber-band at edges */
-      var dampened = swDx * 0.6;
-      if ((cur === 0 && swDx > 0) || (cur === total - 1 && swDx < 0)) {
-        dampened = swDx * 0.15;
-      }
-      gsap.set(track, { x: getX(cur) + dampened });
-    });
-
-    function endSwipe() {
-      if (!swDragging) return;
-      swDragging = false;
-      var threshold = cardW * 0.15;
-      if (swDx < -threshold && cur < total - 1) {
-        goTo(cur + 1);
-      } else if (swDx > threshold && cur > 0) {
-        goTo(cur - 1);
-      } else {
-        gsap.to(track, { x: getX(cur), duration: 0.3, ease: 'power2.out' });
-      }
-    }
-
-    wrap.addEventListener('pointerup', endSwipe);
-    wrap.addEventListener('pointerleave', endSwipe);
-    wrap.addEventListener('pointercancel', endSwipe);
-
-    /* ── Resize ── */
-    var resizeTimer;
-    window.addEventListener('resize', function() {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(function() {
-        measure();
-        gsap.set(track, { x: getX(cur) });
-      }, 150);
-    });
-  })();
-
 })();
 </script>
-</body></html>
+
+</body>
+</html>
