@@ -8,49 +8,65 @@
   </svg>
 </div>
 <a href="#work" class="skip-link" style="position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:12px 24px;z-index:99999;font-size:14px;border-radius:0 0 8px 8px;transition:top .2s;" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to content</a><!-- Progress bar --><div class="progress-bar" id="progressBar"></div><!-- Scroll CTA - hidden by default, shown after 3s if no scroll --><div id="scta" style="opacity:0;pointer-events:none;">  <a href="#work" class="sclink">Selected Work    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1.5v9M2 7l4 4.5L10 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>  </a></div><div class="wrap">  <!-- ═══ LEFT SIDEBAR ═══ -->  <aside class="col-l">    <div>      <div class="name-flip">        <div class="name-flip-inner">          <div class="name-flip-front">            <h1 class="nl">OLLIE<br>EDGE</h1>          </div>          <div class="name-flip-back">            <img src="assets/images/about3.png" alt="Ollie Edge" class="name-flip-photo"                 onerror="this.parentElement.style.background='var(--border)';">          </div>        </div>      </div>      <p class="tl">Lead Product Designer &bull; London 🇬🇧</p>    </div>    <a href="mailto:hello@ollieedge.com" class="pill">      <span class="pu"></span>Write to me    </a>    <nav class="lnav">      <div class="lnav-icons"><a href="https://www.linkedin.com/in/ollieedge/" target="_blank" rel="noopener" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="mailto:hello@ollieedge.com" title="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg></a><a href="https://calendly.com/ollieedge/15min" target="_blank" rel="noopener" title="Schedule a call"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg></a></div>    </nav>    <button class="tbtn" id="themeToggle" aria-label="Toggle theme" role="switch" aria-checked="false"><span class="tbtn-track"><span class="tbtn-thumb"><span class="icon-sun"><svg width="12" height="12" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="2.8" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 1v1.4M7.5 12.6V14M1 7.5h1.4M12.6 7.5H14M3 3l1 1M11 11l1 1M3 12l1-1M11 4l1-1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="icon-moon"><svg width="12" height="12" viewBox="0 0 15 15" fill="none"><path d="M13.5 8.5a6 6 0 0 1-7-7 6 6 0 1 0 7 7z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></span></button>  </aside>  <!-- ═══ RIGHT COLUMN ═══ -->  <main class="col-r">    <!-- Ticker --><div class="tshell" id="tshell" role="marquee" aria-label="Companies I have worked with">  <div class="ttrack" id="ttrack"></div></div>    <!-- HERO BIO -->    <section class="hero">      <p class="bio" id="bio">Thoughtful, research-led design, with an EDGE. I love designing digital experiences that improve people's lives through technology. Whether that's banking through a smartphone, booking a hotel online, or accessing engineering help.</p>    </section>    <div class="content">      <!-- ══ WORK  - horizontal sliding full-bleed cards ══ -->      <section id="work" class="work-outer exp-section">        <div class="work-header">          <h2 class="work-heading">Selected Work</h2>          <div style="display:flex;align-items:center;gap:12px;">            <span class="work-counter" id="workCounter">01 / 04</span>            <div class="work-arrows">              <button class="work-arrow" id="wPrev" aria-label="Previous project">                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>              </button>              <button class="work-arrow" id="wNext" aria-label="Next project">                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>              </button>            </div>          </div>        </div>        <div class="work-track-wrap">          <div class="work-track" id="workTrack">            <!-- Card 1: Dojo -->            <div class="wcard wcard-dojo" data-theme="dojo" data-project="dojo" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Dojo case study">              <div class="wcard-img" style="background:#a8004c;padding:0;"><img src="assets/images/dojo_hero.jpg" alt="Dojo app screens" style="width:100%;height:100%;object-fit:cover;"></div>              <div class="wcard-info">                <div class="wcard-meta">Dojo</div>                <div class="wcard-title">Redesigning the merchant app for 100K+ businesses, saving &#163;1M a year in paper billing.</div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 2: Danske Bank -->            <div class="wcard wcard-danske" data-theme="danske" data-project="danske" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Danske Bank case study">              <div class="wcard-img" style="background:#0a4dbf;padding:0;"><img src="assets/images/danske_hero.jpg" alt="Danske Bank app screens" style="width:100%;height:100%;object-fit:cover;"></div>              <div class="wcard-info">                <div class="wcard-meta">Danske Bank</div>                <div class="wcard-title">Designing a self-service lending platform launched across 4 Nordic countries.</div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 3: Grundfos -->            <div class="wcard wcard-grundfos" data-theme="grundfos" data-project="grundfos" style="cursor:pointer;" tabindex="0" role="button" aria-label="View Grundfos case study">              <div class="wcard-img" style="background:#14507e;display:flex;align-items:center;justify-content:center;">                <div class="gvis-grid" style="width:80%;height:80%;border-radius:8px;overflow:hidden;">                  <div class="gcell"><div class="gdot"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.06);"><div style="width:55%;height:2px;background:rgba(0,0,0,.25);border-radius:2px;"></div></div>                  <div class="gcell"><div class="gdot"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.04);"><div style="width:36%;height:32px;border:1px solid rgba(0,0,0,.15);border-radius:3px;"></div></div>                  <div class="gcell"><div class="gdot" style="width:7px;height:7px;background:rgba(0,0,0,.2);"></div></div>                  <div class="gcell" style="background:rgba(0,0,0,.06);"><div style="font-size:14px;color:rgba(0,0,0,.3);letter-spacing:.2em;">UX</div></div>                </div>              </div>              <div class="wcard-info">                <div class="wcard-meta">Grundfos</div>                <div class="wcard-title">Unifying the digital experience across 80+ countries for the world&#8217;s largest pump manufacturer.</div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>            <!-- Card 4: BMI -->            <div class="wcard wcard-bmi" data-theme="bmi" data-project="bmi" style="cursor:pointer;" tabindex="0" role="button" aria-label="View BMI Group case study">              <div class="wcard-img" style="background:#006a9a;position:relative;">                <div class="bmi-token" style="top:15%;left:8%;">color/primary</div>                <div class="bmi-token" style="top:15%;left:38%;">spacing/4</div>                <div class="bmi-token" style="top:15%;right:6%;">type/heading</div>                <div class="bmi-token" style="top:40%;left:16%;">component/button</div>                <div class="bmi-token" style="top:40%;right:8%;">radius/md</div>                <div class="bmi-token" style="top:65%;left:8%;">shadow/lg</div>                <div class="bmi-token" style="top:65%;left:40%;">grid/12col</div>                <div class="bmi-token" style="top:82%;left:22%;">breakpoint/lg</div>                <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 600 300" preserveAspectRatio="none">                  <line x1="130" y1="60" x2="260" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="280" y1="60" x2="380" y2="120" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="260" y1="120" x2="180" y2="195" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="380" y1="120" x2="340" y2="195" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                  <line x1="180" y1="195" x2="250" y2="250" stroke="rgba(255,255,255,.05)" stroke-width="1"/>                </svg>              </div>              <div class="wcard-info">                <div class="wcard-meta">BMI Group</div>                <div class="wcard-title">Leading a digital transformation across 30+ markets for Europe&#8217;s largest roofing manufacturer.</div>                <span class="wcard-cta">View case study &#8594;</span>              </div>            </div>                      </div>        </div>        </section>      <!-- ══ BUILT WITH AI ══ -->
-      <section id="builtWithAi" class="exp-section bai-section">
-        <h2 class="bai-heading" data-r>Built with AI</h2>
-        <p class="bai-sub" data-r>Native apps designed and coded with AI tools</p>
-        <div class="bai-grid" data-r>
-          <a class="bai-card" href="https://apps.apple.com/dk/app/logbook-museum-log/id6766284179" target="_blank" rel="noopener">
-            <div class="bai-phone-wrap" style="background:#e8e8e8;">
-              <div class="bai-phone" style="background:#f5f5f5;border-color:rgba(0,0,0,.1);">
-                <div class="phone-notch" style="background:#e0e0e0;"></div>
-                <div class="phone-screen">
-                  <img src="assets/images/museumlog_hero.png" alt="Museum Log app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      <section id="builtWithAi" class="work-outer exp-section bai-section">
+        <div class="work-header">
+          <h2 class="work-heading">Built with AI</h2>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <span class="work-counter" id="baiCounter">01 / 03</span>
+            <div class="work-arrows">
+              <button class="work-arrow" id="baiPrev" aria-label="Previous app">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <button class="work-arrow" id="baiNext" aria-label="Next app">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <p class="bai-sub">Not AI features bolted on — products where intelligence is structural to the experience</p>
+        <div class="work-track-wrap">
+          <div class="work-track" id="baiTrack">
+            <a class="wcard bai-card" href="https://apps.apple.com/dk/app/logbook-museum-log/id6766284179" target="_blank" rel="noopener" style="background:rgba(26,26,26,.03);border:1px solid rgba(26,26,26,.06);">
+              <div class="wcard-img" style="background:#e8e8e8;display:flex;align-items:center;justify-content:center;">
+                <div class="bai-phone" style="background:#f5f5f5;border-color:rgba(0,0,0,.1);">
+                  <div class="phone-notch" style="background:#e0e0e0;"></div>
+                  <div class="phone-screen">
+                    <img src="assets/images/museumlog_hero.png" alt="Museum Log app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="bai-name">Logbook - Museum Log</div>
-            <div class="bai-desc">See your own map of the world's art.</div>
-            <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
-          </a>
-          <a class="bai-card" href="https://apps.apple.com/dk/app/spending-tracker-supermonster/id6763580977" target="_blank" rel="noopener">
-            <div class="bai-phone-wrap" style="background:#f0f0f0;">
-              <div class="bai-phone" style="background:#f5f5f5;border-color:rgba(0,0,0,.1);">
-                <div class="phone-notch" style="background:#e0e0e0;"></div>
-                <div class="phone-screen">
-                  <img src="assets/images/supermonster_hero.png" alt="Supermonster app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+              <div class="wcard-info">
+                <div class="wcard-meta">Logbook - Museum Log</div>
+                <div class="wcard-title">See your own map of the world's art. Scan & identify any artwork — AI recognises the piece and pulls in artist, year, and movement.</div>
+                <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
+              </div>
+            </a>
+            <a class="wcard bai-card" href="https://apps.apple.com/dk/app/spending-tracker-supermonster/id6763580977" target="_blank" rel="noopener" style="background:rgba(26,26,26,.03);border:1px solid rgba(26,26,26,.06);">
+              <div class="wcard-img" style="background:#f0f0f0;display:flex;align-items:center;justify-content:center;">
+                <div class="bai-phone" style="background:#f5f5f5;border-color:rgba(0,0,0,.1);">
+                  <div class="phone-notch" style="background:#e0e0e0;"></div>
+                  <div class="phone-screen">
+                    <img src="assets/images/supermonster_hero.png" alt="Supermonster app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="bai-name">Supermonster</div>
-            <div class="bai-desc">Track food price inflation.</div>
-            <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
-          </a>
-          <a class="bai-card" href="#" target="_blank" rel="noopener">
-            <div class="bai-phone-wrap" style="background:#1a0a0a;">
-              <div class="bai-phone" style="background:#1a0a0a;">
-                <div class="phone-notch"></div>
-                <div class="phone-screen">
-                  <img src="assets/images/sippz_hero.png" alt="Sippz app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
-                </div>
+              <div class="wcard-info">
+                <div class="wcard-meta">Supermonster</div>
+                <div class="wcard-title">Track food price inflation. Monster app mascot provides contextual insights. Receipt scanning powered by Apple Intelligence and OCR.</div>
+                <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
               </div>
-            </div>
-            <div class="bai-name">Sippz</div>
-            <div class="bai-desc">Unlike traditional cellar apps, Sippz remembers what you poured.</div>
-            <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
-          </a>
+            </a>
+            <a class="wcard bai-card" href="#" target="_blank" rel="noopener" style="background:rgba(26,26,26,.03);border:1px solid rgba(26,26,26,.06);">
+              <div class="wcard-img" style="background:#f5f5f5;display:flex;align-items:center;justify-content:center;">
+                <img src="assets/images/sippz_hero.png" alt="Sippz app" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+              </div>
+              <div class="wcard-info">
+                <div class="wcard-meta">Sippz</div>
+                <div class="wcard-title">Unlike traditional cellar apps, Sippz remembers what you poured. OCR label scanning, multi-language support, and AI-shaped visuals throughout.</div>
+                <span class="bai-cta"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>App Store</span>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -763,6 +779,96 @@ SKILLS & APPROACH: Research-led design, UX strategy, UI design, design systems, 
         measure();
         gsap.set(track, { x: getX(cur) });
       }, 150);
+    });
+  })();
+
+  /* ═══ BUILT WITH AI CAROUSEL (FINITE) ═══ */
+  (function() {
+    var track = document.getElementById('baiTrack');
+    var prevBtn = document.getElementById('baiPrev');
+    var nextBtn = document.getElementById('baiNext');
+    var counter = document.getElementById('baiCounter');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    var cards = gsap.utils.toArray(track.querySelectorAll('.wcard'));
+    var total = cards.length;
+    if (total < 2) return;
+
+    var cur = 0;
+    var animating = false;
+    var gap, cardW;
+
+    function measure() {
+      var cs = getComputedStyle(track);
+      gap = parseFloat(cs.gap) || 24;
+      cardW = cards[0].offsetWidth;
+    }
+    measure();
+
+    function getX(idx) { return -(idx * (cardW + gap)); }
+
+    function updateArrows() {
+      prevBtn.disabled = cur === 0;
+      nextBtn.disabled = cur === total - 1;
+      prevBtn.style.opacity = cur === 0 ? '0.3' : '1';
+      nextBtn.style.opacity = cur === total - 1 ? '0.3' : '1';
+    }
+
+    function updateCounter() {
+      if (!counter) return;
+      counter.textContent = ('0' + (cur + 1)).slice(-2) + ' / ' + ('0' + total).slice(-2);
+    }
+
+    gsap.set(track, { x: getX(0) });
+    updateCounter();
+    updateArrows();
+
+    function goTo(idx) {
+      if (animating || idx < 0 || idx > total - 1) return;
+      animating = true;
+      cur = idx;
+      updateCounter();
+      updateArrows();
+      gsap.to(track, {
+        x: getX(cur), duration: 0.55, ease: 'power2.inOut',
+        onComplete: function() { animating = false; }
+      });
+    }
+
+    nextBtn.addEventListener('click', function() { goTo(cur + 1); });
+    prevBtn.addEventListener('click', function() { goTo(cur - 1); });
+
+    /* Touch/pointer swipe with rubber-band at edges */
+    var wrap = track.parentElement;
+    var swStartX = 0, swDragging = false, swDx = 0;
+
+    wrap.addEventListener('pointerdown', function(e) {
+      if (animating) return;
+      swStartX = e.clientX; swDragging = true; swDx = 0;
+    });
+    wrap.addEventListener('pointermove', function(e) {
+      if (!swDragging) return;
+      swDx = e.clientX - swStartX;
+      var dampened = swDx * 0.6;
+      if ((cur === 0 && swDx > 0) || (cur === total - 1 && swDx < 0)) dampened = swDx * 0.15;
+      gsap.set(track, { x: getX(cur) + dampened });
+    });
+    function endSwipe() {
+      if (!swDragging) return;
+      swDragging = false;
+      var threshold = cardW * 0.15;
+      if (swDx < -threshold && cur < total - 1) goTo(cur + 1);
+      else if (swDx > threshold && cur > 0) goTo(cur - 1);
+      else gsap.to(track, { x: getX(cur), duration: 0.3, ease: 'power2.out' });
+    }
+    wrap.addEventListener('pointerup', endSwipe);
+    wrap.addEventListener('pointerleave', endSwipe);
+    wrap.addEventListener('pointercancel', endSwipe);
+
+    var resizeTimer2;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer2);
+      resizeTimer2 = setTimeout(function() { measure(); gsap.set(track, { x: getX(cur) }); }, 150);
     });
   })();
 
