@@ -3,137 +3,149 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Two projects, one main file — Figma to Jira workflow</title>
+<title>Parallel design work without breaking what's in build — Figma to Jira</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#DDE1DD;
-    --card:#EBEEEA;
-    --ink:#12181B;
-    --muted:#5F6B66;
-    --branch:#4B34C9;
-    --ready:#0B6E45;
-    --warn:#B33A22;
-    --rule:rgba(18,24,27,.16);
-    --rule-strong:rgba(18,24,27,.4);
+    --paper:#DDE1DD; --card:#EBEEEA; --ink:#12181B; --muted:#5F6B66;
+    --branch:#4B34C9; --ready:#0B6E45; --warn:#B33A22;
+    --rule:rgba(18,24,27,.16); --rule-strong:rgba(18,24,27,.4);
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
+  body{margin:0;background:var(--paper);color:var(--ink);
     font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    font-size:16px;
-    line-height:1.55;
-  }
+    font-size:16px;line-height:1.55}
   .wrap{max-width:1080px;margin:0 auto;padding:40px 24px 80px}
   code,.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+  a{color:var(--branch)}
 
-  /* ---------- masthead ---------- */
-  .eyebrow{
-    font-family:"IBM Plex Mono",monospace;
-    font-size:11px;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--muted);margin:0 0 18px;
-    display:flex;gap:10px;align-items:center;flex-wrap:wrap;
-  }
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--rule-strong)}
-  h1{
-    font-family:"Bricolage Grotesque",sans-serif;
-    font-weight:800;font-size:clamp(34px,6.2vw,64px);
-    line-height:.98;letter-spacing:-.03em;margin:0 0 18px;max-width:14ch;
-  }
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
+    font-size:clamp(32px,5.6vw,58px);line-height:1;letter-spacing:-.03em;margin:0 0 18px;max-width:17ch}
   h1 em{font-style:normal;color:var(--branch)}
-  .deck{max-width:56ch;font-size:clamp(16px,1.9vw,19px);color:#2A3439;margin:0 0 28px}
+  .deck{max-width:58ch;font-size:clamp(16px,1.9vw,19px);color:#2A3439;margin:0 0 40px}
 
-  /* ---------- mode switch ---------- */
-  .modes{display:flex;gap:0;border:1.5px solid var(--ink);border-radius:2px;width:fit-content;overflow:hidden;margin-bottom:8px}
-  .modes button{
-    font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;
-    background:transparent;color:var(--ink);border:0;padding:10px 16px;cursor:pointer;
-    border-right:1.5px solid var(--ink);
-  }
-  .modes button:last-child{border-right:0}
-  .modes button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
-  .modes button:focus-visible{outline:3px solid var(--branch);outline-offset:2px}
-  .mode-note{font-size:13px;color:var(--muted);margin:0 0 30px}
+  h2.sec{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
+    font-size:clamp(24px,3.6vw,34px);letter-spacing:-.025em;margin:0 0 8px;line-height:1.08}
+  .sec-note{color:var(--muted);font-size:14.5px;margin:0 0 24px;max-width:64ch}
+  .kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 
-  /* ---------- the graph ---------- */
-  .graph-shell{
-    border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
-    padding:24px 0 8px;margin-bottom:0;overflow-x:auto;
-  }
+  /* primer */
+  .primer{border-top:1.5px solid var(--ink);padding-top:28px;margin-bottom:56px}
+  .defs{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--ink);
+    border:1.5px solid var(--ink);margin:22px 0 20px}
+  .def{background:var(--card);padding:22px}
+  .def .lbl{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;display:block;margin-bottom:12px}
+  .def:nth-child(1) .lbl{color:var(--ready)}
+  .def:nth-child(2) .lbl{color:var(--branch)}
+  .def h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:21px;
+    letter-spacing:-.02em;margin:0 0 10px}
+  .def p{margin:0 0 10px;font-size:14.5px;color:#2A3439}
+  .def p:last-child{margin:0}
+  .def .meta{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+    padding-top:12px;border-top:1px solid var(--rule);margin-top:14px}
+  .callout{border-left:3px solid var(--branch);padding:2px 0 2px 18px;max-width:64ch;
+    font-size:15px;color:#2A3439}
+  .callout strong{font-weight:600}
+
+  /* tabs */
+  .tabs{display:flex;border:1.5px solid var(--ink);border-radius:2px;width:fit-content;
+    overflow:hidden;margin-bottom:6px;max-width:100%}
+  .tabs button{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.04em;
+    background:transparent;color:var(--ink);border:0;padding:11px 18px;cursor:pointer;
+    border-right:1.5px solid var(--ink);white-space:nowrap}
+  .tabs button:last-child{border-right:0}
+  .tabs button[aria-selected="true"]{background:var(--ink);color:var(--card)}
+  .tabs button:focus-visible{outline:3px solid var(--branch);outline-offset:2px}
+  .req{font-size:13px;color:var(--muted);margin:0 0 26px;font-family:"IBM Plex Mono",monospace}
+  .req b{color:var(--ink);font-weight:500}
+
+  /* graph */
+  .graph-shell{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+    padding:22px 0 6px;overflow-x:auto}
   .graph-shell svg{display:block;min-width:840px;width:100%;height:auto}
+  .scroll-hint{font-size:12px;color:var(--muted);margin:8px 0 0;font-style:italic}
   .lane-label{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--muted);letter-spacing:.06em}
   .lane-rule{stroke:var(--rule);stroke-width:1;stroke-dasharray:2 5}
   .spine{stroke:var(--ink);stroke-width:3.5;fill:none;stroke-linecap:round}
   .limb{stroke:var(--branch);stroke-width:2.25;fill:none;stroke-linecap:round}
-  .limb-dash{stroke:var(--muted);stroke-width:1.5;fill:none;stroke-dasharray:5 4}
+  .limb-dash{stroke:var(--muted);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
   .pin-line{stroke:var(--ready);stroke-width:1.5;stroke-dasharray:3 3}
+  .vtick{stroke:var(--ink);stroke-width:1.6}
+  .danger-band{fill:var(--warn);opacity:.09}
+  .danger-line{stroke:var(--warn);stroke-width:1.4;stroke-dasharray:4 3}
+  .danger-txt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:var(--warn);letter-spacing:.04em}
+  .locked-band{fill:var(--ready);opacity:.12}
   .node{cursor:pointer}
-  .node circle{transition:r .18s ease, stroke-width .18s ease}
+  .node circle{transition:r .18s ease,stroke-width .18s ease}
   .node:hover circle,.node[data-active="true"] circle{r:11;stroke-width:3.5}
-  .node:focus-visible{outline:none}
   .node:focus-visible circle{stroke:var(--branch);stroke-width:4}
   .node text{font-family:"IBM Plex Mono",monospace;font-size:11px;fill:var(--ink);pointer-events:none}
   .node .sub{fill:var(--muted);font-size:10px}
-  .chip{font-family:"IBM Plex Mono",monospace;font-size:10.5px}
-  .locked-band{fill:var(--ready);opacity:.1}
 
-  /* ---------- detail ---------- */
-  .detail{
-    display:grid;grid-template-columns:120px 1fr;gap:0 28px;
-    border-bottom:1.5px solid var(--ink);padding:26px 0 30px;margin-bottom:44px;
-    min-height:150px;
-  }
-  .detail-index{
-    font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
-    font-size:56px;line-height:.8;letter-spacing:-.04em;color:var(--branch);
-  }
-  .detail h2{
-    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
-    font-size:24px;letter-spacing:-.02em;margin:0 0 10px;line-height:1.15;
-  }
-  .detail p{margin:0 0 12px;max-width:62ch;color:#2A3439}
-  .detail .tag{
-    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+  /* detail */
+  .detail{display:grid;grid-template-columns:112px 1fr;gap:0 28px;
+    border-bottom:1.5px solid var(--ink);padding:24px 0 28px;margin-bottom:44px;min-height:140px}
+  .detail-index{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:52px;
+    line-height:.8;letter-spacing:-.04em;color:var(--branch)}
+  .detail h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:23px;
+    letter-spacing:-.02em;margin:0 0 10px;line-height:1.15}
+  .detail p{margin:0 0 12px;max-width:64ch;color:#2A3439}
+  .tag{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;
     letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--rule-strong);
-    border-radius:2px;color:var(--muted);margin-bottom:14px;
-  }
-  .detail .warn{color:var(--warn);border-color:var(--warn)}
-  .detail .go{color:var(--ready);border-color:var(--ready)}
+    border-radius:2px;color:var(--muted);margin-bottom:14px}
+  .tag.warn{color:var(--warn);border-color:var(--warn)}
+  .tag.go{color:var(--ready);border-color:var(--ready)}
   .hint{font-size:13px;color:var(--muted);font-style:italic}
 
-  /* ---------- sections ---------- */
-  h3{
-    font-family:"Bricolage Grotesque",sans-serif;font-weight:700;
-    font-size:clamp(22px,3.2vw,30px);letter-spacing:-.02em;margin:0 0 6px;
-  }
-  .sec-note{color:var(--muted);font-size:14px;margin:0 0 22px;max-width:58ch}
-  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5px;background:var(--ink);border:1.5px solid var(--ink);margin-bottom:56px}
-  .rule{background:var(--card);padding:20px}
-  .rule .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--branch);display:block;margin-bottom:10px}
-  .rule strong{display:block;font-size:17px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
-  .rule p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
+  /* rules */
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5px;
+    background:var(--ink);border:1.5px solid var(--ink);margin-bottom:52px}
+  .rule-card{background:var(--card);padding:20px}
+  .rule-card .k{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--branch);display:block;margin-bottom:10px}
+  .rule-card.crit .k{color:var(--warn)}
+  .rule-card strong{display:block;font-size:17px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
+  .rule-card p{margin:0;font-size:14px;color:var(--muted);line-height:1.5}
 
-  table{width:100%;border-collapse:collapse;margin-bottom:14px}
-  th,td{text-align:left;padding:13px 14px 13px 0;border-bottom:1px solid var(--rule);vertical-align:top;font-size:14.5px}
-  th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400;padding-bottom:8px}
-  td:first-child{font-family:"IBM Plex Mono",monospace;font-size:13px;white-space:nowrap;padding-right:28px}
+  table{width:100%;border-collapse:collapse;margin-bottom:16px}
+  th,td{text-align:left;padding:13px 14px 13px 0;border-bottom:1px solid var(--rule);
+    vertical-align:top;font-size:14.5px}
+  th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--muted);font-weight:400;padding-bottom:8px}
+  td:first-child{font-family:"IBM Plex Mono",monospace;font-size:13px;padding-right:26px}
   td.q{color:var(--muted)}
 
-  footer{margin-top:56px;padding-top:22px;border-top:1.5px solid var(--ink);font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  a{color:var(--branch)}
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:12px}
+  .links a{display:block;text-decoration:none;border:1px solid var(--rule-strong);border-radius:2px;
+    padding:14px 16px;color:var(--ink);transition:background .15s ease}
+  .links a:hover{background:var(--card)}
+  .links b{display:block;font-size:15px;font-weight:600;margin-bottom:4px;color:var(--branch)}
+  .links span{font-size:12.5px;color:var(--muted);line-height:1.45}
 
-  @media (max-width:640px){
+  footer{margin-top:52px;padding-top:22px;border-top:1.5px solid var(--ink);font-size:13px;
+    color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  @media (max-width:700px){
     .wrap{padding:28px 18px 60px}
+    .defs{grid-template-columns:1fr}
     .detail{grid-template-columns:1fr;gap:14px}
     .detail-index{font-size:38px}
+    .tabs{width:100%}
+    .tabs button{flex:1;padding:11px 8px;font-size:11px}
   }
-  @media (prefers-reduced-motion:reduce){
-    *{transition:none!important;animation:none!important}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  @media print{
+    .tabs,.scroll-hint{display:none}
+    [role="tabpanel"]{display:block!important}
+    body{background:#fff}
   }
 </style>
 </head>
@@ -141,304 +153,461 @@
 <div class="wrap">
 
   <p class="eyebrow">Design operations · Figma → Jira</p>
-  <h1>Two projects, <em>one main file</em></h1>
-  <p class="deck">How parallel design work stays isolated, how it gets back into the main file, and what stops an in‑flight change from disturbing a screen that is already in build.</p>
+  <h1>Parallel design work without <em>breaking what's in build</em></h1>
+  <p class="deck">Two designers, two tickets, one product surface. This is how the work stays isolated, how it gets back into the main file, and what stops an in‑flight change from quietly moving a screen a developer is already building.</p>
 
-  <div class="modes" role="group" aria-label="Figma plan">
-    <button id="m-branch" aria-pressed="true">Organization / Enterprise</button>
-    <button id="m-pro" aria-pressed="false">Professional</button>
+  <!-- ============ PRIMER ============ -->
+  <section class="primer">
+    <p class="kicker">Start here</p>
+    <h2 class="sec">Branching and versioning are not the same thing</h2>
+    <p class="sec-note">This is the distinction everything else depends on, and the one teams most often collapse. You need both. They solve different problems.</p>
+
+    <div class="defs">
+      <div class="def">
+        <span class="lbl">Backward looking</span>
+        <h3>Version history</h3>
+        <p>A timeline of one file. Figma autosaves checkpoints and you can name specific ones, for example <code>MYLO-412 handoff</code>.</p>
+        <p>It is linear. You can view, restore, or link to a past state, but you cannot work inside one. Its job is proof and recovery: what did this file look like on the day we agreed it.</p>
+        <p class="meta">Every file, every paid plan.</p>
+      </div>
+      <div class="def">
+        <span class="lbl">Forward looking</span>
+        <h3>Branching</h3>
+        <p>A parallel copy of a file that you work in, then merge back into the main file.</p>
+        <p>It is concurrent. Two designers can hold separate branches off the same main file at once, and the merge step forces someone to resolve the conflicts between them. Its job is isolation: keeping unfinished work away from the file developers build from.</p>
+        <p class="meta">Organization and Enterprise plans, Full seat.</p>
+      </div>
+    </div>
+
+    <p class="callout"><strong>The git comparison is close enough to be useful.</strong> Version history is roughly the commit log, branching is roughly branches. Where it breaks: Figma's history is mostly time‑based autosave rather than deliberate commits, and you cannot diff or roll back a single frame. Restore is all or nothing, at file level.</p>
+  </section>
+
+  <!-- ============ TABS ============ -->
+  <p class="kicker">Choose your approach</p>
+  <h2 class="sec">Two ways to run this</h2>
+  <p class="sec-note">Approach A is the one to use if your plan allows it. Approach B is what you are left with otherwise, and it is worth understanding exactly where it is weaker before you commit a team to it.</p>
+
+  <div class="tabs" role="tablist" aria-label="Workflow approach">
+    <button role="tab" id="tab-branch" aria-controls="panel-branch" aria-selected="true">A · Branching</button>
+    <button role="tab" id="tab-version" aria-controls="panel-version" aria-selected="false">B · Versioning only</button>
   </div>
-  <p class="mode-note" id="modeNote">Branching available. Isolation is enforced by the tool.</p>
 
-  <div class="graph-shell">
-    <svg id="graph" viewBox="0 0 900 430" role="img" aria-label="Diagram of the branch, merge, and handoff workflow">
-      <!-- lane rules -->
-      <line class="lane-rule" x1="150" y1="52" x2="880" y2="52"/>
-      <line class="lane-rule" x1="150" y1="140" x2="880" y2="140"/>
-      <line class="lane-rule" x1="150" y1="238" x2="880" y2="238"/>
-      <line class="lane-rule" x1="150" y1="336" x2="880" y2="336"/>
-      <line class="lane-rule" x1="150" y1="400" x2="880" y2="400"/>
+  <!-- ---------- PANEL A ---------- -->
+  <div role="tabpanel" id="panel-branch" aria-labelledby="tab-branch">
+    <p class="req"><b>Requires:</b> Organization or Enterprise plan · Full seat · isolation enforced by the tool</p>
 
-      <text class="lane-label" x="0" y="56">JIRA</text>
-      <text class="lane-label" x="0" y="144">DESIGN SYSTEM</text>
-      <text class="lane-label" x="0" y="242">MAIN FILE</text>
-      <text class="lane-label" x="0" y="340" id="laneA">BRANCH · MYLO-412</text>
-      <text class="lane-label" x="0" y="404" id="laneB">BRANCH · MYLO-418</text>
+    <div class="graph-shell">
+      <svg viewBox="0 0 900 440" role="img" aria-label="Branching workflow: two branches diverging from a main file and merging back, with Jira above and the design system library alongside">
+        <line class="lane-rule" x1="160" y1="52" x2="880" y2="52"/>
+        <line class="lane-rule" x1="160" y1="140" x2="880" y2="140"/>
+        <line class="lane-rule" x1="160" y1="248" x2="880" y2="248"/>
+        <line class="lane-rule" x1="160" y1="346" x2="880" y2="346"/>
+        <line class="lane-rule" x1="160" y1="410" x2="880" y2="410"/>
+        <text class="lane-label" x="0" y="56">JIRA</text>
+        <text class="lane-label" x="0" y="144">DESIGN SYSTEM FILE</text>
+        <text class="lane-label" x="0" y="244">MAIN FILE</text>
+        <text class="lane-label" x="0" y="258" style="font-size:9.5px">Pensions Dashboard</text>
+        <text class="lane-label" x="0" y="350">BRANCH · MYLO-412</text>
+        <text class="lane-label" x="0" y="414">BRANCH · MYLO-418</text>
 
-      <!-- ============ BRANCHING MODE ============ -->
-      <g id="modeBranch">
-        <!-- delivered band -->
-        <rect class="locked-band" x="150" y="228" width="90" height="20" rx="3"/>
+        <!-- collision zone -->
+        <rect class="danger-band" x="330" y="230" width="132" height="36"/>
+        <line class="danger-line" x1="330" y1="230" x2="330" y2="196"/>
+        <line class="danger-line" x1="462" y1="230" x2="462" y2="196"/>
+        <line class="danger-line" x1="330" y1="196" x2="462" y2="196"/>
+        <text class="danger-txt" x="396" y="187" text-anchor="middle">both branches open · sequence the merges</text>
 
-        <!-- main spine -->
-        <path class="spine" d="M150 238 H860"/>
+        <rect class="locked-band" x="160" y="238" width="86" height="20" rx="3"/>
+        <path class="spine" d="M160 248 H862"/>
+        <path class="limb-dash" d="M300 140 V220 Q300 248 320 248"/>
+        <path class="limb" d="M246 248 Q268 248 268 270 V324 Q268 346 290 346 H418 Q440 346 440 324 V270 Q440 248 462 248"/>
+        <path class="limb-dash" d="M352 248 V346"/>
+        <path class="limb" d="M330 248 Q352 248 352 272 V388 Q352 410 374 410 H616 Q638 410 638 388 V272 Q638 248 660 248"/>
+        <path class="pin-line" d="M200 248 V52"/>
+        <path class="pin-line" d="M740 248 V52"/>
 
-        <!-- library publish -->
-        <path class="limb-dash" d="M300 140 V210 Q300 238 320 238"/>
-
-        <!-- branch A -->
-        <path class="limb" d="M240 238 Q262 238 262 260 V314 Q262 336 284 336 H418 Q440 336 440 314 V260 Q440 238 462 238"/>
-        <!-- sync pull into A -->
-        <path class="limb-dash" d="M352 238 V336"/>
-        <!-- branch B -->
-        <path class="limb" d="M330 238 Q352 238 352 262 V378 Q352 400 374 400 H616 Q638 400 638 378 V262 Q638 238 660 238"/>
-
-        <!-- pin up to Jira -->
-        <path class="pin-line" d="M195 238 V52"/>
-        <path class="pin-line" d="M740 238 V52"/>
-
-        <g class="node" tabindex="0" role="button" data-step="1" transform="translate(195,52)">
+        <g class="node" tabindex="0" role="button" data-step="b1" transform="translate(200,52)">
           <circle r="8.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">MYLO-390</text>
-          <text class="sub" x="0" y="-31" text-anchor="middle">shipped · pinned</text>
+          <text class="sub" x="0" y="-31" text-anchor="middle">pinned version link</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="7" transform="translate(740,52)">
+        <g class="node" tabindex="0" role="button" data-step="b8" transform="translate(740,52)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">MYLO-418</text>
           <text class="sub" x="0" y="-31" text-anchor="middle">ready for dev</text>
         </g>
-
-        <g class="node" tabindex="0" role="button" data-step="8" transform="translate(300,140)">
+        <g class="node" tabindex="0" role="button" data-step="b9" transform="translate(300,140)">
           <circle r="8.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">tokens v2.3</text>
         </g>
-
-        <g class="node" tabindex="0" role="button" data-step="0" transform="translate(195,238)">
+        <g class="node" tabindex="0" role="button" data-step="b0" transform="translate(200,248)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
-          <text x="0" y="30" text-anchor="middle">delivered</text>
+          <text x="0" y="30" text-anchor="middle">in build</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="2" transform="translate(240,238)">
+        <g class="node" tabindex="0" role="button" data-step="b2" transform="translate(246,248)">
           <circle r="7" fill="var(--branch)" stroke="var(--branch)" stroke-width="2.5"/>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="5" transform="translate(462,238)">
+        <g class="node" tabindex="0" role="button" data-step="b6" transform="translate(462,248)">
           <circle r="8.5" fill="var(--card)" stroke="var(--branch)" stroke-width="2.5"/>
           <text x="0" y="30" text-anchor="middle">merge 412</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="5" transform="translate(660,238)">
+        <g class="node" tabindex="0" role="button" data-step="b6" transform="translate(660,248)">
           <circle r="8.5" fill="var(--card)" stroke="var(--branch)" stroke-width="2.5"/>
           <text x="0" y="30" text-anchor="middle">merge 418</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="6" transform="translate(740,238)">
+        <g class="node" tabindex="0" role="button" data-step="b7" transform="translate(740,248)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
           <text x="0" y="30" text-anchor="middle">ready for dev</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="9" transform="translate(840,238)">
+        <g class="node" tabindex="0" role="button" data-step="b10" transform="translate(845,248)">
           <circle r="7" fill="var(--card)" stroke="var(--warn)" stroke-width="2.5"/>
           <text x="0" y="30" text-anchor="middle">next change</text>
         </g>
-
-        <g class="node" tabindex="0" role="button" data-step="3" transform="translate(300,336)">
+        <g class="node" tabindex="0" role="button" data-step="b3" transform="translate(300,346)">
           <circle r="7" fill="var(--branch)" stroke="var(--branch)" stroke-width="2"/>
-          <text x="0" y="26" text-anchor="middle">share &amp; review</text>
+          <text x="0" y="26" text-anchor="middle">share for review</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="4" transform="translate(352,336)">
+        <g class="node" tabindex="0" role="button" data-step="b4" transform="translate(352,346)">
           <circle r="7" fill="var(--card)" stroke="var(--branch)" stroke-width="2"/>
-          <text class="sub" x="46" y="26" text-anchor="middle">pull from main</text>
+          <text class="sub" x="54" y="26" text-anchor="middle">pull from main</text>
         </g>
-      </g>
+        <g class="node" tabindex="0" role="button" data-step="b5" transform="translate(500,410)">
+          <circle r="7" fill="var(--branch)" stroke="var(--branch)" stroke-width="2"/>
+          <text x="0" y="26" text-anchor="middle">second ticket, same file</text>
+        </g>
+      </svg>
+    </div>
+    <p class="scroll-hint">Select any node for the detail. Scroll the diagram sideways on a narrow screen.</p>
 
-      <!-- ============ PROFESSIONAL MODE ============ -->
-      <g id="modePro" style="display:none">
-        <rect class="locked-band" x="150" y="228" width="90" height="20" rx="3"/>
-        <path class="spine" d="M150 238 H860"/>
-        <path class="limb-dash" d="M300 140 V210 Q300 238 320 238"/>
+    <div class="detail" id="detailA" aria-live="polite">
+      <div class="detail-index" id="aIndex">01</div>
+      <div>
+        <span class="tag go" id="aTag">Protected</span>
+        <h3 id="aTitle">The state that is in build</h3>
+        <p id="aBody">This point on main is what engineering is building right now. It is marked ready for dev and its version link sits on the Jira ticket. Nothing in flight should move it.</p>
+        <p class="hint" id="aHint">The green band is the segment of main currently in development.</p>
+      </div>
+    </div>
 
-        <!-- copy out / paste back, dashed = manual -->
-        <path class="limb-dash" d="M240 238 Q262 238 262 260 V314 Q262 336 284 336 H418"/>
-        <path class="limb-dash" d="M418 336 H440 Q462 336 462 314 V260 Q462 238 484 238"/>
-        <path class="limb-dash" d="M330 238 Q352 238 352 262 V378 Q352 400 374 400 H616 Q638 400 638 378 V262 Q638 238 660 238"/>
+    <p class="kicker">Non-negotiable</p>
+    <h2 class="sec">The five rules</h2>
+    <p class="sec-note">Figma gives you isolation. It does not give you discipline. Everything below is convention, and the process fails without it.</p>
+    <div class="rules">
+      <div class="rule-card">
+        <span class="k">Rule 01</span>
+        <strong>One main file per surface</strong>
+        <p>Not one per company. "Pensions Dashboard / Main", "Onboarding / Main", each with its own branches and its own merge cadence. A single shared main file across the whole product recreates the problem you are solving.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Rule 02</span>
+        <strong>Nobody edits main directly</strong>
+        <p>Main changes by merge, never by hand. One named reviewer per merge, and a fixed weekly merge window rather than merge‑whenever.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Rule 03</span>
+        <strong>One branch per ticket, named with the key</strong>
+        <p>Short‑lived, and pull from main often. You cannot cherry‑pick which main‑file changes to take, so the longer a branch runs the worse the conflict resolution gets.</p>
+      </div>
+      <div class="rule-card crit">
+        <span class="k">Rule 04 · highest risk</span>
+        <strong>Two branches on the same screens is the danger zone</strong>
+        <p>Avoid it where you can. Where you cannot, sequence the merges deliberately, and have the second branch pull from main before it merges. This is where silent overwrites happen.</p>
+      </div>
+      <div class="rule-card crit">
+        <span class="k">Rule 05 · highest risk</span>
+        <strong>Never edit a delivered screen in place</strong>
+        <p>Branch it and raise a new ticket instead, so the change is visible, reviewable and traceable to a decision. Silent edits to screens already in build are the single most common failure.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Rule 06</span>
+        <strong>Ready for dev lives in main, tickets carry a pinned link</strong>
+        <p>Never set the status inside a branch. And a normal file link is live: it shows today's file, not March's. Add the version‑history link so the ticket keeps the design that was actually signed off.</p>
+      </div>
+    </div>
+  </div>
 
-        <path class="pin-line" d="M195 238 V52"/>
-        <path class="pin-line" d="M740 238 V52"/>
+  <!-- ---------- PANEL B ---------- -->
+  <div role="tabpanel" id="panel-version" aria-labelledby="tab-version" hidden>
+    <p class="req"><b>Requires:</b> any paid plan · isolation depends entirely on people following the convention</p>
 
-        <g class="node" tabindex="0" role="button" data-step="1" transform="translate(195,52)">
+    <div class="graph-shell">
+      <svg viewBox="0 0 900 440" role="img" aria-label="Versioning-only workflow: work copied out to separate files and pasted back into main, with named versions marking each change">
+        <line class="lane-rule" x1="160" y1="52" x2="880" y2="52"/>
+        <line class="lane-rule" x1="160" y1="140" x2="880" y2="140"/>
+        <line class="lane-rule" x1="160" y1="248" x2="880" y2="248"/>
+        <line class="lane-rule" x1="160" y1="346" x2="880" y2="346"/>
+        <line class="lane-rule" x1="160" y1="410" x2="880" y2="410"/>
+        <text class="lane-label" x="0" y="56">JIRA</text>
+        <text class="lane-label" x="0" y="144">DESIGN SYSTEM FILE</text>
+        <text class="lane-label" x="0" y="244">MAIN FILE</text>
+        <text class="lane-label" x="0" y="258" style="font-size:9.5px">Pensions Dashboard</text>
+        <text class="lane-label" x="0" y="350">WORKING FILE · 412</text>
+        <text class="lane-label" x="0" y="414">WORKING FILE · 418</text>
+
+        <rect class="danger-band" x="246" y="230" width="416" height="36"/>
+        <line class="danger-line" x1="246" y1="230" x2="246" y2="196"/>
+        <line class="danger-line" x1="662" y1="230" x2="662" y2="196"/>
+        <line class="danger-line" x1="246" y1="196" x2="662" y2="196"/>
+        <text class="danger-txt" x="454" y="187" text-anchor="middle">both initiatives live · no conflict review exists here</text>
+
+        <rect class="locked-band" x="160" y="238" width="86" height="20" rx="3"/>
+        <path class="spine" d="M160 248 H862"/>
+        <path class="limb-dash" d="M300 140 V220 Q300 248 320 248"/>
+
+        <!-- copy out / paste back, all dashed = manual -->
+        <path class="limb-dash" d="M246 248 Q268 248 268 270 V324 Q268 346 290 346 H400"/>
+        <path class="limb-dash" d="M400 346 H422 Q444 346 444 324 V270 Q444 248 466 248"/>
+        <path class="limb-dash" d="M330 248 Q352 248 352 272 V388 Q352 410 374 410 H600"/>
+        <path class="limb-dash" d="M600 410 H620 Q642 410 642 388 V272 Q642 248 662 248"/>
+
+        <!-- named version ticks -->
+        <line class="vtick" x1="452" y1="240" x2="452" y2="256"/>
+        <line class="vtick" x1="480" y1="240" x2="480" y2="256"/>
+        <line class="vtick" x1="648" y1="240" x2="648" y2="256"/>
+        <line class="vtick" x1="676" y1="240" x2="676" y2="256"/>
+
+        <path class="pin-line" d="M200 248 V52"/>
+        <path class="pin-line" d="M740 248 V52"/>
+
+        <g class="node" tabindex="0" role="button" data-step="v1" transform="translate(200,52)">
           <circle r="8.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">MYLO-390</text>
-          <text class="sub" x="0" y="-31" text-anchor="middle">shipped · pinned</text>
+          <text class="sub" x="0" y="-31" text-anchor="middle">pinned version link</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="7" transform="translate(740,52)">
+        <g class="node" tabindex="0" role="button" data-step="v7" transform="translate(740,52)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">MYLO-418</text>
           <text class="sub" x="0" y="-31" text-anchor="middle">ready for dev</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="8" transform="translate(300,140)">
+        <g class="node" tabindex="0" role="button" data-step="v8" transform="translate(300,140)">
           <circle r="8.5" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>
           <text x="0" y="-18" text-anchor="middle">tokens v2.3</text>
         </g>
-
-        <g class="node" tabindex="0" role="button" data-step="0" transform="translate(195,238)">
+        <g class="node" tabindex="0" role="button" data-step="v0" transform="translate(200,248)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
-          <text x="0" y="30" text-anchor="middle">delivered</text>
+          <text x="0" y="30" text-anchor="middle">in build</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="11" transform="translate(240,238)">
+        <g class="node" tabindex="0" role="button" data-step="v2" transform="translate(246,248)">
           <circle r="7" fill="var(--card)" stroke="var(--muted)" stroke-width="2.5"/>
-          <text class="sub" x="0" y="-16" text-anchor="middle">copy out</text>
+          <text class="sub" x="-6" y="-14" text-anchor="middle">copy out</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="12" transform="translate(484,238)">
+        <g class="node" tabindex="0" role="button" data-step="v3" transform="translate(340,346)">
+          <circle r="7" fill="var(--muted)" stroke="var(--muted)" stroke-width="2"/>
+          <text x="0" y="26" text-anchor="middle">work in isolation</text>
+        </g>
+        <g class="node" tabindex="0" role="button" data-step="v4" transform="translate(466,248)">
           <circle r="8.5" fill="var(--card)" stroke="var(--warn)" stroke-width="2.5"/>
-          <text x="0" y="30" text-anchor="middle">paste back</text>
+          <text x="0" y="32" text-anchor="middle">paste back 412</text>
+          <text class="sub" x="0" y="44" text-anchor="middle">name a version either side</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="13" transform="translate(660,238)">
+        <g class="node" tabindex="0" role="button" data-step="v4" transform="translate(662,248)">
           <circle r="8.5" fill="var(--card)" stroke="var(--warn)" stroke-width="2.5"/>
-          <text x="0" y="30" text-anchor="middle">paste back</text>
+          <text x="0" y="32" text-anchor="middle">paste back 418</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="6" transform="translate(740,238)">
+        <g class="node" tabindex="0" role="button" data-step="v6" transform="translate(740,248)">
           <circle r="8.5" fill="var(--ready)" stroke="var(--ready)" stroke-width="2.5"/>
           <text x="0" y="30" text-anchor="middle">ready for dev</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="9" transform="translate(840,238)">
-          <circle r="7" fill="var(--card)" stroke="var(--warn)" stroke-width="2.5"/>
-          <text x="0" y="30" text-anchor="middle">next change</text>
+        <g class="node" tabindex="0" role="button" data-step="v5" transform="translate(845,248)">
+          <circle r="7" fill="var(--card)" stroke="var(--ready)" stroke-width="2.5"/>
+          <text x="0" y="30" text-anchor="middle">restore</text>
         </g>
-        <g class="node" tabindex="0" role="button" data-step="10" transform="translate(340,336)">
-          <circle r="7" fill="var(--muted)" stroke="var(--muted)" stroke-width="2"/>
-          <text x="0" y="26" text-anchor="middle">working file</text>
-        </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
+    <p class="scroll-hint">Every line here is dashed on purpose. Dashed means manual: nothing in Figma enforces it.</p>
+
+    <div class="detail" id="detailB" aria-live="polite">
+      <div class="detail-index" id="bIndex">01</div>
+      <div>
+        <span class="tag go" id="bTag">Protected</span>
+        <h3 id="bTitle">The state that is in build</h3>
+        <p id="bBody">Same starting point as approach A. The difference is what protects it from here: a naming convention and people remembering, rather than a merge step that will not let you past without resolving conflicts.</p>
+        <p class="hint" id="bHint">Select any node for the detail.</p>
+      </div>
+    </div>
+
+    <p class="kicker">Read this before choosing B</p>
+    <h2 class="sec">What you give up</h2>
+    <p class="sec-note">Versioning does not substitute for branching. It is a different capability that happens to sit next to the same problem.</p>
+    <div class="rules">
+      <div class="rule-card crit">
+        <span class="k">Gap 01</span>
+        <strong>Recovery, not prevention</strong>
+        <p>If two initiatives touch the same screens, nothing warns you and nothing asks you to resolve it. You will find out afterwards, and restore from a named version. The damage happens either way.</p>
+      </div>
+      <div class="rule-card crit">
+        <span class="k">Gap 02</span>
+        <strong>Restore is whole-file</strong>
+        <p>You cannot roll back a single frame. Restoring main to recover one screen also throws away everything else that landed after that point, including other people's work.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Gap 03</span>
+        <strong>No review step</strong>
+        <p>There is no side‑by‑side comparison of what changed. Review has to happen as a meeting or a comment thread, before the paste‑back rather than as part of it.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Practice 01</span>
+        <strong>Name a version either side of every paste-back</strong>
+        <p><code>before MYLO-412 paste</code> and <code>after MYLO-412 paste</code>. Two named points is what makes the difference identifiable later, and gives you a clean restore target.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Practice 02</span>
+        <strong>Named owner and a fixed cadence per working file</strong>
+        <p>One person is responsible for getting each working file back into main, on a schedule. Without that, working files become permanent forks and main slowly stops being the truth.</p>
+      </div>
+      <div class="rule-card">
+        <span class="k">Practice 03</span>
+        <strong>Everything else from approach A still applies</strong>
+        <p>One main file per surface. Ready for dev only in main. Pinned version link on every ticket. Never edit a delivered screen in place. The rules do not change, only the enforcement.</p>
+      </div>
+    </div>
+    <p class="callout"><strong>The honest read:</strong> beyond two parallel initiatives on the same surface, this stops scaling. That is the strongest practical argument for moving to the Organization tier, and it is worth costing that against the hours lost to reconciling overwrites.</p>
   </div>
 
-  <div class="detail" id="detail" aria-live="polite">
-    <div class="detail-index" id="dIndex">00</div>
-    <div>
-      <span class="tag" id="dTag">Start here</span>
-      <h2 id="dTitle">Pick a point on the graph</h2>
-      <p id="dBody">Each node is a step in the handoff. Select one to see what happens there, who does it, and what it protects.</p>
-      <p class="hint" id="dHint">Solid violet lines are branches. Dashed lines are manual steps that nothing enforces.</p>
-    </div>
-  </div>
-
-  <h3>Four rules that hold it together</h3>
-  <p class="sec-note">The tool gives you isolation. It does not give you discipline. These are the conventions the process needs to survive a busy sprint.</p>
-  <div class="rules">
-    <div class="rule">
-      <span class="k">Rule 01</span>
-      <strong>Nobody edits main directly</strong>
-      <p>Main is changed by merge, never by hand. One named reviewer per merge, and a fixed weekly merge window rather than merge‑whenever.</p>
-    </div>
-    <div class="rule">
-      <span class="k">Rule 02</span>
-      <strong>One branch per ticket</strong>
-      <p>Name it with the issue key. Keep it short‑lived and pull from main often, because you cannot cherry‑pick which main changes to take.</p>
-    </div>
-    <div class="rule">
-      <span class="k">Rule 03</span>
-      <strong>Ready for dev lives in main</strong>
-      <p>Never set the status inside a branch. Developers build from main only, so a status anywhere else is a false signal.</p>
-    </div>
-    <div class="rule">
-      <span class="k">Rule 04</span>
-      <strong>Tickets carry a pinned link</strong>
-      <p>A normal file link is live and shows today's file. Add the version‑history link so the ticket keeps the design that was actually signed off.</p>
-    </div>
-  </div>
-
-  <h3>Wiring it to Jira</h3>
-  <p class="sec-note">Beyond installing the app, four things are worth setting up.</p>
+  <!-- ============ SHARED ============ -->
+  <p class="kicker">Both approaches</p>
+  <h2 class="sec">Wiring it to Jira</h2>
+  <p class="sec-note">Beyond installing the Figma for Jira app, four things are worth setting up.</p>
   <table>
     <thead><tr><th>What</th><th>Why it earns its place</th></tr></thead>
     <tbody>
-      <tr><td>File link on the issue</td><td class="q">Registers file‑level webhooks automatically. No team URL or admin config needed. The issue then shows design updates and Dev Mode status.</td></tr>
-      <tr><td>Status automation</td><td class="q">Transition the issue and notify developers when the design status flips. Removes a whole class of manual chasing.</td></tr>
-      <tr><td>JQL filter</td><td class="q">Find issues in To&nbsp;do with a linked design marked ready for dev. This becomes the sprint‑planning view of what is genuinely ready.</td></tr>
+      <tr><td>File link on the issue</td><td class="q">Registers file‑level webhooks automatically, with no team URL or admin configuration. The issue then reflects design updates and Dev Mode status, and ready for dev in Jira mirrors the status in Figma.</td></tr>
+      <tr><td>Status automation</td><td class="q">Transition the issue, apply labels and notify developers when the design status flips. Removes a whole class of manual chasing.</td></tr>
+      <tr><td>JQL filter</td><td class="q">Find issues in To&nbsp;do with a linked design marked ready for dev. This becomes the sprint‑planning view of what is genuinely ready to pick up.</td></tr>
       <tr><td>Dev resources</td><td class="q">Link the ticket, the repo and Storybook to the frame itself in Dev Mode. Added to a component, they propagate to every instance.</td></tr>
     </tbody>
   </table>
 
+  <p class="kicker" style="margin-top:44px">Reference</p>
+  <h2 class="sec">Source documentation</h2>
+  <p class="sec-note">Check these before you finalise the process, particularly the plan and seat requirements.</p>
+  <div class="links">
+    <a href="https://help.figma.com/hc/en-us/articles/360063144053-Guide-to-branching" target="_blank" rel="noopener">
+      <b>Guide to branching</b><span>Creating branches, pulling from main, review, and the plan and seat requirements.</span></a>
+    <a href="https://help.figma.com/hc/en-us/articles/5691189138839-Merge-branch-into-main-file" target="_blank" rel="noopener">
+      <b>Merge branch into main file</b><span>Side‑by‑side and overlay conflict review, and named merge descriptions.</span></a>
+    <a href="https://www.figma.com/best-practices/branching-in-figma/" target="_blank" rel="noopener">
+      <b>Branching best practices</b><span>Figma's own guidance on when branching is and is not appropriate.</span></a>
+    <a href="https://help.figma.com/hc/en-us/articles/360039827834-Jira-and-Figma" target="_blank" rel="noopener">
+      <b>Jira and Figma</b><span>Integration setup, status mirroring, and the JQL tip.</span></a>
+    <a href="https://help.figma.com/hc/en-us/articles/15023124644247-Guide-to-Dev-Mode" target="_blank" rel="noopener">
+      <b>Guide to Dev Mode</b><span>Ready for dev statuses, notifications, and dev resources on frames.</span></a>
+    <a href="https://marketplace.atlassian.com/apps/1217865/figma-for-jira" target="_blank" rel="noopener">
+      <b>Figma for Jira</b><span>The Atlassian Marketplace listing, for whoever installs it.</span></a>
+  </div>
+
   <footer>
-    <span>Internal reference · adapt the lane names to your own file structure</span>
-    <span class="mono">v1</span>
+    <span>Internal reference · replace the ticket prefix and lane names with your own before circulating</span>
+    <span class="mono">v2</span>
   </footer>
 </div>
 
 <script>
 const STEPS = {
-  0:{i:"01",tag:"Protected",cls:"go",t:"The delivered state",
-     b:"This point on main is what engineering is building. It is marked ready for dev, and its version-history link is sitting on the Jira ticket. Nothing in flight should move it.",
-     h:"The green band is the segment of main that is currently in build."},
-  1:{i:"02",tag:"Jira",cls:"",t:"Ticket links the file",
-     b:"Link the main Figma file to the issue. Figma registers file-level webhooks automatically, so the issue starts reflecting design updates and Dev Mode status with no admin setup. Paste the pinned version link alongside it.",
-     h:"Link the file, not a bare page URL, or the status will not sync."},
-  2:{i:"03",tag:"Branch",cls:"",t:"Branch off, named with the key",
-     b:"Create a branch from main and name it with the issue key up front: MYLO-412 consolidation step 3. From this moment main is untouched, and a second designer can branch the same file without colliding with you.",
-     h:"Requires Organization or Enterprise, and a Full seat."},
-  3:{i:"04",tag:"Branch",cls:"",t:"Share the branch for review",
-     b:"Send the branch link to stakeholders and reviewers. They can view, comment and edit without affecting main, and the comments stay in context and carry through when the branch merges.",
-     h:"Share the branch, never a duplicate file. Duplicates never come back."},
-  4:{i:"05",tag:"Branch",cls:"",t:"Pull updates from main",
-     b:"Take main's changes into your branch regularly. You cannot pick and choose which updates to apply, so the longer you leave it, the more painful the conflict resolution becomes at merge time.",
-     h:"Weekly at minimum, and always before you request review."},
-  5:{i:"06",tag:"Merge",cls:"",t:"Review, resolve, merge",
-     b:"Compare branch against main side by side or as an overlay, resolve conflicts, then merge with a named description containing the issue key. That entry becomes your changelog in main's version history.",
-     h:"Two branches touching the same screens? Sequence the merges, and have the second pull from main first."},
-  6:{i:"07",tag:"Handoff",cls:"go",t:"Mark ready for dev in main",
-     b:"Set the status only after the merge, and only in main. Developers with a Full or Dev seat are notified, and the status mirrors into the linked Jira issue.",
-     h:"Ready for dev is a label, not a lock. Anyone with edit access can still change the frame."},
-  7:{i:"08",tag:"Jira",cls:"go",t:"Status lands on the ticket",
-     b:"The issue now shows ready for dev without anyone updating it by hand. Automations can transition the issue, add labels and notify the developers on it.",
-     h:"Pair it with a JQL filter to see everything genuinely ready to pick up."},
-  8:{i:"09",tag:"Library",cls:"",t:"Design system publishes on its own clock",
-     b:"Keep the system in its own file with its own branch and release cadence. Publish deliberate versioned releases with notes referencing tickets, rather than continuously.",
-     h:"Otherwise a token change lands mid-sprint across three product files and nobody knows which ticket caused it."},
-  9:{i:"10",tag:"Do not do this",cls:"warn",t:"A delivered screen needs to change",
-     b:"Do not edit it in place. Branch it and raise a new ticket, so the change is visible, reviewable and traceable to a decision. Silent edits to in-build screens are the main way this process fails.",
-     h:"If the dev is already halfway through it, that is a conversation, not a merge."},
-  10:{i:"05",tag:"Workaround",cls:"warn",t:"Working file per initiative",
-     b:"Without branching, duplicate the relevant frames into a separate project file and work there. It gives you the isolation, but nothing connects it back to main automatically.",
-     h:"Name an owner per working file, or it becomes a permanent fork."},
-  11:{i:"03",tag:"Workaround",cls:"warn",t:"Copy frames out of main",
-     b:"Take a copy of the screens you need into the working file. Name a version in main's history first so you have a clean point to compare against later.",
-     h:"Note what you took and when. There is no record of it otherwise."},
-  12:{i:"06",tag:"Workaround",cls:"warn",t:"Paste back on a fixed cadence",
-     b:"Reintroduce the work into main manually. There is no conflict review here, so if another initiative touched the same screens you will overwrite them without being told.",
-     h:"Name a version immediately before and immediately after every paste-back."},
-  13:{i:"07",tag:"Workaround",cls:"warn",t:"Second paste-back, higher risk",
-     b:"The more initiatives running in parallel, the worse this gets. Versioning gives you recovery here, not prevention: you can identify what moved and restore, but nothing stopped it.",
-     h:"This is the strongest argument for the Organization tier if you are running more than two parallel projects."}
+  b0:{i:"01",tag:"Protected",cls:"go",t:"The state that is in build",
+    b:"This point on main is what engineering is building right now. It is marked ready for dev and its version link sits on the Jira ticket. Nothing in flight should move it.",
+    h:"The green band is the segment of main currently in development."},
+  b1:{i:"02",tag:"Jira",cls:"",t:"Ticket links the file",
+    b:"Link the main Figma file to the issue. Figma registers file-level webhooks automatically, so the issue starts reflecting design updates and Dev Mode status with no admin setup. Paste the pinned version link alongside it.",
+    h:"Link the file, not a bare page URL, or the status will not sync."},
+  b2:{i:"03",tag:"Branch",cls:"",t:"Branch off, named with the key",
+    b:"Create a branch from main and name it with the issue key up front, for example MYLO-412 consolidation step 3. From this moment main is untouched, and a second designer can branch the same file without colliding with you.",
+    h:"Requires Organization or Enterprise, and a Full seat."},
+  b3:{i:"04",tag:"Branch",cls:"",t:"Share the branch for review",
+    b:"Send the branch link to stakeholders and reviewers. They can view, comment and edit without affecting main, and the comments stay in context and carry through when the branch merges.",
+    h:"Share the branch, never a duplicate file. Duplicates never come back."},
+  b4:{i:"05",tag:"Branch",cls:"",t:"Pull updates from main",
+    b:"Take main's changes into your branch regularly. You cannot pick and choose which updates to apply, so the longer you leave it, the more painful the conflict resolution becomes at merge time.",
+    h:"Weekly at minimum, and always before you request review."},
+  b5:{i:"06",tag:"Concurrency",cls:"warn",t:"A second ticket on the same file",
+    b:"This is the whole point of branching. Two tickets progress at once on the same surface, each isolated, neither able to move what the other is working on or what is already in build.",
+    h:"If both branches touch the same screens, see rule 04 below."},
+  b6:{i:"07",tag:"Merge",cls:"",t:"Review, resolve, merge",
+    b:"Compare branch against main side by side or as an overlay, resolve conflicts, then merge with a named description containing the issue key. That entry becomes your changelog in main's version history.",
+    h:"Two branches touching the same screens? Sequence the merges, and have the second pull from main first."},
+  b7:{i:"08",tag:"Handoff",cls:"go",t:"Mark ready for dev in main",
+    b:"Set the status only after the merge, and only in main. Developers with a Full or Dev seat are notified, and the status mirrors into the linked Jira issue.",
+    h:"Ready for dev is a label, not a lock. Anyone with edit access can still change the frame."},
+  b8:{i:"09",tag:"Jira",cls:"go",t:"Status lands on the ticket",
+    b:"The issue now shows ready for dev without anyone updating it by hand. Automations can transition the issue, add labels and notify the developers on it. Add the version-specific link from history so the ticket keeps the design that was signed off.",
+    h:"Pair it with a JQL filter to see everything genuinely ready to pick up."},
+  b9:{i:"10",tag:"Library",cls:"",t:"Design system publishes on its own clock",
+    b:"Keep the system in its own file with its own branch and release cadence. Publish deliberate versioned releases with notes referencing tickets, rather than continuously.",
+    h:"Otherwise a token change lands mid-sprint across three product files and nobody knows which ticket caused it."},
+  b10:{i:"11",tag:"Do not do this",cls:"warn",t:"A delivered screen needs to change",
+    b:"Do not edit it in place. Branch it and raise a new ticket, so the change is visible, reviewable and traceable to a decision. Silent edits to in-build screens are the main way this process fails.",
+    h:"If a developer is already halfway through it, that is a conversation, not a merge."},
+
+  v0:{i:"01",tag:"Protected",cls:"go",t:"The state that is in build",
+    b:"Same starting point as approach A. The difference is what protects it from here: a naming convention and people remembering, rather than a merge step that will not let you past without resolving conflicts.",
+    h:"Everything downstream of this point is manual."},
+  v1:{i:"02",tag:"Jira",cls:"",t:"Ticket links the file",
+    b:"Identical to approach A. Link the main file to the issue so Dev Mode status mirrors into Jira, and paste the pinned version-history link on the ticket so the signed-off design stays reachable.",
+    h:"This part does not depend on your plan tier."},
+  v2:{i:"03",tag:"Manual",cls:"warn",t:"Copy frames out of main",
+    b:"Duplicate the screens you need into a separate working file. Name a version in main's history first, so you have a clean comparison point and know exactly what state you took.",
+    h:"Write down what you took and when. There is no record of it otherwise."},
+  v3:{i:"04",tag:"Manual",cls:"",t:"Work in the working file",
+    b:"You get real isolation here: main is untouched while the work happens. What you do not get is any link back. Nothing tells main that this file exists, and nothing tells you if someone else copied the same screens out yesterday.",
+    h:"One working file per initiative, not per person."},
+  v4:{i:"05",tag:"Highest risk",cls:"warn",t:"Paste back into main",
+    b:"Reintroduce the work manually. There is no conflict review, no side-by-side, no warning. If another initiative touched the same screens since you copied out, you will overwrite them and nothing will tell you.",
+    h:"Name a version immediately before and immediately after every paste-back, every time."},
+  v5:{i:"06",tag:"Recovery",cls:"go",t:"Restore from a named version",
+    b:"When a paste-back goes wrong, this is your only remedy. Restore main to a named point. It works, but it is whole-file: everything that landed after that point goes too, including other people's work.",
+    h:"This is why versioning is recovery and branching is prevention."},
+  v6:{i:"07",tag:"Handoff",cls:"go",t:"Mark ready for dev in main",
+    b:"Unchanged from approach A. Status set only in main, only once the work has actually landed there, and it mirrors into the linked Jira issue.",
+    h:"Never set it in a working file. Developers do not build from those."},
+  v7:{i:"08",tag:"Jira",cls:"go",t:"Status lands on the ticket",
+    b:"Same mechanism as approach A. The integration does not know or care whether you branched or pasted, so the Jira half of this workflow is identical either way.",
+    h:"The pinned version link matters more here, not less."},
+  v8:{i:"09",tag:"Library",cls:"",t:"Design system publishes on its own clock",
+    b:"Keep the system in its own file with deliberate versioned releases. This is if anything more important without branching, because an unannounced token change plus a manual paste-back is very hard to untangle after the fact.",
+    h:"Release notes referencing tickets, not continuous publishing."}
 };
 
-const el = id => document.getElementById(id);
-const detail = {i:el("dIndex"),tag:el("dTag"),t:el("dTitle"),b:el("dBody"),h:el("dHint")};
-let active = null;
-
-function show(step, node){
-  const s = STEPS[step]; if(!s) return;
-  detail.i.textContent = s.i;
-  detail.tag.textContent = s.tag;
-  detail.tag.className = "tag " + (s.cls || "");
-  detail.t.textContent = s.t;
-  detail.b.textContent = s.b;
-  detail.h.textContent = s.h;
-  if(active) active.removeAttribute("data-active");
-  active = node; if(node) node.setAttribute("data-active","true");
-}
-
-function bind(){
-  document.querySelectorAll(".node").forEach(n=>{
+function wire(panelId, prefix){
+  const p = document.getElementById(panelId);
+  const out = {
+    i:document.getElementById(prefix+"Index"), tag:document.getElementById(prefix+"Tag"),
+    t:document.getElementById(prefix+"Title"), b:document.getElementById(prefix+"Body"),
+    h:document.getElementById(prefix+"Hint")
+  };
+  let active = null;
+  const show = (key,node) => {
+    const s = STEPS[key]; if(!s) return;
+    out.i.textContent = s.i; out.tag.textContent = s.tag;
+    out.tag.className = "tag " + (s.cls||"");
+    out.t.textContent = s.t; out.b.textContent = s.b; out.h.textContent = s.h;
+    if(active) active.removeAttribute("data-active");
+    active = node; if(node) node.setAttribute("data-active","true");
+  };
+  p.querySelectorAll(".node").forEach(n=>{
     n.onclick = () => show(n.dataset.step, n);
-    n.onkeydown = e => {
-      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); show(n.dataset.step, n); }
-    };
+    n.onkeydown = e => { if(e.key==="Enter"||e.key===" "){ e.preventDefault(); show(n.dataset.step,n); } };
   });
 }
-bind();
+wire("panel-branch","a");
+wire("panel-version","b");
 
-const mb = el("m-branch"), mp = el("m-pro");
-function setMode(branching){
-  el("modeBranch").style.display = branching ? "" : "none";
-  el("modePro").style.display = branching ? "none" : "";
-  mb.setAttribute("aria-pressed", branching);
-  mp.setAttribute("aria-pressed", !branching);
-  el("laneA").textContent = branching ? "BRANCH · MYLO-412" : "WORKING FILE · MYLO-412";
-  el("laneB").textContent = branching ? "BRANCH · MYLO-418" : "WORKING FILE · MYLO-418";
-  el("modeNote").textContent = branching
-    ? "Branching available. Isolation is enforced by the tool."
-    : "No branching. Isolation depends entirely on the team following the convention.";
-  active = null;
-  show(branching ? 0 : 10, null);
+const tabs = [document.getElementById("tab-branch"), document.getElementById("tab-version")];
+const panels = [document.getElementById("panel-branch"), document.getElementById("panel-version")];
+function select(idx){
+  tabs.forEach((t,i)=>{ t.setAttribute("aria-selected", i===idx); t.tabIndex = i===idx ? 0 : -1; });
+  panels.forEach((p,i)=>{ p.hidden = i!==idx; });
 }
-mb.onclick = () => setMode(true);
-mp.onclick = () => setMode(false);
+tabs.forEach((t,i)=>{
+  t.onclick = () => select(i);
+  t.onkeydown = e => {
+    if(e.key==="ArrowRight"||e.key==="ArrowLeft"){
+      e.preventDefault();
+      const n = (i + (e.key==="ArrowRight"?1:tabs.length-1)) % tabs.length;
+      select(n); tabs[n].focus();
+    }
+  };
+});
+select(0);
 </script>
 </body>
 </html>
